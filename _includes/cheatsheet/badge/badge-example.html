@@ -1,0 +1,63 @@
+          <!-- START Badgse Filter Large {{ include.comment }} -->
+          <{% if include.asLink %}a{% else %}span{% endif %} class="badge badge-avatar hstack {% if include.outlineStyle %} badge-outline-filter shadow-sm {% else %} badge-filter bg-gray-200 {% endif %} rounded-pill text-dark {% if include.customClass %} {{ include.customClass }} {% else %} py-1 {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
+
+            <!-- Left Side -->
+            {% if include.avatar %}
+              <img src="{{page.root}}/{{ site.data.avatars | sample }}" class="rounded-circle me-2" alt="..." width=20>
+            {% elsif include.avatarInitials %}
+                <span class="avatar-xs rounded-pill bg-secondary small text-white d-flex align-items-center opacity-75 justify-content-center me-2">
+                  <span style="font-size: 10px; line-height: 0px;">H</span>
+                </span>
+            {% elsif include.avatarIcon %}
+              <div class="avatar-xs rounded-pill bg-secondary small text-white d-flex align-items-center opacity-75 justify-content-center me-2">
+                <i class="fa fa-user" style="font-size: 10px; line-height: 0px;"></i>
+              </div>
+            {% elsif include.icon %}
+              <i class="fa fa-{{ include.iconName }} mx-2 text-body"></i>
+            {% elsif include.iconMs2Me1 %}
+              <i class="fa fa-{{ include.iconMs2Me1-Name }} ms-2 me-1 text-{{ include.iconMs2Me1-Color }}"></i>
+            {% elsif include.iconColor %}
+              <i class="fa fa-circle ms-1 me-2 text-{{ site.data.colors | sample }}"></i>
+            {% elsif include.iconColorSelected %}
+              <i class="fa fa-circle ms-1 me-1 text-{{ include.iconColorSelected-Color }}"></i>
+            {% else %}
+            {% endif %}
+
+            <!-- Subtitle -->
+            {% if include.withSubtitle %}
+              <span class="text-body me-1">{{ include.withSubtitleTitle }}</span>
+            {% else %}
+            {% endif %}
+
+            <!-- Title -->
+            {% if include.titleMe-2 %}
+              <span class="me-2">{{ site.data.firstName | sample }} {{ site.data.lastName | sample }}</span>
+            {% elsif include.titleCustomMe-2 %}
+              <span class="me-2">{{ include.title }}</span>
+            {% elsif include.titleCustom %}
+              <span>{{ include.title }}</span>
+            {% else %}
+              <span>{{ site.data.firstName | sample }} {{ site.data.lastName | sample }}</span>
+            {% endif %}
+
+            <!-- Result -->
+            {% if include.withResult %}
+              <span class="text-body small mx-2">({{ site.data.numbers | sample }})</span>
+            {% else %}
+            {% endif %}
+
+            <!-- Close & Caret -->
+            {% if include.withClose %}
+              <a href="#" class="link-secondary opacity-75 ms-1">
+                <i class="fa fa-times-circle"></i>
+              </a>
+            {% elsif include.withDropdown %}
+              <span class="text-body opacity-75 ms-1 me-1">
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            {% else %}
+
+            {% endif %}
+            
+          </{% if include.asLink %}a{% else %}span{% endif %}>
+          <!-- END Badge Badge Filter Large {{ include.comment }} -->
