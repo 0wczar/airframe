@@ -8,11 +8,11 @@
 							{% elsif page.backDisabledPage %}
 
 							{% elsif include.closeProject %}
-								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="height: 30px; width: 30px;">
+								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-body" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
 									<i class="fa-solid fa-times"></i>
 								</a>
 							{% elsif include.closeProject %}
-								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="height: 30px; width: 30px;">
+								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-body" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
 									<i class="fa-solid fa-times"></i>
 								</a>
 							{% elsif include.breadcrumbProject %}
@@ -80,7 +80,10 @@
 									"
 								{% endif %}
 								
-								data-bs-toggle="tooltip" data-bs-placement="left" title="List View">
+								data-bs-toggle="tooltip" data-bs-placement="left" title="List View"
+								
+								style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
+								>
 								<i class="fa-solid fa-line-columns"></i>
 							</a>
 
@@ -98,13 +101,16 @@
 									"
 								{% endif %}
 						 
-								aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" title="Grid View">
+								aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" title="Grid View"
+
+								style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
+								>
 								<i class="fa-solid fa-grid-2"></i>
 							</a>
 
 							<!-- Table View -->
 							<a href="{{page.root}}/{% if include.table-link-inc_tasks-table %}tasks/table/{% elsif include.table-link-inc_projects-table %}{% elsif page.internalProjectsTable %}projects/list/table{% elsif include.table-link-inc_projects-list-table %}projects/list/table{% elsif include.table-link-inc_projects-list-empty %}projects-list-empty.html{% elsif include.table-link-inc_tasks-empty %}tasks-empty.html{% else %} {% endif %}" 
-							class="btn btn-link btn-sm rounded-circle me-3 text-secondary 
+							class="btn btn-link btn-sm rounded-circle me-3 text-body 
 							
 								{% if include.table-active-inc_tasks-table %}
 									{% if page.url == "/tasks/table/" %}active{% endif %}" 
@@ -116,18 +122,20 @@
 									"
 								{% endif %}
 								
-								aria-current="page"  data-bs-toggle="tooltip" data-bs-placement="left" title="Table View">
+								aria-current="page"  data-bs-toggle="tooltip" data-bs-placement="left" title="Table View"
+								
+								style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
 								<i class="fa-solid fa-bars"></i>
 							</a>
 							{% endif %}
 							
 							<!-- Add Task/Project -->
 							{% if include.modalCreateProject %}
-								<button class="btn btn-primary btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalCreateProject">
+								<button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCreateProject" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
 									<i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="Add Project"></i>
 								</button>
 							{% else %}
-								<button class="btn btn-primary btn-sm rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
+								<button class="btn btn-primary btn-sm rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
 									<i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="Add Task"></i>
 								</button>
 							{% endif %}
