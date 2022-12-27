@@ -1,0 +1,179 @@
+---
+layout: sidebar-list
+title:  'Members'
+offNavbarFilters: 1
+onSettings: 1
+---
+<div class="col min-vh-100">
+
+    <div class="container-sm pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+                {% include settings/header-settings.html
+                    withTeam=""
+                    team="airframe"
+                    title="Members"
+                    description="Manage Members in this team."
+                %}
+
+                <div class="card rounded-5 shadow-sm mb-5">
+                  <div class="card-body px-4 pt-4">
+
+                    <label for="inputPassword5" class="form-label h6">Team Invite Link</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="http://zackary.org/project/tasks/subtask" aria-label="Recipient's username" aria-describedby="button-addon2" readonly>
+                      <button class="btn btn-primary" type="button" id="button-addon2">Copy team invite link</button>
+                    </div>
+                    <div id="passwordHelpBlock" class="form-text text-body">
+                      Anyone with this link can join the team.
+                    </div>
+
+                  </div>
+
+                  <hr style="opacity: 0.12;" />
+
+                  <div class="card-body px-4 pb-4">
+                    <div>
+                      <label for="inputPassword5" class="form-label mb-2 h6">Allowed Email Domains</label>
+                      <div id="passwordHelpBlock" class="mb-3">
+                        Anyone with both the link and an email address from theses domains can join this team automticlly
+                      </div>
+                      <button type="button" class="btn btn-primary">
+                        Add domains
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <!-- START Table Header -->
+                <div class="d-flex align-items-center mb-3">
+                  <ul class="nav nav-pills align-self-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active px-3" id="pills-members-tab" data-bs-toggle="pill" data-bs-target="#pills-members" type="button" role="tab" aria-controls="pills-members" aria-selected="true">Members</button>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link px-3" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pending</button>
+                    </li>
+                  </ul>
+
+                  <span class="ms-auto hstack gap-2 align-self-center">
+                    <input type="text" class="form-control bg-white" placeholder="Search...">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalInviteUsers">
+                      <i class="fa fa-plus" data-bs-toggle="tooltip" data-bs-placement="top" title="Add Members"></i>
+                    </button>
+                  </span>
+                </div>
+                <!-- END Table Header -->
+
+                <div class="tab-content" id="pills-tabContent">
+
+                  <!-- Start Table: Members -->
+                  <div class="tab-pane fade show active" id="pills-members" role="tabpanel" aria-labelledby="pills-members-tab">
+                    <table class="table table-borderless table-hover mt-2 mb-4">
+                      <thead class="bg-light border-bottom">
+                        <tr>
+                          <th scope="col" class="align-middle">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </th>
+                          <th scope="col"></th>
+                          <th scope="col" class="align-middle">
+                            First
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Last
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Email
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Status
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Role
+                          </th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {% include settings/tr-members.html 
+                              status="Member"
+                          %}
+                          {% include settings/tr-members.html 
+                              status="Suspended"
+                              admin=""
+                          %}
+                          {% include settings/tr-members.html 
+                              status="Left Team"
+                          %}
+                          {% include settings/tr-members.html 
+                              status="Pending"  
+                          %}
+                          {% include settings/tr-members.html 
+                              status="Member"  
+                          %}
+                      </tbody>
+                    </table>
+  
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <!-- END Table: Members -->
+
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <table class="table table-borderless table-hover mt-2 mb-4">
+                      <thead class="bg-light border-bottom">
+                        <tr>
+                          <th scope="col" class="align-middle">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Invited
+                          </th>
+                          <th scope="col" class="align-middle">
+                            Invitation date
+                          </th>
+                          <th scope="col" class="align-middle text-end">
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {% include settings/tr-pending.html %}
+                          {% include settings/tr-pending.html %}
+                          {% include settings/tr-pending.html %}
+                          {% include settings/tr-pending.html %}
+                          {% include settings/tr-pending.html %}
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+
+
+
+
+    
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% include modals/modal-invite-users.html 
+
+%}

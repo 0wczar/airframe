@@ -1,0 +1,58 @@
+<article class="my-3" id="navbar">
+  <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+    <h3>Navbar</h3>
+    <a class="d-flex align-items-center" href="../components/navbar/">Documentation</a>
+  </div>
+
+  <div>
+    <div class="bd-example">
+
+      <h5 class="mb-3">Light Navbar</h5>
+      <!-- START Navbar Light -->
+      <div class="card bg-light rounded-5 overflow-auto mb-5">
+        {% include cheatsheet/navbar/navbar-example.html 
+          navbarClass="navbar-light bg-white border-bottom shadow-sm"
+          statusBorderClass="border-white"
+        %}
+        <div class="h-50 p-3">
+          <h5 class="mb-3">Example</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repudiandae accusamus veniam impedit
+            delectus quidem ab, quae voluptates vero aut.</p>
+        </div>
+      </div>
+      <!-- END Navbar Light -->
+
+      <h5 class="mb-3">Dark Navbar</h5>
+      <!-- START Navbar Light -->
+      <div class="card bg-light rounded-5 overflow-auto mb-5">
+        {% include cheatsheet/navbar/navbar-example.html 
+          navbarClass="navbar-dark bg-dark"
+          statusBorderClass="border-dark"  
+        %}
+        <div class="h-50 p-3">
+          <h5 class="mb-3">Example</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repudiandae accusamus veniam impedit
+            delectus quidem ab, quae voluptates vero aut.</p>
+        </div>
+      </div>
+      <!-- END Navbar Light -->
+
+      <h5 class="mb-3">Color Navbar</h5>
+      <!-- START Navbar Light -->
+      <div class="card bg-light rounded-5 overflow-auto mb-5">
+        {% include cheatsheet/navbar/navbar-example.html 
+          navbarClass="navbar-dark bg-primary"
+          logoWhite=""
+          statusBorderClass="border-primary"  
+        %}
+        <div class="h-50 p-3">
+          <h5 class="mb-3">Example</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repudiandae accusamus veniam impedit
+            delectus quidem ab, quae voluptates vero aut.</p>
+        </div>
+      </div>
+      <!-- END Navbar Light -->
+
+    </div>
+  </div>
+</article>

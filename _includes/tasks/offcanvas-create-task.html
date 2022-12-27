@@ -1,0 +1,143 @@
+<!-- START OFF CANVAS: CREATE TASK -->
+<div class="offcanvas offcanvas-end w-50 shadow-sm" tabindex="-1" id="offcanvasCreateTask" aria-labelledby="offcanvasLabel">
+  
+  <!-- Offcanvas Header -->
+  <div class="offcanvas-header bg-light d-flex px-4 pt-4 pb-2 align-items-start">
+    <div>
+      <h6 class="mb-1">Create Task</h6>
+      <p>Get started by filling in the information below to create your new task</p>
+    </div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  
+  <!-- Offcanvas Body -->
+  <div class="offcanvas-body p-5">
+    <!-- Title -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Title
+      </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword" placeholder="Enter Title...">
+      </div>
+    </div>
+    
+    <!-- Priority -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Priority
+      </label>
+      <div class="col-sm-10">
+
+        <div class="dropdown">
+          <button type="button" class="btn btn-outline-light text-dark text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-circle fa-fw text-danger me-2"></i> 
+            Important 
+            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+          </button>
+          {% include tasks/dropdown-priority.html %} 
+        </div>
+      </div>
+    </div>
+    
+    <!-- Status -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Status
+      </label>
+      <div class="col-sm-10">
+
+        <div class="dropdown">
+          <button type="button" class="btn btn-outline-light text-dark text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-circle-notch fa-fw text-warning me-2"></i> 
+            In Progress 
+            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+          </button>
+          {% include tasks/dropdown-status.html %} 
+
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Due Date -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Due Date
+      </label>
+      <div class="col-sm-10">
+        <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
+          <i class="fa fa-ellipsis-h fa-fw text-muted me-2"></i> 
+          Without 
+          <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Tags -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Tags
+      </label>
+      <div class="col-sm-10 d-flex align-items-center hstack gap-1">
+
+        <div class="dropdown">
+          <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-plus"></i>
+          </button>
+          {% include tasks/dropdown-tags.html %} 
+
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Assigned -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Assigned
+      </label>
+      <div class="col-sm-10 d-flex align-items-center hstack gap-1">
+
+        <div class="dropdown">
+
+          <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-plus"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Description
+      </label>
+      <div class="col-sm-10">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Description..."></textarea>
+      </div>
+    </div>
+    
+    <!-- Attachemnts -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+        Attachments
+      </label>
+      <div class="col-sm-10 d-flex align-items-center hstack gap-1">
+        <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Offcanvas Footer -->
+  <div class="card-footer border-0 p-3 d-flex justify-content-end bg-light">
+    <button type="button" class="btn btn-link text-dark text-decoration-none px-4">Cancel</button>
+    <button type="button" class="btn btn-primary px-4 shadow-sm">Create Task</button>
+  </div>
+</div>
+<!-- END OFF CANVAS: CREATE TASK -->

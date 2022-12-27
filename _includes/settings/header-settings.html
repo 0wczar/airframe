@@ -1,0 +1,12 @@
+<!-- START Header -->
+<div class="mb-5">
+
+    {% if include.withTeam %}
+        <h1 class="mb-2"><span class="text-body fw-normal">{{ include.team }}</span> <span class="px-2 text-body opacity-50 fw-light">/</span> {{ include.title }}</h1>
+    {% else %}
+        <h1 class="mb-2 fw-normal">{{ include.title }}</h1>
+    {% endif %}
+
+    <p>{{ include.description }}</p>
+</div>
+<!-- END Header -->

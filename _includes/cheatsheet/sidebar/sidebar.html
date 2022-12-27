@@ -1,0 +1,214 @@
+<!-- Logo -->
+<div class="px-3 pb-4 pt-4">
+    <img src="{{[page.root}}/images/logo-alone-airframe-primary.svg">
+</div>
+
+<!-- Avatar -->
+<div class="px-3">
+    {% include cheatsheet/avatar/avatar-example.html %}
+</div>
+
+<!-- Name & Position -->
+<ul class="nav nav-pills sidebar-light-primary mb-4">
+    <li class="nav-item flex-sm-fill d-flex dropdown">
+        <a class="nav-link flex-sm-fill d-flex" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <div class="flex-grow-1">
+                <div class="text-dark">Cora Trantow</div>
+                <span class="small">Project Manager</span>
+            </div>
+            <i class="fa fa-fw fa-ellipsis-v align-self-center"></i>
+        </a>
+        <ul class="dropdown-menu shadow">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </li>
+</ul>
+
+{% if include.navPills %}
+    <!-- Nav Pills -->
+    <ul class="nav nav-pills sidebar-light-primary flex-column">
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill active" aria-current="page">
+                <i class="fa fa-fw fa-home me-3 align-self-center"></i>
+                <span class="flex-grow-1">Home</span>
+                <i class="fa fa-fw fa-angle-left align-self-center"></i>
+            </a>
+        </li>
+
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill" aria-current="page">
+                <i class="fa fa-fw fa-clone me-3 align-self-center"></i>
+                <span class="flex-grow-1">Cards</span>
+            </a>
+        </li>
+
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill" aria-current="page">
+                <i class="fa fa-fw fa-columns me-3 align-self-center"></i>
+                <span class="flex-grow-1">Layouts</span>
+                <i class="fa fa-fw fa-angle-left align-self-center"></i>
+            </a>
+        </li>
+
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill" aria-current="page">
+                <i class="fa fa-fw fa-table me-3 align-self-center"></i>
+                <span class="flex-grow-1">Tables</span>
+                <i class="fa fa-fw fa-angle-left align-self-center"></i>
+            </a>
+        </li>
+
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill" aria-current="page">
+                <i class="fa fa-fw fa-toggle-on me-3 align-self-center"></i>
+                <span class="flex-grow-1">Forms</span>
+                <i class="fa fa-fw fa-angle-left align-self-center"></i>
+            </a>
+        </li>
+
+        <li class="nav-item d-flex">
+            <a href="#" class="nav-link d-flex flex-sm-fill" aria-current="page">
+                <i class="fa fa-fw fa-sticky-note me-3 align-self-center"></i>
+                <span class="flex-grow-1">Pages</span>
+                <span class="badge rounded-pill bg-danger align-self-center">2</span>
+            </a>
+        </li>
+
+        <!-- START COLLAPSE AREA -->
+        <li class="nav-item d-flex">
+            <a data-bs-toggle="collapse" href="#collapseAppsPill" role="button" aria-expanded="false" aria-controls="collapseAppsPill" class="nav-link d-flex flex-sm-fill">
+                <i class="fa fa-fw fa-mouse-pointer me-3 align-self-center"></i>
+                <span class="flex-grow-1">Apps</span>
+                <i class="fa fa-fw fa-angle-down align-self-center"></i>
+            </a>
+        </li>
+
+            <!-- START Collapse Sub + Sub-Sub -->
+            <div class="collapse" id="collapseAppsPill">
+
+                <!-- START Collapse |- Sub -->
+                <li class="nav-item d-flex">
+                    <a data-bs-toggle="collapse" href="#collapseTasksPill" role="button" aria-expanded="false" aria-controls="collapseTasksPill" class="nav-link d-flex flex-sm-fill">
+                        <i class="fa fa-fw me-3 align-self-center"></i>
+                        <span class="flex-grow-1">Tasks</span>
+                        <i class="fa fa-fw fa-angle-down align-self-center"></i>
+                    </a>
+                </li>
+                <!-- END Collapse |- Sub -->
+
+                    <!-- START Collapse |-- Sub-Sub -->
+                    <div class="collapse" id="collapseTasksPill">
+
+                        <li class="nav-item d-flex">
+                            <a href="#" class="nav-link d-flex flex-sm-fill ps-4" aria-current="page">
+                                <i class="fa fa-fw me-3 align-self-center"></i>
+                                <span class="flex-grow-1">Task Details</span>
+                            </a>
+                        </li>
+                        
+                    </div>
+                    <!-- END Collapse |-- Sub-Sub -->
+
+            </div>
+            <!-- END Collapse Sub + Sub-Sub -->
+
+    </ul>
+{% else %}
+    <!-- Nav List -->
+    <ul class="list-group list-group-flush sidebar-light-primary mb-4">
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill active">
+            <i class="fa fa-fw fa-home me-3 align-self-center"></i>
+            <span class="flex-grow-1">Home</span>
+            <i class="fa fa-fw fa-angle-left align-self-center"></i>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill ">
+            <i class="fa fa-fw fa-clone me-3 align-self-center"></i>
+            <span class="flex-grow-1">Cards</span>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill ">
+            <i class="fa fa-fw fa-columns me-3 align-self-center"></i>
+            <span class="flex-grow-1">Layouts</span>
+            <i class="fa fa-fw fa-angle-left align-self-center"></i>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill ">
+            <i class="fa fa-fw fa-table me-3 align-self-center"></i>
+            <span class="flex-grow-1">Tables</span>
+            <i class="fa fa-fw fa-angle-left align-self-center"></i>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill ">
+            <i class="fa fa-fw fa-toggle-on me-3 align-self-center"></i>
+            <span class="flex-grow-1">Forms</span>
+            <i class="fa fa-fw fa-angle-left align-self-center"></i>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex flex-sm-fill ">
+            <i class="fa fa-fw fa-sticky-note me-3 align-self-center"></i>
+            <span class="flex-grow-1">Pages</span>
+            <span class="badge rounded-pill bg-danger align-self-center">2</span>
+        </li>
+
+        <!-- START COLLAPSE AREA -->
+        <a data-bs-toggle="collapse" href="#collapseApps" role="button" aria-expanded="false" aria-controls="collapseApps" class="list-group-item list-group-item-action d-flex flex-sm-fill">
+            <i class="fa fa-fw fa-mouse-pointer me-3 align-self-center"></i>
+            <span class="flex-grow-1">Apps</span>
+            <i class="fa fa-fw fa-angle-down align-self-center"></i>
+        </a>
+
+            <!-- START Collapse Sub + Sub-Sub -->
+            <div class="collapse" id="collapseApps">
+
+                <a data-bs-toggle="collapse" href="#collapseTasks" role="button" aria-expanded="false" aria-controls="collapseTasks" class="list-group-item list-group-item-action d-flex flex-sm-fill">
+                    <i class="fa fa-fw me-3 align-self-center"></i>
+                    <span class="flex-grow-1">Tasks</span>
+                    <i class="fa fa-fw fa-angle-down align-self-center"></i>
+                </a>
+
+                <!-- START Collapse |-- Sub-Sub -->
+                <div class="collapse" id="collapseTasks">
+
+                    <li class="list-group-item list-group-item-action d-flex flex-sm-fill ps-5">
+                        <i class="fa fa-fw me-3 align-self-center"></i>
+                        <span class="flex-grow-1">Task Details</span>
+                    </li>
+
+                </div>
+                <!-- END Collapse |-- Sub-Sub -->
+
+            </div>
+            <!-- END Collapse Sub + Sub-Sub -->
+    </ul>
+{% endif %}
+
+
+<!-- Select Version -->
+<ul class="nav nav-pills sidebar-light-primary mb-4">
+    <li class="nav-item flex-sm-fill d-flex dropup">
+        <a class="nav-link flex-sm-fill d-flex" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <div class="flex-grow-1">
+                <div class="text-dark">Bootstrap 5.1</div>
+                <span class="small">28 Jan 2021, 12:12PM</span>
+            </div>
+            <i class="fa fa-fw fa-ellipsis-v align-self-center"></i>
+        </a>
+        <ul class="dropdown-menu shadow">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </li>
+</ul>
+
+<!-- Footer All Rights -->
+<p class="small px-3 pb-3 mt-auto footer">
+    (C) 2018 All Rights Reserved. This is the "Admin Theme" built with Bootstrap 4, React 16 (latest) & NPM. Designed
+    and implemented by <a href="#" class="text-decoration-none">www.webkom.co</a>
+</p>

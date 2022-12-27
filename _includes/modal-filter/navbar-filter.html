@@ -1,0 +1,43 @@
+        <!-- START Navbar: Badges with Reset -->
+        <div class="bg-light px-3 py-1 ">
+            <!-- Reset -->
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted">
+                    {{ include.title }}
+                </span>
+                {% if include.reset %}
+                <button type="button" class="btn btn-link btn-sm text-dark text-decoration-none pe-0">
+                    Reset All Filters
+                    <i class="fas fa-times-circle text-muted ms-2"></i>
+                </button>
+                {% else %}
+                {% endif %}
+            </div>
+
+            {% if include.badges %}
+            <!-- START Badges -->
+            <div class="pb-2 h-stack gap-2">
+              <span class="badge rounded-pill badge-filter">
+                  <i class="fa fa-circle text-danger me-1"></i><span class="me-1">Production</span>
+                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove">
+                      <i class="fa fa-times-circle me-1"></i>
+                  </a>
+              </span>
+              <span class="badge rounded-pill badge-filter">
+                  <i class="fa fa-circle text-warning me-1"></i><span class="me-1">Javascript</span>
+                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove">
+                      <i class="fa fa-times-circle me-1"></i>
+                  </a>
+              </span>
+              <span class="badge rounded-pill badge-filter">
+                  <i class="fa fa-circle text-info me-1"></i><span class="me-1">UI</span>
+                  <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remove">
+                      <i class="fa fa-times-circle me-1"></i>
+                  </a>
+              </span> 
+            </div>
+            <!-- END Badges -->
+            {% else %}
+            {% endif %}
+          </div>
+          <!-- END Navbar: Badges with Reset -->

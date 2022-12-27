@@ -1,0 +1,189 @@
+---
+layout: sidebar-list
+title:  'Billings'
+offNavbarFilters: 1
+onSettings: 1
+---
+<div class="col min-vh-100">
+
+    <div class="container-sm pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+            {% include settings/header-settings.html
+                withTeam=""
+                team="airframe"
+                title="Billings"
+                description="Manage your billing and payment details"
+            %}
+
+
+                <div class="row row-cols-1 row-cols-md-2 g-4 pb-5">
+                  <div class="col">
+                    <!-- START Card: Plan -->
+                    <div class="card shadow-sm rounded-5 h-100">
+                      <div class="card-body p-4">
+                        <div class="d-flex">
+                          <div class="me-3">
+                            <h5 class="mb-1">Basic Plan</h5>
+                            <p>
+                              Our most popoluar plan for small teams
+                            </p>
+                          </div>
+                          <div class="ms-auto">
+                            <div class="text-end">
+                              <h3 class="mb-0 fw-normal">
+                                $10
+                              </h3> 
+                              <span>per month</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-2 small">14 of 20 users</div>
+                        <div class="progress mb-2" style="height: 5px;">
+                          <div class="progress-bar rounded-pill" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="card-footer border-top-0 d-flex py-3">
+                        <span class="badge bg-primary rounded-pill ps-3 pe-3 fw-normal">
+                          Monthly
+                        </span> 
+                        <a href="#" class="text-dark ms-auto" role="button" data-bs-toggle="modal" data-bs-target="#modalSelectPlan">
+                          Upgrade Plan
+                        </a>
+                      </div>
+                    </div>
+                    <!-- END Card: Plan -->
+                  </div>
+
+                  <div class="col">
+                    <!-- START Card: Payment Method -->
+                    <div class="card shadow-sm rounded-5 h-100">
+                      <div class="card-body p-4">
+                        <h5 class="mb-1">Payment Method</h5>
+                        <p class="mb-3">
+                          Change how you pay for your plan.
+                        </p>
+
+                        <!-- START Selected Card -->
+                        <div class="card rounded-5">
+                          <div class="card-body d-flex align-items-start">
+
+                            <div class="flex-shrink-0">
+                              <i class="fab fa-cc-visa fa-2x text-primary"></i>
+                            </div>
+
+                            <div class="flex-grow-1 ms-3">
+                              <div class="text-dark">
+                                Visa ending in 1234
+                              </div>
+                              <div class="small mb-2">
+                                Expiry 06/2024
+                              </div>
+
+                              <div class="text-nowrap">
+                                <i class="fa fa-envelope me-2 text-body text-opacity-50"></i>
+                                tom@webkom.co
+                              </div>
+                            </div>
+
+                            <button type="button" class="btn btn-outline-light px-3" data-bs-toggle="modal" data-bs-target="#modalAddCreditCard">
+                              Edit
+                            </button>
+
+                          </div>
+                        </div>
+                        <!-- END Selected Card -->
+
+                      </div>
+
+                      <div class="card-footer border-top-0 d-flex py-3">
+                        <a role="button" class="text-dark ms-auto" data-bs-toggle="modal" data-bs-target="#modalEditPayments">
+                          Edit Payments
+                        </a>
+                      </div>
+
+                    </div>
+                    <!-- END Card: Payment Method -->
+                  </div>
+                </div>
+
+                <!-- START Table Header -->
+                <div class="d-flex align-items-center mb-3">
+                  <h5>Billing History</h5>
+                  <span class="ms-auto hstack gap-2 align-self-center">
+                    <button type="button" class="btn btn-primary text-nowrap px-3" data-bs-toggle="modal" data-bs-target="#modalInviteUsers">
+                      Download All <i class="fa fa-arrow-down ms-2 text-white text-opacity-75" data-bs-toggle="tooltip" data-bs-placement="top" title="Add Members"></i> 
+                    </button>
+                  </span>
+                </div>
+                <!-- END Table Header -->
+
+
+                  
+                    <!-- Start Table: Members -->
+                    <table class="table table-borderless table-hover mt-2 mb-4">
+                      <thead class="bg-light border-bottom">
+                        <tr>
+                          <th scope="col" class="align-middle">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </th>
+                          <th scope="col" class="align-middle fw-normal">
+                            Plan
+                          </th>
+                          <th scope="col" class="align-middle fw-normal">
+                            Amount
+                          </th>
+                          <th scope="col" class="align-middle fw-normal">
+                            Date
+                          </th>
+                          <th scope="col" class="align-middle fw-normal">
+                            Status
+                          </th>
+                          <th scope="col" class="align-middle fw-normal">
+                            Payment Method
+                          </th>
+                          <th scope="col fw-normal">
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {% include settings/tr-billings.html 
+                            paymentPaypal=""
+                            title="Premium"
+                          %}
+                        {% include settings/tr-billings.html 
+                            statusPaid=""
+                            title="Basic"
+                        %}
+                        {% include settings/tr-billings.html 
+                            paymentPaypal=""
+                            title="Enterprise"
+                          %}
+                        {% include settings/tr-billings.html 
+                            statusPaid=""
+                            title="Free"
+                        %}
+                        {% include settings/tr-billings.html 
+                            paymentPaypal=""
+                            title="Basic"
+                          %}
+                        {% include settings/tr-billings.html 
+                            statusPaid=""
+                            title="Premium"
+                        %}
+                      </tbody>
+                    </table>
+                  <!-- END Table: Members -->
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% include modals/modal-invite-users.html 
+
+%}

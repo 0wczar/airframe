@@ -1,0 +1,126 @@
+---
+layout: sidebar-list
+title:  'Task Details'
+projectsListListDetails-Sidebar: 1
+projectsListList: 1
+listProjects: 1
+modalDangerListTasks: 1
+---
+<!-- START 2nd Left List -->
+<div class="border-start-0 border-end border-gray-300 col-3">
+    <!-- 2nd Tasks Filters List -->
+    {% include layouts/navbar-filters.html 
+        1class=""
+        2class=""
+        badgesDisabled=""
+        closeProject=""
+        link-projects-list-list-details-sidebar=""
+            active-projects-list-list-details-sidebar=""
+        grid-link-inc_projects-list-grid=""
+            grid-active-inc_projects-list-grid=""
+        table-link-inc_projects-list-table=""
+        title="Project Selected"
+    %}
+
+    <!-- 2nd START Tasks List -->
+    <ul class="list-group list-group-flush min-vh-100 overflow-auto border-top border-light">
+        {% include tasks/list-task.html 
+            finished=""
+            high=""
+            listClass=""
+            avatar4=""
+        %}
+        {% include tasks/list-task.html 
+            backlog=""
+            important=""
+            listClass=""
+            avatar3=""
+        %}
+        {% include tasks/list-task.html 
+            rejected=""
+            normal=""
+            listClass=""
+            avatar2=""
+        %}
+        {% include tasks/list-task.html 
+            doing=""
+            low=""
+            listClass=""
+            avatar1=""
+        %}
+        {% include tasks/list-task.html 
+            todo=""
+            normal=""
+            listClass=""
+            avatar4=""
+        %}
+        {% include tasks/list-task.html 
+            listClass=""
+            high=""
+            avatar4=""
+        %}
+    </ul>	
+    <!-- 2nd END Tasks List -->
+</div>
+<!-- END 2nd Left List -->
+
+<div class="col gx-3">
+
+    <!-- START Navbar Transparent -->
+    <div class="d-flex px-2 py-3">
+        <a href="{{page.root}}/projects/list/list" class="btn btn-link btn-sm rounded-circle me-1 text-body" data-bs-toggle="tooltip" data-bs-placement="right" title="" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" data-bs-original-title="Close this Task">
+            <i class="fa fa-times"></i>
+        </a>
+        <a href="#" class="btn btn-link btn-sm rounded-circle me-1 text-secondary ms-auto" data-bs-toggle="tooltip" data-bs-placement="left" title="" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" data-bs-original-title="Edit this Task">
+            <i class="fa fa-pen"></i>
+        </a>
+    </div>
+    <!-- END Navbar Transparent -->
+
+    <div class="container-sm">
+        <div class="row">
+            <div class="col">
+                <div class="pt-1">
+                    {% include tasks/task-details.html %}
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <!-- START Section Files -->
+                    <div class="mb-5">
+
+                        <!-- Small Header -->
+                        <div class="small mb-4 text-body">
+                            <i class="fa fa-paperclip me-2"></i> Files
+                        </div>
+
+                        <!-- Attachments -->
+                        <div class="d-flex gap-3">
+
+                          {% include tasks/subtask/files.html %}
+
+                        </div>
+
+                    </div>
+                    <!-- END Section Files -->
+
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <div class="mb-3">
+
+                      <!-- Small Header -->
+                      <div class="d-flex mb-3 align-items-center">
+                          <div class="small text-body">
+                              <i class="fa fa-list me-2"></i> Subtasks
+                          </div>
+                          <button class="btn btn-primary btn-sm rounded-circle ms-auto">
+                            <i class="fas fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add Subtask" aria-label="Add Task"></i>
+                          </button>
+                      </div>
+
+                      {% include tasks/subtask/card-subtask.html %}
+                    </div>
+
+                    {% include tasks/subtask/table-subtasks.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

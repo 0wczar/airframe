@@ -1,0 +1,74 @@
+---
+layout: sidebar-list
+title:  'Projects'
+projectsListList: 1
+listProjects: 1
+modalDangerListTasks: 1
+---
+<!-- START 2nd Left List -->
+<div class="border-start-0 border-end border-gray-300 col-3">
+    <!-- 2nd Tasks Filters List -->
+    {% include layouts/navbar-filters.html 
+        1class=""
+        2class=""
+        badgesDisabled=""
+        closeProject=""
+        list-link-inc_projects-list-list=""
+            list-active-inc_projects-list-list=""
+        grid-link-inc_projects-list-grid=""
+            grid-active-inc_projects-list-grid=""
+        table-link-inc_projects-list-table=""
+        title="Project Selected"
+    %}
+
+    <!-- 2nd START Tasks List -->
+    <ul class="list-group list-group-flush min-vh-100 overflow-auto border-top border-light">
+        {% include tasks/list-task.html 
+            linkProjectsListListsDetails=""
+            finished=""
+            high=""
+            listClass=""
+            avatar4=""
+        %}
+        {% include tasks/list-task.html 
+            linkProjectsListListsDetails=""
+            backlog=""
+            important=""
+            listClass=""
+            avatar3=""
+        %}
+        {% include tasks/list-task.html
+            linkProjectsListListsDetails="" 
+            rejected=""
+            normal=""
+            listClass=""
+            avatar2=""
+        %}
+        {% include tasks/list-task.html 
+            linkProjectsListListsDetails=""
+            doing=""
+            low=""
+            listClass=""
+            avatar1=""
+        %}
+        {% include tasks/list-task.html
+            linkProjectsListListsDetails="" 
+            todo=""
+            normal=""
+            listClass=""
+            avatar4=""
+        %}
+        {% include tasks/list-task.html
+            linkProjectsListListsDetails="" 
+            listClass=""
+            high=""
+            avatar4=""
+        %}
+    </ul>	
+    <!-- 2nd END Tasks List -->
+</div>
+<!-- END 2nd Left List -->
+
+<div class="col min-vh-100 d-flex flex-column justify-content-center align-items-center">
+    {% include empty-placeholder.html clickTask="" %}
+</div>

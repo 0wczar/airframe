@@ -1,0 +1,9 @@
+- "<span class='badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1'><i class='fa fa-times-circle me-1 text-danger'></i> Cancelled</span>"
+
+- "<span class='badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1'><i class='fa fa-pause-circle me-1 text-warning'></i> Paused</span>"
+
+- "<span class='badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1'><i class='fa fa-play-circle me-1 text-success'></i> Active</span>"
+
+- "<span class='badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1'><i class='fa fa-check-circle me-1 text-primary'></i> Completed</span>"
+
+- "<span class='badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1'><i class='fa fa-clock me-1 text-info'></i> Planned</span>"

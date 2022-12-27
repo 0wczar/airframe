@@ -1,0 +1,25 @@
+<span class="badge badge-light-light rounded-pill text-dark py-2 fw-normal">
+    {% if include.leftIcon %}
+        <i class="fa-solid fa-{{ include.leftIconName }} me-1 text-{{ include.leftIconColor }}"></i>
+    {% else %}
+    {% endif %}
+
+    {% if include.beforeSubtext %}
+        <span class="text-body me-1">{{ include.beforeSubtextTitle }}</span>
+    {% else %}
+    {% endif %}
+
+    {{ include.title }} 
+
+    {% if include.afterSubtext %}
+        <span class="text-body small ms-1">{{ include.afterSubtextTitle }}</span>
+    {% else %}
+    {% endif %}
+
+    {% if include.removeIcon %}
+        <a href="#" class="link-secondary opacity-50 ms-1">
+            <i class="fa-solid fa-times-circle"></i>
+        </a>
+    {% else %}
+    {% endif %}
+  </span>

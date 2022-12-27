@@ -1,0 +1,47 @@
+<!-- START Settings -->
+<div class="bg-white p-4 min-vh-100 overflow-auto border-light">
+    <h5 class="mb-4">Settings</h5>
+    <nav class="nav nav-pills flex-column flex-row">
+        <a class="flex-sm-fill nav-link {% if page.url == "/settings/settings.html" %}active{% endif %}" aria-current="page" href="{{page.root}}/settings/settings.html">
+            <i class="fa-solid fa-user fa-fw me-2 opacity-50"></i> Edit Profile
+        </a>
+        <a class="flex-sm-fill nav-link" href="#">
+            <i class="fa-solid fa-cog fa-fw me-2 opacity-50"></i> Account
+        </a>
+        <a class="flex-sm-fill nav-link {% if page.url == "/settings/password.html" %}active{% endif %}" href="{{page.root}}/settings/password.html">
+            <i class="fa-solid fa-key fa-fw me-2 opacity-50 "></i> Password
+        </a>
+        <a class="flex-sm-fill nav-link d-flex align-items-center" href="#">
+            <i class="fa-solid fa-users fa-fw me-3 opacity-50"></i> Teams 
+            <i class="fa-solid fa-angle-down fa-fw opacity-75 ms-auto"></i>
+        </a>
+        <a class="flex-sm-fill nav-link ps-5 d-flex align-items-center" href="#">
+            webkom.co
+            <i class="fa-solid fa-angle-left fa-fw opacity-75 ms-auto"></i>
+        </a>
+        <a class="flex-sm-fill nav-link ps-5 d-flex align-items-center" href="#">
+            airframe
+            <i class="fa-solid fa-angle-down fa-fw opacity-75 ms-auto"></i>
+        </a>
+        <a class="flex-sm-fill nav-link ps-7 small {% if page.url == "/settings/general.html" %}active{% endif %}" href="{{page.root}}/settings/general.html">
+            General
+        </a>
+        <a class="flex-sm-fill nav-link ps-7 small {% if page.url == "/settings/billings.html" %}active{% endif %}" href="{{page.root}}/settings/billings.html">
+            Billings
+        </a>
+        <a class="flex-sm-fill nav-link ps-7 small {% if page.url == "/settings/members.html" %}active{% endif %}" href="{{page.root}}/settings/members.html">
+            Members
+        </a>
+        <button class="flex-sm-fill ps-5 nav-link d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#modalCreateTeam">
+            <i class="fa-solid fa-plus fa-fw  me-2 "></i>
+            Add Team
+        </button>
+        <a class="flex-sm-fill nav-link" href="#">
+            <i class="fa-solid fa-credit-card fa-fw me-2 opacity-50"></i> Billings
+        </a>
+        <a class="flex-sm-fill nav-link {% if page.url == "/settings/notifications.html" %}active{% endif %}" href="{{page.root}}/settings/notifications.html">
+            <i class="fa-solid fa-bell fa-fw me-2 opacity-50"></i> Notifications
+        </a>
+      </nav>
+</div>	
+<!-- END Settings -->

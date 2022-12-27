@@ -1,0 +1,93 @@
+<!-- START Modal Example -->
+<div class="modal-dialog">
+
+    {% if include.closeOutside %}
+        <!-- Close Button -->
+        <button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle" style="z-index: 999;"
+            data-bs-dismiss="modal">
+            <span class="fa-stack" style="font-size: 0.7em;">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fa fa-times fa-stack-1x"></i>
+            </span>
+        </button>
+    {% else %}
+    {% endif %}
+
+    <div class="modal-content rounded-5 overflow-auto shadow-sm">
+
+        {% if include.headerOff %}
+        {% else %}
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Modal title</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        {% endif %}
+
+        {% if include.contextualDanger %}
+            <!-- Modal Body Danger -->
+            <div class="modal-body px-5 pt-5">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <span class="fa-stack fa-2x mb-3">
+                        <i class="fas fa-circle fa-stack-2x text-danger opacity-25"></i>
+                        <i class="fas fa-times fa-stack-1x fa-inverse text-danger"></i>
+                    </span>
+                    <h5 class="mb-3 text-center">Are you sure do you want delete these files?</h5>
+                    <p class="text-center">Are you sure you want to deactivate your account? All of your data will be
+                        permanently removed. This action cannot be undone.</p>
+                </div>
+            </div>
+        {% elsif include.centerHeader %}
+            <!-- Modal Body Danger -->
+            <div class="modal-body px-5 pt-5">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <h2 class="mb-3 text-center fw-light mb-4">Modal Title</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia possimus labore assumenda a cum itaque quia asperiores dignissimos suscipit laboriosam?</p>
+                </div>
+            </div>
+        {% elsif include.bodyWithHeader %}
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <h6 class="mb-3">Modal Title</h6>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia possimus labore assumenda a cum itaque
+                quia asperiores dignissimos suscipit laboriosam?
+            </div>
+        {% else %}
+            <!-- Modal Body -->
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia possimus labore assumenda a cum itaque
+                quia asperiores dignissimos suscipit laboriosam?
+            </div>
+        {% endif %}
+
+        {% if include.footerFull %}
+            <!-- Modal Full Footer -->
+            <div class="modal-footer hstack p-0 m-0 bg-light rounded-bottom">
+                <button type="button"
+                    class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end"
+                    data-bs-dismiss="modal">Close</button>
+                <a role="button" href="{{page.root}}/"
+                    class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0">Save</a>
+            </div>
+        {% elsif include.contextualDanger %}
+            <!-- Modal Full Footer Danger -->
+            <div class="modal-footer hstack p-0 m-0 bg-light rounded-bottom">
+                <button type="button"
+                    class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end"
+                    data-bs-dismiss="modal">Close</button>
+                <a role="button" href="{{page.root}}/"
+                    class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete
+                    now</a>
+            </div>
+        {% else %}
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link dark-link text-decoration-none"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+<!-- END Modal Example -->

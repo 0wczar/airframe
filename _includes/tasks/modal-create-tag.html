@@ -1,0 +1,69 @@
+    <!-- START Modal: Create New Tag -->
+    <div class="modal fade" id="modalCreateTag" tabindex="-1" aria-labelledby="modalCreateTag" aria-hidden="true">
+
+        <!-- Content -->
+        <div class="modal-dialog modal-sm position-relative">
+
+        <!-- Right Close Button -->
+        <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
+            <span class="fa-stack" style="font-size: 0.7em;">
+                <i class="fa-solid fa-circle fa-stack-2x text-muted"></i>
+                <i class="fa-solid fa-times fa-stack-1x text-white"></i>
+            </span>
+        </span>
+          
+          <div class="modal-content rounded-5 shadow-sm overflow-auto">
+            
+            <!-- Content -->
+            <div class="modal-body px-4 pt-4">
+              <div class="d-flex flex-column">
+                
+                <h5 class="mb-4 text-center fw-normal">
+                  Create New Tag
+                </h5>
+                
+                <!-- Preview -->
+                <div class="mb-4">
+                  <div for="" class="mb-2">Preview</div>
+                  
+                  <span class="badge badge-light-light rounded-pill text-dark py-2 fw-normal">
+                    <i class="fa fa-circle me-1 text-success"></i>
+                    <span class="me-1 text-body">Tag</span>My Example Tag
+                    <a href="#" class="text-body opacity-50 ms-1">
+                      <i class="fa fa-times-circle"></i>
+                    </a>
+                  </span>
+                </div>
+                
+                <!-- Tag Name -->
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label">Title</label>
+                  <input type="text" class="form-control form-control" value="My Example Tag" id="exampleFormControlInput1" placeholder="Enter...">
+                </div>
+                
+                <!-- Color -->
+                <div class="mb-4">
+                  <label for="inputColor" class="form-label">Color</label>
+                  <div class="hstack gap-2">
+                    <button type="button" class="btn btn-success">
+                      <i class="fa fa-sync-alt"></i>
+                    </button>
+                    <input type="input" class="form-control" id="inputColor" value="#87HTY" placeholder="Enter...">
+                   </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="modal-footer hstack p-0 m-0 bg-light rounded-bottom">
+              <button type="button" class="btn flex-fill rounded-0 py-3 btn-link text-secondary text-decoration-none m-0">Cancel</button>
+              <div class="vr m-0 bg-dark"></div>
+              <button type="button" class="btn flex-fill rounded-0 btn-link py-3 text-dark text-decoration-none m-0">Save</button>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+    <!-- END Modal: Create New Tag -->

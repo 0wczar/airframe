@@ -1,0 +1,174 @@
+<article class="my-3" id="navs">
+  <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+    <h3>Navs</h3>
+    <a class="d-flex align-items-center" href="../components/navs-tabs/">Documentation</a>
+  </div>
+
+  <div>
+    <h5 class="mb-4">Default Navs</h5>
+    <div class="bd-example mb-4">
+      <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled">Disabled</a>
+      </nav>
+    </div>
+
+    <div class="bd-example">
+      <nav>
+        <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+            role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+            role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab
+            will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content
+            visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another
+            tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+            content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered
+            navigation.</p>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another
+            tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+            content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered
+            navigation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bd-example mb-4">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <h5 class="mt-5 mb-4">Custom Navs</h5>
+    <div class="bd-example mb-4">
+      <!-- START Tabs Line Primary -->
+      <ul class="nav nav-tabs nav-line-primary mb-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <i class="fa fa-user me-2"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-cog me-2">
+            </i>
+            Settings
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-power-off me-2"></i>
+            Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+            <i class="fa fa-heart me-2"></i>
+            Favorites</a>
+        </li>
+      </ul>
+      <!-- END Tabs Line Primary -->
+    </div>
+
+    <div class="bd-example mb-4">
+      <!-- START Tabs Line Primary Icon -->
+      <ul class="nav nav-tabs nav-line-primary">
+        <li class="nav-item">
+          <a class="nav-link nav-line active" aria-current="page" href="#">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-th position-relative">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2
+                <span class="visually-hidden">
+                  unread messages
+                </span>
+              </span>
+            </i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-columns"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+            <i class="fa fa-plus"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- END Tabs Primary Icon -->
+    </div>
+
+    <div class="bd-example mb-4">
+      <!-- START Card with Tabs Line -->
+      <div class="card text-center shadow-sm mb-5">
+        <div class="card-header border-0">
+          <!-- START Tabs Line Default -->
+          <ul class="nav nav-tabs nav-line-primary card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa fa-user me-2"></i>
+                Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa fa-cog me-2">
+                </i>
+                Settings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa fa-power-off me-2"></i>
+                Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                <i class="fa fa-heart me-2"></i>
+                Favorites</a>
+            </li>
+          </ul>
+          <!-- END Tabs Line Default -->
+        </div>
+        <div class="card-body">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <!-- END Card with Tabs Line -->
+    </div>
+
+
+  </div>
+</article>

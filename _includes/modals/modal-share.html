@@ -1,0 +1,127 @@
+<!-- START Modal Share -->
+<div class="modal fade" id="modalShare" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+	<!-- START Modal Content -->
+	<div class="modal-dialog rounded-5 shadow-sm position-relative">
+		<!-- Close Button -->
+		<button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle"
+			style="z-index: 999;" data-bs-dismiss="modal">
+			<span class="fa-stack" style="font-size: 0.7em;">
+				<i class="fa-solid fa-circle fa-stack-2x text-body"></i>
+				<i class="fa-solid fa-times fa-stack-1x text-white"></i>
+			</span>
+		</button>
+
+		<!-- START CONTENT -->
+		<div class="modal-content shadow-sm rounded-5 overflow-auto">
+			<!-- START Header with Search -->
+			<div class="d-flex flex-column px-4 pt-4 pb-2 justify-content-center border-bottom border-gray-200">
+				<h5 class="text-center fw-normal pb-3">
+					Share
+				</h5>
+
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" aria-label="Text input with dropdown button"
+						placeholder="Enter email...">
+					<button class="btn btn-outline-light text-dark px-3" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">Can View <i
+							class="fa fa-angle-down ms-1 text-body text-opacity-50"></i></button>
+					<ul class="dropdown-menu dropdown-menu-end shadow-sm">
+						<li><a class="dropdown-item" href="#">Can Edit</a></li>
+						<li><a class="dropdown-item" href="#">Can View</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Custom</a></li>
+					</ul>
+					<button class="btn btn-primary px-3" type="button">Send Ivite</button>
+				</div>
+
+			</div>
+			<!-- END Header with Search -->
+
+			<!-- START List -->
+			<ul class="list-group list-group-flush list-modal">
+
+				{% for user in site.data.modalSelectUsers %}
+				<!-- START LI: User -->
+				<li class="list-group-item list-group-item-action d-flex pe-auto" data-bs-toggle="button"
+					aria-current="true">
+					<!-- START Avatar Image Small Pill with Status -->
+					<div class="me-3 d-flex align-items-center">
+						<div class="position-relative">
+							<img class="avatar-sm rounded-pill" src="{{page.root}}/{{ site.data.avatars | sample }}"
+								alt="{{ user.title }}" alt="{{ user.title }}">
+							<span
+								class="position-absolute top-100 start-100 badge border border-light rounded-circle bg-{{ site.data.statusColor | sample }} p-1"
+								style="transform: translate(-90%,-80%);"><span class="visually-hidden">unread
+									messages</span></span>
+						</div>
+					</div>
+					<!-- END Avatar Image Small Pill with Status -->
+					<div class="flex-grow-1">
+						<div class="h6 fw-normal mb-0">{{ site.data.names | sample }}</div>
+						<small>{{ site.data.emails | sample }}</small>
+					</div>
+
+					<div class="dropdown align-self-center">
+						<button class="btn btn-link text-dark text-decoration-none" type="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Can View <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+						</button>
+						<ul class="dropdown-menu shadow-sm">
+							<li><a class="dropdown-item" href="#">Can View</a></li>
+							<li><a class="dropdown-item" href="#">Can Edit</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Remove</a></li>
+						</ul>
+					</div>
+				</li>
+				<!-- END LI: User -->
+				{% endfor %}
+
+			</ul>
+			<!-- END List -->
+
+
+
+			<!-- START Footer -->
+			<div class="modal-footer p-0 m-0 bg-light rounded-bottom py-3 ps-2 pe-3 d-flex">
+				<div class="dropdown">
+					<button class="btn btn-link text-body text-decoration-none" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Anyone with the link <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Anyone with the link</a></li>
+						<li><a class="dropdown-item" href="#">Only people invited to this project</a></li>
+					</ul>
+				</div>
+
+				<div class="dropdown">
+					<button class="btn btn-link text-body text-decoration-none" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Can Edit <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Can Edit</a></li>
+						<li><a class="dropdown-item" href="#">Can View</a></li>
+				</div>
+
+
+				<button type="button" class="btn btn-primary px-3 ms-auto">
+					<i class="fa fa-link me-1"></i>
+					Copy Link
+				</button>
+			</div>
+			<!-- END Footer -->
+		</div>
+		<!-- END CONTENT -->
+
+	</div>
+	<!-- END Modal Content -->
+
+</div>
+<!-- END Modal Share -->

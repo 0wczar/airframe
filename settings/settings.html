@@ -1,0 +1,113 @@
+---
+layout: sidebar-list
+title:  'Settings'
+offNavbarFilters: 1
+onSettings: 1
+---
+<div class="col min-vh-100">
+
+    <div class="container-sm pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+                {% include settings/header-settings.html 
+                    title="Settings"
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                %}
+
+                <!-- START Card: Settings -->
+                <div class="card shadow-sm rounded-5">
+
+                    <div class="card-body px-4 pt-4">
+                        <div class="mb-4">
+                            <h5>Profile</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Username</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">webkom.co/</span>
+                                <input type="text" class="form-control" value="tomasz" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Photo</label>
+                            <div class="hstack gap-1">
+                                <img class="avatar rounded-pill me-3" src="https://randomuser.me/api/portraits/women/65.jpg">
+                                <button type="button" class="btn btn-outline-primary px-3">Change</button>
+                                <button type="button" class="btn btn-link text-muted text-decoration-none">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <div id="passwordHelpBlock" class="form-text">
+                                Brief description for your profile. URLs are hyperlinked.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="opacity: 0.12;" />
+
+                    <div class="card-body px-4 pb-4">
+                        <div class="mb-3">
+                            <h5>Personal Information</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Language</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer border-top-0 d-flex py-3">
+                        <button class="btn px-3 btn-primary ms-auto" role="button">
+                            Save
+                        </button>
+                    </div>
+
+                </div>
+                <!-- END Card: Settings -->
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

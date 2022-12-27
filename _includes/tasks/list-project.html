@@ -1,0 +1,161 @@
+                        <!-- START List Item Project -->
+                        <li class="list-group-item list-group-item-action {% if include.listClass %} bg-light {{ listClass }} {% else %} {% endif %}">
+
+                            <!-- List Header -->
+                            <div class="pb-1 pt-1 d-flex justify-content-between align-items-center">
+                                <div class="me-auto d-flex">
+                                    <button type="button" class="btn btn-link btn-sm text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Favorites">
+                                        <i class="fa-solid fa-star"></i>
+                                    </button>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <span class="me-2">
+                                        {{ site.data.percents | sample }}%
+                                    </span>
+                                    {% if include.cancelled %}
+                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                            <i class="fa-solid fa-times-circle me-1 text-danger"></i>
+                                            Cancelled
+                                        </span>
+                                    {% elsif include.paused %}
+                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                            <i class="fa-solid fa-pause-circle me-1 text-warning"></i>
+                                            Paused
+                                        </span>
+                                    {% elsif include.active %}
+                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                            <i class="fa-solid fa-play-circle me-1 text-success"></i>
+                                            Active
+                                        </span>
+                                    {% elsif include.completed %}
+                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                            <i class="fa-solid fa-check-circle me-1 text-primary"></i>
+                                            Completed
+                                        </span>
+                                    {% elsif include.planned %}
+                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                            <i class="fa-solid fa-clock me-1 text-info"></i>
+                                            Planned
+                                        </span> 
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- List Title -->
+                            <div class="mb-3">
+                                <a href="{{page.root}}/projects/list/list" class="text-dark ps-2 align-items-center"> 
+                                    <i class="fa-solid fa-circle fa-fw me-2 text-{{ site.data.colors | sample }}"></i>{{ site.data.projectsTitles | sample }}
+                                </a>
+                            </div>
+
+                            <!-- List Description -->
+                            <dl class="row  mb-1 px-2">
+                                <dt class="col-sm-3 mb-1 fw-normal">Updated:</dt>
+                                <dd class="col-sm-9 mb-1">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</dd>
+                              
+                                <dt class="col-sm-3  fw-normal">Due Date:</dt>
+                                <dd class="col-sm-9">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</dd>
+                            </dl>
+
+                            <!-- List Avatars -->
+                            <div class="d-flex ps-3 pb-3">
+                                    {% if include.avatar4 %} 
+                                        <!-- START Avatars #4 -->
+                                        <div class="d-inline-flex">
+        
+                                            <!-- Members -->
+                                            <div class="avatars d-flex">
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                            </div>
+
+                                            <!-- Edit -->
+                                            <div class="btn-group">
+                                                <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                                                    <i class="fa-solid fa-pen small text-body"></i>
+                                                </button>
+                                                {% include tasks/dropdown-assigned.html %}
+                                            </div>
+                                        </div>
+                                        <!-- END Avatars #4 -->
+                                    {% elsif include.avatar3 %}
+                                        <!-- START Avatars #3 -->
+                                        <div class="d-inline-flex">
+
+                                            <!-- Members -->
+                                            <div class="avatars d-flex">
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                            </div>
+
+                                            <!-- Edit -->
+                                            <div class="btn-group">
+                                                <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                                                    <i class="fa-solid fa-pen small text-muted"></i>
+                                                </button>
+                                                {% include tasks/dropdown-assigned.html %}
+                                            </div>
+
+                                        </div>
+                                        <!-- END Avatars #3 -->
+                                    {% elsif include.avatar2 %}
+                                        <!-- START Avatars #2 -->
+                                        <div class="d-inline-flex">
+
+                                            <!-- Members -->
+                                            <div class="avatars d-flex">
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                                <div class="avatars__item"> 
+                                                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                                                </div>
+                                            </div>
+
+                                            <!-- Edit -->
+                                            <div class="btn-group">
+                                                <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                                                    <i class="fa-solid fa-pen small text-muted"></i>
+                                                </button>
+                                                {% include tasks/dropdown-assigned.html %}
+                                            </div>
+                                        </div>
+                                        <!-- END Avatars #2 -->
+                                    {% else include.avatar1 %}
+                                        <!-- START Avatars #1 -->
+                                        <div class="d-inline-flex">
+                                            <!-- Edit -->
+                                            <div class="btn-group">
+                                                <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                                                    <i class="fa-solid fa-plus small text-muted"></i>
+                                                </button>
+                                                {% include tasks/dropdown-assigned.html %}
+                                            </div>
+                                        </div>
+                                        <!-- END Avatars #1 -->
+                                    {% endif %}
+                                <div class="ms-auto">
+                                    {% include tasks/dropdown-options.html %}
+                                </div>
+                                
+                            </div>
+                        </li>
+                        <!-- END List Item Project -->

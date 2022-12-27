@@ -1,0 +1,5 @@
+- icon: history
+  color: secondary
+
+- icon: finished
+  color: success

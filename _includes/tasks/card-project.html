@@ -1,0 +1,80 @@
+<!-- START CARD PROJECT -->
+    <div class="card shadow-sm">
+
+      <!-- Card Header -->
+      <div class="card-body pb-0 d-flex justify-content-between px-3 pt-4 pb-1">
+        <div class="d-flex align-items-center">
+            {{ site.data.badgesProjects | sample }}
+            <span class="ms-3">
+                {{ site.data.percents | sample }}%
+            </span>
+        </div>
+      
+      </div>
+
+      <!-- START Card Body -->
+      <div class="card-body pe-4">
+
+        <div class="d-flex pb-3">
+            <a href="{{page.root}}/tasks/grid/" class="text-dark align-items-center"> 
+                <i class="fa-solid fa-circle fa-fw me-2 text-{{ site.data.colors | sample }}"></i>{{ site.data.projectsTitles | sample }}
+            </a>
+        </div>
+
+        <!-- List Description -->
+        <dl class="row mb-2">
+            <dt class="col-sm-3 mb-1 fw-normal">Updated:</dt>
+            <dd class="col-sm-9 mb-1">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</dd>
+            
+            <dt class="col-sm-3 fw-normal">Due Date:</dt>
+            <dd class="col-sm-9">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</dd>
+        </dl>
+
+        <!-- Avatars -->
+        <div class="d-inline-flex mb-2">
+
+          <div class="avatars d-flex ms-2">
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+          </div>
+
+          <div class="btn-group ms-1">
+            <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small text-body"></i>
+            </button>
+            {% include tasks/dropdown-assigned.html %}
+          </div>
+
+
+
+          
+        </div>
+
+
+      </div>
+      <!-- END Card Body -->
+
+      <!-- START Cart Footer -->
+      <div class="card-footer border-0 px-2 d-flex justify-content-between">
+
+        <button type="button" class="btn btn-link btn-sm text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Favorites">
+          <i class="fa-solid fa-star"></i>
+        </button>
+
+        {% include tasks/dropdown-options.html 
+          modalDangerListTasks=""
+        %}
+      </div>
+
+    </div>
+    <!-- END CARD PROJECT -->

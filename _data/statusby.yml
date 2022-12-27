@@ -1,0 +1,25 @@
+- title: Backlog
+  icon: history
+  iconColor:
+  rightIcon: fa-check
+  class: active
+
+- title: To Do
+  icon: circle-notch
+  iconColor: text-warning
+  rightIcon:
+
+- title: Finished
+  icon: check
+  iconColor: text-success
+  rightIcon:
+
+- title: Doing
+  icon: clock
+  iconColor: text-info
+  rightIcon:
+
+- title: Rejected
+  icon: times
+  iconColor: text-danger
+  rightIcon: 

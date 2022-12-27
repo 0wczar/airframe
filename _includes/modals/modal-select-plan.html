@@ -1,0 +1,76 @@
+    <!-- START Modal: Select Plan -->
+    <div class="modal fade" id="modalSelectPlan" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    
+        <div class="modal-dialog modal-xl position-relative show">
+
+            <!-- Right Close Button -->
+            <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
+                <span class="fa-stack" style="font-size: 0.7em;">
+                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
+                    <i class="far fa-times fa-stack-1x text-white"></i>
+                </span>
+            </span>
+            
+            <!-- Content -->
+            <div class="modal-content rounded-5 shadow-sm overflow-auto">
+ 
+                <div class="modal-body px-4 pt-4 pb-4">
+                    <h4 class="mb-3 text-center fw-normal">
+                        Pricing Plan
+                    </h4>
+                    <p class="text-center mb-3">Start buliding for free, then add a site plan to go live. Account plans unlock additional features.</p>
+
+                    <ul class="nav nav-pills justify-content-center mb-5">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-5 active" aria-current="page" href="#">Monthly billing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Yearly billing</a>
+                        </li>
+                    </ul>
+
+                    <div class="container-fluid mb-3">
+                        <div class="row row-cols-1 row-cols-md-3 g-3">
+                            <div class="col">
+                                {% include settings/card-pricing-plan.html 
+                                    title="Basic"
+                                    price="10"
+                                    two=""
+                                    selected=""
+                                    cardClass="border-primary"
+                                %}
+                            </div>
+                            <div class="col">
+                                {% include settings/card-pricing-plan.html 
+                                    title="Premium"
+                                    price="25"
+                                    three=""
+                                %}
+                            </div>
+                            <div class="col">
+                                {% include settings/card-pricing-plan.html 
+                                    title="Team"
+                                    price="30"
+                                    four=""
+                                %}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer small m-0 bg-light d-flex justify-content-center border-0">
+                    If you want to reduce your plan to <strong>Free</strong> with a limited space and the number of users press <a href="#" class="text-dark"> here</a>
+                </div>
+                
+            </div>
+            
+
+
+          </div>
+        </div>
+
+    </div>
+    <!-- END Modal: Select Plan -->

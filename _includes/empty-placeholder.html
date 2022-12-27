@@ -1,0 +1,48 @@
+
+    {% if include.addTask %}
+        <!-- Icon -->
+        <span class="fa-stack fa-2x mb-4">
+            <i class="fa-solid fa-circle fa-stack-2x text-body opacity-25"></i>
+            <i class="fa-solid fa-pen fa-stack-1x text-body"></i>
+        </span>
+        <!-- Text with Description -->
+        <h5>There are no Tasks</h5>
+        <p class="mb-4 text-body">
+            In the upper right corner there is a blue button + and below where you can add a task.
+        </p>
+        <!-- Button -->
+        <button type="button" href="#" class="btn btn-primary px-4 rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
+            <i class="fa-solid fa-plus me-1"></i> Add Task
+        </button>
+    {% elsif include.clickProject %}
+        <!-- Icon -->
+        <span class="fa-stack fa-2x mb-4">
+            <i class="fa-solid fa-circle fa-stack-2x text-body opacity-25"></i>
+            <i class="fa-solid fa-list fa-stack-1x text-body"></i>
+        </span>
+        <h5>On the left side</h5>
+        <!-- Text with Description -->
+        <p class="mb-4 text-body">
+            You have projects and if you press then you will see here a list of tasks.
+        </p>
+    {% elsif include.clickTask %}
+        <!-- Icon -->
+        <span class="fa-stack fa-2x mb-4">
+            <i class="fa-solid fa-circle fa-stack-2x text-body opacity-25"></i>
+            <i class="fa-solid fa-check fa-stack-1x text-body"></i>
+        </span>
+        <h5>On the left side</h5>
+        <!-- Text with Description -->
+        <p class="mb-4 text-body">
+            You have tasks, and if you press one then you will see details.
+        </p>
+    {% else %}
+        <!-- START Empty State Placeholder -->
+        <div class="text-center">
+            <i class="fa-solid fa-list fa-3x text-body mb-3"></i>
+            <div class="small text-body">
+                Click on a project on the left to see the task list.
+            </div>
+        </div>
+        <!-- END Empty State Placeholder -->
+    {% endif %}

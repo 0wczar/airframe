@@ -1,0 +1,366 @@
+  <!-- START Demo Modal Filter -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="{{ include.modalName }}">
+    <div class="modal-dialog  modal-dialog-scrollable">
+
+        <!-- Close Button -->
+        <button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle" style="z-index: 999;" data-bs-dismiss="modal">
+            <span class="fa-stack" style="font-size: 0.7em;">
+                <i class="fa-solid fa-circle fa-stack-2x text-body"></i>
+                <i class="fa-solid fa-times fa-stack-1x"></i>
+            </span>
+        </button>
+
+      <div class="modal-content rounded-4 shadow-lg overflow-hidden">
+
+        <!-- START Filter Input + Back -->
+        <div class="input-group input-group-lg border-bottom">
+            {% if include.inputBack %}
+                <button class="btn btn-link link-dark bg-light" type="button" data-bs-toggle="modal" href="#modalStart">
+                    <i class="fa fas fa-chevron-left small opacity-50"></i>
+                </button>
+            {% else %}
+            {% endif %}
+
+            <input 
+                type="text" 
+                class="form-control border-0" 
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                placeholder="{{ include.placholderTitle }}"
+            >
+            {% if include.inputCheck %}
+                <button class="btn btn-link link-success bg-light {{ include.rightCheckClass }}" type="button" data-bs-dismiss="modal">
+                    <i class="fa fas small fa-check"></i>
+                </button>
+            {% else %}
+            {% endif %}
+
+            {% if include.inputClose %}
+                <button class="btn btn-link link-dark bg-light" type="button" data-bs-dismiss="modal">
+                    <i class="fa fas fa-times small opacity-50"></i>
+                </button>
+            {% else %}
+            {% endif %}
+        </div>
+        <!-- END Filter Input + Back -->
+
+        <!-- START Mini Navbar: Results with Reset -->
+        <div class="bg-light {% if include.navbarStyleAlone %} px-3 pt-2 pb-2 border-bottom border-white {% else %} px-3 py-2 {% endif %}">
+            <!-- Reset -->
+            <div class="d-flex justify-content-between align-items-center overflow-auto">
+                <span class="small text-body">
+                    {{ include.navbarTitle }}
+                </span>
+                {% if include.navbarReset %}
+                    <a href="#" class="link-dark small">
+                        Reset All Filters
+                    </a>
+                {% else %}
+
+                {% endif %}
+            </div>
+          </div>
+          <!-- END Mini Navbar: Results with Reset -->
+
+
+
+        {% if include.navbarBadgesAssignee %}
+            <!-- START Badges: Assignee -->
+            <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+                {% include cheatsheet/badge/badge-example.html 
+                    avatar=""
+                    withSubtitle=""
+                        withSubtitleTitle="Person"
+                    withClose=""
+                    withResult=""
+                    withSubtitle=""
+                %}
+
+                {% include cheatsheet/badge/badge-example.html 
+                    avatarInitials=""
+                    withSubtitle=""
+                        withSubtitleTitle="Person"
+                    withClose=""
+                    withResult=""
+                    withSubtitle=""
+                  %}
+
+                  {% include cheatsheet/badge/badge-example.html 
+                    avatarIcon=""
+                    withSubtitle=""
+                        withSubtitleTitle="Person"
+                    withClose=""
+                    withResult=""
+                    withSubtitle=""
+                  %}
+
+            </div>
+            <!-- END Badges: Assignee -->
+                
+        {% elsif include.navbarBadgesStatus %}
+                <!-- START Badges: Status -->
+                <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+
+                    {% include cheatsheet/badge/badge-example.html
+                        iconMs2Me1=""
+                            iconMs2Me1-Name="history"
+                            iconMs2Me1-Color="body"
+                        titleCustom=""
+                            title="Backlog"
+                        withClose=""
+                        withResult=""
+                        withSubtitle=""
+                    %}
+
+                    {% include cheatsheet/badge/badge-example.html
+                        iconMs2Me1=""
+                            iconMs2Me1-Name="circle-notch"
+                            iconMs2Me1-Color="warning"
+                        titleCustom=""
+                            title="To Do"
+                        withClose=""
+                        withResult=""
+                        withSubtitle=""
+                    %}
+
+                    {% include cheatsheet/badge/badge-example.html
+                        iconMs2Me1=""
+                            iconMs2Me1-Name="check"
+                            iconMs2Me1-Color="success"
+                        titleCustom=""
+                            title="Finished"
+                        withClose=""
+                        withResult=""
+                        withSubtitle=""
+                    %}
+
+                    {% include cheatsheet/badge/badge-example.html
+                        iconMs2Me1=""
+                            iconMs2Me1-Name="clock"
+                            iconMs2Me1-Color="info"
+                        titleCustom=""
+                            title="Doing"
+                        withClose=""
+                        withResult=""
+                        withSubtitle=""
+                    %}
+
+                    {% include cheatsheet/badge/badge-example.html
+                        iconMs2Me1=""
+                            iconMs2Me1-Name="times"
+                            iconMs2Me1-Color="danger"
+                        titleCustom=""
+                            title="Rejected"
+                        withClose=""
+                        withResult=""
+                        withSubtitle=""
+                    %}
+
+                </div>
+                <!-- END Badges: Status -->
+
+
+                {% elsif include.navbarBadgesPriority %}
+                    <!-- START Badges: Priority -->
+                    <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="danger"
+                            titleCustom=""
+                                title="Important"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="primary"
+                            titleCustom=""
+                                title="Normal"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="warning"
+                            titleCustom=""
+                                title="High"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="muted"
+                            titleCustom=""
+                                title="Low"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                    </div>
+                    <!-- END Badges: Priority -->
+
+                {% elsif include.navbarBadgesTag %}
+                    <!-- START Badges: Tag -->
+                    <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="success"
+                            titleCustom=""
+                                title="Usability"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="danger"
+                            titleCustom=""
+                                title="UI"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="warning"
+                            titleCustom=""
+                                title="Beta"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                        {% include cheatsheet/badge/badge-example.html
+                            iconColorSelected=""
+                                iconColorSelected-Color="primary"
+                            titleCustom=""
+                                title="Javascript"
+                            withClose=""
+                            withResult=""
+                            withSubtitle=""
+                        %}
+
+                    </div>
+                    <!-- END Badges: Tag -->
+
+            {% else  %}
+
+            {% endif %}
+
+        <div class="list-group list-group-flush list-modal overflow-scroll" style="border-bottom-right-radius: calc(.5rem - 1px) !important; border-bottom-left-radius: calc(.5rem - 1px) !important;">
+            {% if include.modalAssignee %}
+                {% for user in site.data.users %}
+                <!-- START Li Modal Assignee -->
+                <a class="list-group-item list-group-item-action p-33 d-flex {{ user.class }}" data-bs-toggle="button">
+                    <div class="me-3 d-flex align-items-center">
+                        <img class="avatar-sm rounded-pill" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="flex-grow-1">
+                        <div>{{ user.title }} <small class="text-body ms-3"> {{ site.data.numbers | sample }} </small></div>
+                        <small>{{ user.subtitle }}</small>
+                    </div>
+                    <div class="me-3 d-flex align-items-center">
+                        <i class="far fa-fw {{ user.rightIcon }}"></i>
+                    </div>
+                </a>
+                <!-- END Li Modal Assignee -->
+                {% endfor %}
+            {% elsif include.modalFilterBy %}
+                {% for filter in site.data.filterby %}
+                <!-- START Li Modal Filter By -->
+                <a class="list-group-item list-group-item-action p-2 d-flex" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#{{ filter.modalLink }}" role="button" >
+                    <div class="me-2 d-flex align-items-center">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fas fa-stack-2x"></i>
+                            <i class="fas fa-search fa-stack-1x opacity-50"></i>
+                        </span>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="text-dark">{{ filter.title }}</div>
+                        <small>{{ filter.subtitle }}</small>
+                    </div>
+                    <div class="me-3 d-flex align-items-center">
+                        {% if filter.rightBadge %}
+                            <span class="badge rounded-pill bg-danger">1</span>
+                        {% else %}
+                        {% endif %}
+                    </div>
+                </a>
+                <!-- END Li Modal Filter By -->
+                {% endfor %}
+            {% elsif include.modalStatusBy %}
+                {% for status in site.data.statusby %}
+                <!-- START Li Modal Status -->
+                <a class="list-group-item list-group-item-action p-2 d-flex {{ status.class }}" data-bs-toggle="button" role="button">
+                    <div class="me-2 d-flex align-items-center">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fas fa-stack-2x"></i>
+                            <i class="fas fa-{{ status.icon }} fa-stack-1x {{ status.iconColor }}"></i>
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 align-self-center">
+                        <div>{{ status.title }} <small class="text-body ms-3"> {{ site.data.numbers | sample }} </small></div>
+                    </div>
+                    <div class="me-3 d-flex align-items-center">
+                        <i class="far fa-fw {{ status.rightIcon }}"></i>
+                    </div>
+                </a>
+                <!-- END Li Modal Status -->
+                {% endfor %}
+            {% elsif include.modalTagBy %}
+                {% for tag in site.data.tagby %}
+                <!-- START Li Modal Tag -->
+                <a class="list-group-item list-group-item-action p-2 d-flex {{ tag.class }}" data-bs-toggle="button" role="button">
+                    <div class="me-2 d-flex align-items-center">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fas fa-stack-2x"></i>
+                            <i class="fas fa-circle fa-stack-1x {{ tag.iconColor }}"></i>
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 align-self-center">
+                        <div>{{ tag.title }} <small class="text-body ms-3"> {{ site.data.numbers | sample }} </small></div>
+                    </div>
+                    <div class="me-3 d-flex align-items-center">
+                        <i class="far fa-fw {{ tag.rightIcon }}"></i>
+                    </div>
+                </a>
+                <!-- END Li Modal Tag -->
+                {% endfor %}
+            {% elsif include.modalPriorityBy %}
+                {% for priority in site.data.priorityby %}
+                <!-- START Li Priority Tag -->
+                <a class="list-group-item list-group-item-action p-2 d-flex {{ priority.class }}" data-bs-toggle="button" role="button">
+                    <div class="me-2 d-flex align-items-center">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fas fa-stack-2x"></i>
+                            <i class="fas fa-circle fa-stack-1x {{ priority.iconColor }}"></i>
+                        </span>
+                    </div>
+                    <div class="flex-grow-1 align-self-center">
+                        <div>{{ priority.title }} <small class="text-body ms-3"> {{ site.data.numbers | sample }} </small></div>
+                    </div>
+                    <div class="me-3 d-flex align-items-center">
+                        <i class="far fa-fw {{ priority.rightIcon }}"></i>
+                    </div>
+                </a>
+                <!-- END Li Priority Tag -->
+                {% endfor %}
+
+            {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END Demo Modal Filter -->

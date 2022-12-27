@@ -1,0 +1,31 @@
+<!-- START Toast {{ include.color }} -->
+<div id="liveToast" class="toast {% if include.toast-color %} toast-{{ include.color }} {% else %} toast-{{ include.bg }}-{{ include.color }} {% endif %} p-2 mb-4 show" role="alert" aria-live="assertive" aria-atomic="true">
+    {% if include.headerOff %}
+
+    {% else %}
+        <!-- Toast Header -->
+        <div class="toast-header">
+            <i class="fa fa-info-circle fa-fw me-2"></i>
+            <strong class="me-auto text-uppercase">{{ include.color }}</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close {% if include.closeDark %} btn-close-white {% else %} {% endif %}" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    {% endif %}
+
+    <!-- Toast Body -->
+    <div class="toast-body">
+      Hello, world! This is a toast message. Hello, world! This is a toast message.Hello, world! This is a toast message.
+
+      {% if include.footerOff %}
+
+      {% else %}
+        <!-- Toast Footer -->
+        <div class="mt-2 pt-2">
+            <button type="button" class="btn {% if include.btn-white %} btn-light {% else %} btn-{{ include.color }} {% endif %}">I Understand</button>
+            <button type="button" class="btn btn-link" data-bs-dismiss="toast">Close</button>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+<!-- END Toast {{ include.color }} -->

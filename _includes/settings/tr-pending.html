@@ -1,0 +1,17 @@
+                    <!-- START TR: Members -->
+                    <tr>
+                        <th scope="row" class="align-middle">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        </th>
+                        <td class="align-middle text-dark">{{ site.data.emails | sample }}</td>
+                        <td class="align-middle">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</td>
+                        <td class="text-end align-middle">
+                            <button class="btn btn-link text-decoration-none btn-sm text-body rounded-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-copy fa-fw me-1 opacity-75 text-body"></i> Copy Invitation Link
+                            </button>
+                            <button class="btn btn-link text-decoration-none btn-sm text-body rounded-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-times fa-fw me-1 opacity-75 text-body"></i> Remove
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- END TR: Members -->

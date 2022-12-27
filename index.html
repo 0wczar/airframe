@@ -1,0 +1,47 @@
+---
+layout: slim-sidebar
+title:  'Projects'
+projectsTable: 1
+bodyClass: 'bg-white'
+---
+<div class="table-responsive-md">
+  <table class="table table-hover mt-2">
+      <thead class="border-bottom">
+        <tr>
+          <th scope="col" width=30></th>
+          <th scope="col" width=30></th>
+          <th scope="col" class="small fw-normal">Title</th>
+          <th scope="col" class="small fw-normal">Last Updated</th>
+          <th scope="col" class="small fw-normal">Due Date</th>
+          <th scope="col" class="small fw-normal">Members</th>
+          <th scope="col" class="small fw-normal">Status</th>
+          <th scope="col" class="small fw-normal text-end">Progress</th>
+          <th scope="col" class="small fw-normal"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for table in site.data.tableTask %}
+          {% include tasks/tr-project.html
+              avatar4=""
+              paused=""    
+          %}
+          {% include tasks/tr-project.html
+              avatar3=""
+              cancelled=""    
+          %}
+          {% include tasks/tr-project.html
+              avatar2=""
+              active=""    
+          %}
+          {% include tasks/tr-project.html
+              avatar1=""
+              completed=""    
+          %}
+          {% include tasks/tr-project.html
+              avatar2="" 
+              planned=""    
+          %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>

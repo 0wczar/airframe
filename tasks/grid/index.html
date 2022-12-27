@@ -1,0 +1,51 @@
+---
+layout: slim-sidebar
+title:  'Tasks Grid'
+tasksGrid: 1
+containerClass: 1
+modalDangerTasks: 1
+---
+<div class="row row-cols-1 row-cols-md-3 g-4 pt-4">
+    <div class="col">
+        {% include tasks/card-task.html 
+          important=""
+          finished="" 
+        %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        high=""
+        backlog="" 
+      %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        normal=""
+        rejected="" 
+      %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        low=""
+        doing="" 
+      %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        important=""
+        finished="" 
+      %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        high=""
+        backlog="" 
+      %}
+    </div>
+    <div class="col">
+      {% include tasks/card-task.html 
+        normal=""
+        rejected="" 
+      %}
+    </div>
+  </div>

@@ -1,0 +1,125 @@
+---
+layout: sidebar-list
+title:  'Notifications'
+offNavbarFilters: 1
+onSettings: 1
+---
+<div class="col min-vh-100">
+
+    <div class="container-sm pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+                    {% include settings/header-settings.html
+                        withTeam=""
+                        team="airframe"
+                        title="Notifications"
+                        description="Decide which communications you'd to receive and how"
+                    %}
+
+                    <!-- START Card: Notifications -->
+                    <div class="card shadow-sm rounded-5">
+                        <div class="card-body px-4 pt-4 vstack gap-3">
+
+                            <!-- Header Notifications -->
+                            <div class="mb-2">
+                                <h5 class="mb-1">In-app notifications</h5>
+                                <span>Select when you'll be notified in-app.</span>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault1">
+                                <label class="form-check-label" for="flexCheckDefault1">
+                                  Messages mentions<br />
+                                  <span class="text-body small">
+                                      I'm mentioned in a message or comment.
+                                  </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input  me-3" type="checkbox" value="" id="flexCheckDefault2" checked>
+                                <label class="form-check-label" for="flexCheckDefault2">
+                                    Messages replies<br />
+                                    <span class="text-body small">
+                                        Someone replies to any message or comment.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input  me-3" type="checkbox" value="" id="flexCheckDefault3">
+                                <label class="form-check-label" for="flexCheckDefault3">
+                                   New projects<br />
+                                    <span class="text-body small">
+                                        New projects are created on my team.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input  me-3" type="checkbox" value="" id="flexCheckDefault4">
+                                <label class="form-check-label" for="flexCheckDefault4">
+                                   Outstanding tasks<br />
+                                    <span class="text-body small">
+                                        I've had oustanding tasks for more than:
+                                    </span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <hr style="opacity: 0.11;">
+
+                        <div class="card-body px-4 pt-3 pb-4 vstack gap-3">
+
+                            <!-- Header Notifications -->
+                            <div class="mb-2">
+                                <h5 class="mb-1">Email notifications</h5>
+                                <span>Select when you'll be notified in-app.</span>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault5">
+                                <label class="form-check-label" for="flexCheckDefault5">
+                                  Messages mentions<br />
+                                  <span class="text-body small">
+                                      I'm mentioned in a message or comment.
+                                  </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input  me-3" type="checkbox" value="" id="flexCheckDefault6" checked>
+                                <label class="form-check-label" for="flexCheckDefault6">
+                                    Messages replies<br />
+                                    <span class="text-body small">
+                                        Someone replies to any message or comment.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input  me-3" type="checkbox" value="" id="flexCheckDefault7">
+                                <label class="form-check-label" for="flexCheckDefault7">
+                                   New projects<br />
+                                    <span class="text-body small">
+                                        New projects are created on my team.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-footer border-top-0 d-flex py-3">
+                          <button class="btn px-3 btn-primary ms-auto" role="button">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                      <!-- END Card: Notifications -->
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% include modals/modal-invite-users.html 
+
+%}

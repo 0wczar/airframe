@@ -1,0 +1,201 @@
+					<!-- START Navbar: 1st Title with Buttons -->
+					<div class="p-3 d-flex {% if include.1class %} bg-light border-bottom border-gray-200 {% else %} bg-white border-bottom shadow-sm {% endif %}">
+
+						<!-- Left Side-->
+						<div class="d-flex flex-grow-1">
+							{% if include.backDisabled %}
+
+							{% elsif page.backDisabledPage %}
+
+							{% elsif include.closeProject %}
+								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="height: 30px; width: 30px;">
+									<i class="fa-solid fa-times"></i>
+								</a>
+							{% elsif include.closeProject %}
+								<a href="{{page.root}}/projects/list" class="btn btn-link btn-sm rounded-circle me-1 text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close this Project" style="height: 30px; width: 30px;">
+									<i class="fa-solid fa-times"></i>
+								</a>
+							{% elsif include.breadcrumbProject %}
+								<a class="align-self-center h6 mb-0 fw-normal text-body" href="{{page.root}}/">
+									Projects
+								</a>
+								<span class="mx-2 text-body align-self-center fw-normal opacity-50">/</span>
+							{% else %}
+								<a href="{{page.root}}/" class="btn btn-link btn-sm rounded-circle me-1 text-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to Projects" style="height: 30px; width: 30px;">
+									<i class="fa-solid fa-chevron-left"></i>
+								</a>
+							{% endif %}
+								<h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap">
+									{% if include.title %}
+										{{ include.title }}
+									{% else %}
+										{{ page.title }}
+									{% endif %}
+								</h6>
+
+							{% if page.offBulkDropdown %}
+
+							{% else %}
+								<!-- START Dropdown: Bulk Options-->
+								<div class="dropdown">
+									<button class="btn btn-sm btn-link text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa-solid fa-cog me-1 text-body"></i> <i class="fa-solid fa-angle-down text-body opacity-75"></i>
+									</button>
+									{% include tasks/dropdown-bulk.html %}
+								</div>
+								<!-- END Dropdown: Bulk Options-->
+							{% endif %}
+						</div>
+
+						<!-- Right Side-->
+						<div class="d-flex h-stack gap-1">
+							{% if page.offViewsBtns %}
+
+							{% else %}
+							<!-- List View -->
+							<a href="{{page.root}}/{% if include.list-link-inc_tasks-list %}tasks/list/{% elsif include.list-link-inc_projects-list %}projects/list/{% elsif include.list-link-inc_projects-list-list %}projects/list/list{% elsif include.list-link-inc_projects-list-table %}projects/list/table{% elsif include.list-link-inc_projects-list-grid %}projects/list/grid{% elsif include.list-link-inc_projects-list-empty %}projects-list-empty.html{% elsif include.link-projects-list-grid-sidebar %}projects/list/grid{% elsif include.link-projects-list-table-sidebar %}projects/list/table{% elsif include.link-projects-list-list-details-sidebar %}{% elsif include.link-tasks-list-task-sidebar %}tasks/list/task.html{% else %} {% endif %}" 
+							class="btn btn-link btn-sm rounded-circle text-body
+
+								{% if include.list-active-inc_tasks-list %}
+									{% if page.url == "/tasks/list/" %}active{% endif %}"
+								{% elsif include.list-active-inc_projects-list %}
+									{% if page.url == "/projects/list/" %}active{% endif %}"
+								{% elsif include.list-active-inc_projects-list-list %}
+									{% if page.url == "/projects/list/list/" %}active{% endif %}"
+								{% elsif include.list-active-inc_projects-list-grid %}
+									{% if page.url == "/projects-list-grid.html" %}active{% endif %}"
+								{% elsif include.list-active-inc_projects-list-table %}
+									{% if page.url == "/projects-list-table.html" %}active{% endif %}"
+								{% elsif include.list-active-inc_projects-list-empty %}
+									{% if page.url == "/projects-list-empty.html" %}active{% endif %}"
+								{% elsif include.active-projects-list-grid-sidebar %}
+									{% if page.url == "/projects/list/grid/" %}active{% endif %}"
+								{% elsif include.active-projects-list-table-sidebar %}
+									{% if page.url == "/projects/list/table/" %}active{% endif %}"
+								{% elsif include.active-projects-list-list-details-sidebar %}
+									{% if page.url == "/projects/list/list/details/" %}active{% endif %}" 
+								{% elsif include.active-tasks-list-task-sidebar %}
+									{% if page.url == "/tasks/list/task.html" %}active{% endif %}" 
+								{% else %}
+									"
+								{% endif %}
+								
+								data-bs-toggle="tooltip" data-bs-placement="left" title="List View">
+								<i class="fa-solid fa-line-columns"></i>
+							</a>
+
+							<!-- Grid View -->
+							<a href="{{page.root}}/{% if include.grid-link-inc_tasks-grid %}tasks/grid/{% elsif include.grid-link-inc_projects-grid %}projects/grid/{% elsif include.grid-link-inc_projects-list-grid %}projects/list/grid{% else %} {% endif %}" 
+							class="btn btn-link btn-sm rounded-circle text-body
+							
+								{% if include.grid-active-inc_tasks-grid %}
+									{% if page.url == "/tasks/grid/" %}active{% endif %}" 
+								{% elsif include.grid-active-inc_projects-grid %}
+									{% if page.url == "/projects/grid/" %}active{% endif %}"
+								{% elsif include.grid-active-inc_projects-list-grid %}
+									{% if page.url == "/projects/list/grid/" %}active{% endif %}"
+								{% else %}
+									"
+								{% endif %}
+						 
+								aria-current="page" data-bs-toggle="tooltip" data-bs-placement="left" title="Grid View">
+								<i class="fa-solid fa-grid-2"></i>
+							</a>
+
+							<!-- Table View -->
+							<a href="{{page.root}}/{% if include.table-link-inc_tasks-table %}tasks/table/{% elsif include.table-link-inc_projects-table %}{% elsif page.internalProjectsTable %}projects/list/table{% elsif include.table-link-inc_projects-list-table %}projects/list/table{% elsif include.table-link-inc_projects-list-empty %}projects-list-empty.html{% elsif include.table-link-inc_tasks-empty %}tasks-empty.html{% else %} {% endif %}" 
+							class="btn btn-link btn-sm rounded-circle me-3 text-secondary 
+							
+								{% if include.table-active-inc_tasks-table %}
+									{% if page.url == "/tasks/table/" %}active{% endif %}" 
+								{% elsif include.table-active-inc_projects-table %}
+									{% if page.url == "/" %}active{% endif %}"
+								{% elsif include.table-active-inc_projects-list-table %}
+									{% if page.url == "/projects/list/table/" %}active{% endif %}"
+								{% else %}
+									"
+								{% endif %}
+								
+								aria-current="page"  data-bs-toggle="tooltip" data-bs-placement="left" title="Table View">
+								<i class="fa-solid fa-bars"></i>
+							</a>
+							{% endif %}
+							
+							<!-- Add Task/Project -->
+							{% if include.modalCreateProject %}
+								<button class="btn btn-primary btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalCreateProject">
+									<i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="Add Project"></i>
+								</button>
+							{% else %}
+								<button class="btn btn-primary btn-sm rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
+									<i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="Add Task"></i>
+								</button>
+							{% endif %}
+						</div>
+					</div>
+					<!-- END Navbar: 1st Title with Buttons -->
+					{% if include.offNavbarBadges %}
+					
+					{% else %}
+					<!-- START 2nd Navbar: Filter Badges -->
+					<div class="px-3 py-2 hstack gap-1 overflow-auto {% if include.2class %} bg-light border-bottom shadow-sm {% else %} bg-white border-bottom shadow-sm {% endif %}">
+						<span class="badge rounded-pill py-2 pe-2 badge-add-filter" data-bs-toggle="modal" href="#modalStart" role="button">
+							Select Filter <i class="fa-solid fa-plus ms-1"></i>
+						</span>
+						{% if include.badgesDisabled %}
+
+						{% else %}
+
+						  {% include cheatsheet/badge/badge-example.html
+							iconColor="danger"
+							withSubtitle=""
+								withSubtitleTitle="Tag"
+							withClose=""
+							withResult=""
+							withSubtitle=""
+						  %}
+
+						  {% include cheatsheet/badge/badge-example.html
+							asLink=""
+							icon=""
+								iconName="calendar"
+							withSubtitle=""
+								withSubtitleTitle="Date"
+							titleCustom=""
+								title="12 January"
+							withDropdown=""
+							withResult=""
+							withSubtitle=""
+						  %}
+
+						  {% include cheatsheet/badge/badge-example.html 
+							avatarInitials=""
+							withSubtitle=""
+								withSubtitleTitle="Person"
+							withClose=""
+							withResult=""
+							withSubtitle=""
+						  %}
+
+						  {% include cheatsheet/badge/badge-example.html 
+							avatarIcon=""
+							withSubtitle=""
+								withSubtitleTitle="Person"
+							withClose=""
+							withResult=""
+							withSubtitle=""
+						  %}
+
+						  {% include cheatsheet/badge/badge-example.html 
+							avatar=""
+							withSubtitle=""
+								withSubtitleTitle="Person"
+							withClose=""
+							withResult=""
+							withSubtitle=""
+						  %}
+
+						{% endif %}
+					</div>
+					<!-- END 2nd Navbar: Filter Badges -->
+					{% endif %}

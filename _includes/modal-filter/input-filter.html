@@ -1,0 +1,33 @@
+    <!-- START Filter Input + Back -->
+    <div class="input-group input-group-lg border-bottom">
+        {% if include.leftBack %}
+        <button class="btn btn-link pe-0 text-secondary" type="button" id="button-addon1">
+            <i class="fa fas fa-chevron-left"></i>
+        </button>
+        {% else %}
+
+        {% endif %}
+        <input 
+            type="text" 
+            class="form-control border-0" 
+            aria-label="Sizing example input" 
+            aria-describedby="inputGroup-sizing-lg" 
+            placeholder="{{ include.placholderTitle }}"
+        >
+        {% if include.rightCheck %}
+        <button class="btn btn-link text-success {{ include.rightCheckClass }}" type="button" id="button-addon1">
+            <i class="fa fas fa-fw fa-check"></i>
+        </button>
+        {% else %}
+
+        {% endif %}
+
+        {% if include.rightClose %}
+        <button class="btn btn-link text-secondary" type="button" id="button-addon1">
+            <i class="fa fas fa-fw fa-times"></i>
+        </button>
+        {% else %}
+        
+        {% endif %}
+    </div>
+    <!-- END Filter Input + Back -->

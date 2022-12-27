@@ -1,0 +1,17 @@
+- title: Important
+  iconColor: text-danger
+  rightIcon: 
+
+- title: High
+  iconColor: text-warning
+  rightIcon: fa-check
+  class: active
+
+- title: Normal
+  iconColor: text-primary
+  rightIcon:
+
+- title: Low
+  iconColor: text-muted
+  rightIcon: 
+  class: 

@@ -1,0 +1,39 @@
+- title: UI
+  iconColor: text-danger
+  rightIcon: 
+  class:
+
+- title: Javascript
+  iconColor: text-primary
+  rightIcon: 
+  class:
+
+- title: Bug
+  iconColor: text-warning
+  rightIcon: 
+  class:
+
+- title: Feature
+  iconColor: text-info
+  rightIcon: 
+  class: 
+
+- title: Beta
+  iconColor: text-success
+  rightIcon: 
+  class:
+
+- title: Backend
+  iconColor: text-muted
+  rightIcon: 
+  class: 
+
+- title: Design
+  iconColor: text-dark
+  rightIcon: 
+  class:
+
+- title: To Discussion
+  iconColor: text-light
+  rightIcon: 
+  class: 

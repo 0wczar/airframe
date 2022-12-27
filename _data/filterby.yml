@@ -1,0 +1,16 @@
+- title: Filter by Status...
+  subtitle: 87 Filters
+  modalLink: modalStatus
+  rightBadge: 2
+
+- title: Filter by Priority...
+  subtitle: 5 Filters
+  modalLink: modalPriority
+
+- title: Filter by Assignee...
+  subtitle: 12 Filters
+  modalLink: modalAssignee
+
+- title: Filter by Tags...
+  subtitle: 9 Filters
+  modalLink: modalTags

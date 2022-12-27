@@ -1,0 +1,151 @@
+<!-- START TR Subtask -->
+<tr>
+  <td class="align-middle text-middle" width="30">
+    <!-- START Dropdown: Priority -->
+    <div class="btn-group {% if include.tableView %} me-3 {% else %} {% endif %} ">
+      <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          {% if include.importantIcon %} 
+              <i class="fa fa-circle fa-fw text-danger"></i> 
+          {% elsif include.high %} 
+              <i class="fa fa-circle fa-fw text-warning"></i> 
+              High 
+          {% elsif include.highIcon %} 
+              <i class="fa fa-circle fa-fw text-warning"></i> 
+          {% elsif include.normal %} 
+              <i class="fa fa-circle fa-fw text-primary"></i> 
+              Normal
+          {% elsif include.normalIcon %} 
+              <i class="fa fa-circle fa-fw text-primary"></i>  
+          {% elsif include.low %} 
+              <i class="fa fa-circle fa-fw text-muted"></i> 
+              Low
+          {% elsif include.lowIcon %} 
+              <i class="fa fa-circle fa-fw text-muted"></i> 
+          {% else %} 
+              <i class="fa fa-circle fa-fw text-danger"></i>
+          {% endif %}
+      </button>
+      {% include tasks/dropdown-priority.html %}  
+  </div>
+  <!-- END Dropdown: Priority -->
+</td>
+<td class="align-middle" width="30">
+  <!-- START Dropdown: Status -->
+  <div class="btn-group {% if include.tableView %} me-2 d-flex align-items-center {% else %}  {% endif %}">
+    <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      {% if include.buttonDefault %} 
+      <i class="fa fa-check fa-fw text-danger"></i>
+        Finished
+        <i class="fa fa-caret-down fa-fw"></i>
+      {% elsif include.finished %} 
+        <i class="fa fa-check fa-fw text-success"></i>
+      {% elsif include.backlog %} 
+        <i class="fa fa-history fa-fw text-secondary"></i>
+      {% elsif include.rejected %} 
+        <i class="fa fa-times fa-fw text-danger"></i>
+      {% elsif include.doing %} 
+        <i class="fa fa-clock fa-fw text-info"></i>
+      {% elsif include.todo %} 
+        <i class="fa fa-circle-notch fa-fw text-warning"></i>
+      {% else %}
+        <i class="fa fa-check fa-fw text-success"></i>
+      {% endif %}
+    </button>
+    {% include tasks/dropdown-status.html 
+    %}  
+  </div>
+  <!-- END Dropdown: Status -->
+</td>
+<td class="align-middle">
+  <a href="#" class="text-dark">
+    {{ site.data.projectsTitles | sample }}
+  </a>
+</td>
+<td class="text-end">
+  {% if include.avatar4 %} 
+  <!-- START Avatars #4 -->
+  <div class="d-inline-flex">
+      <!-- Edit -->
+      <div class="btn-group">
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small text-body"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+      </div>
+      <!-- Members -->
+      <div class="avatars d-flex">
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+      </div>
+  </div>
+  <!-- END Avatars #4 -->
+{% elsif include.avatar3 %}
+  <!-- START Avatars #3 -->
+  <div class="d-inline-flex">
+      <!-- Edit -->
+      <div class="btn-group">
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small text-body"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+      </div>
+      <!-- Members -->
+      <div class="avatars d-flex">
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+      </div>
+  </div>
+  <!-- END Avatars #3 -->
+{% elsif include.avatar2 %}
+  <!-- START Avatars #2 -->
+  <div class="d-inline-flex">
+      <!-- Edit -->
+      <div class="btn-group">
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small text-body"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+      </div>
+      <!-- Members -->
+      <div class="avatars d-flex">
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+          <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+          </div>
+      </div>
+  </div>
+  <!-- END Avatars #2 -->
+{% elsif include.avatar1 %}
+  <!-- START Avatars #1 -->
+  <div class="d-inline-flex">
+      <!-- Edit -->
+      <div class="btn-group">
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-plus small text-body"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+      </div>
+  </div>
+  <!-- END Avatars #1 -->
+{% endif %}
+</td>
+<!-- END TR Subtask -->

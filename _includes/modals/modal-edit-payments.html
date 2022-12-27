@@ -1,0 +1,149 @@
+    <!-- START Modal: Edit Payments -->
+    <div class="modal fade" id="modalEditPayments" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    
+        <div class="modal-dialog position-relative show">
+
+            <!-- Right Close Button -->
+            <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
+                <span class="fa-stack" style="font-size: 0.7em;">
+                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
+                    <i class="far fa-times fa-stack-1x text-white"></i>
+                </span>
+            </span>
+
+            <div class="modal-content rounded-5 shadow-sm overflow-auto">
+
+                <!-- Content -->
+                <div class="modal-body px-4 pt-4">
+                    <h5 class="mb-3 text-center fw-normal">
+                        Edit Payments
+                    </h5>
+                    <p class="text-center mb-4">Select Payment method and select actions between delete, set as default or edit.</p>
+
+
+                    <ul class="nav nav-pills flex-column mb-3">
+
+                        <!-- START: Pill Card -->
+                        <li class="nav-item">
+                          <span class="nav-link d-flex align-items-start rounded-5 py-3 px-4 active" aria-current="page">
+      
+                            <div class="flex-shrink-0">
+                              <i class="fab fa-cc-visa fa-fw fa-2x text-primary"></i>
+                            </div>
+      
+                            <div class="flex-grow-1 ms-3">
+                              <div class="text-dark">
+                                Visa ending in 1234
+                              </div>
+                              <div class="mb-0 text-body small">
+                                Expiry 06/2024
+                              </div>
+                            </div>
+                           
+                            <div class="align-self-center">
+                              <button type="button" class="btn btn-link btn-sm text-success text-decoration-none">
+                                  <i class="fa fa-fw fa-check-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="This Card is Default"></i>
+                              </button>
+                              <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalAddCreditCard" data-bs-toggle="modal">
+                                  <i class="fa fa-fw fa-pen" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit this card"></i>
+                              </button>
+                              <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalDanger" data-bs-toggle="modal">
+                                  <i class="fa fa-fw fa-trash" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove this card"></i>
+                              </button>
+                          </div>
+                            </span>
+                        </li>
+                        <!-- END: Pill Card -->
+      
+                        <!-- START: Pill Card -->
+                        <li class="nav-item">
+                          <a href="#" class="nav-link d-flex align-items-start rounded-5 py-3 px-4" aria-current="page">
+      
+                            <div class="flex-shrink-0">
+                              <i class="fab fa-paypal fa-fw fa-2x text-primary"></i>
+                            </div>
+      
+                            <div class="flex-grow-1 ms-3 ">
+                              <div class="text-dark">
+                                PayPal
+                              </div>
+                              <div class="text-body small mb-0">
+                                tom@webkom.co
+                              </div>
+                            </div>
+
+                            <div class="align-self-center">
+                              <button type="button" class="btn btn-link btn-sm text-body text-decoration-none">
+                                  <i class="fa fa-fw fa-check opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Set this card as default"></i>
+                              </button>
+                              <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalAddCreditCard" data-bs-toggle="modal">
+                                  <i class="fa fa-fw fa-pen opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit this card"></i>
+                              </button>
+                              <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalDanger" data-bs-toggle="modal">
+                                  <i class="fa fa-fw fa-trash opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove this card"></i>
+                              </button>
+                          </div>
+                           
+                          </a>
+                        </li>
+                        <!-- END: Pill Card -->
+      
+                        <!-- START: Pill Card -->
+                        <li class="nav-item">
+                          <a href="#" class="nav-link d-flex align-items-start rounded-5 py-3 px-4" aria-current="page">
+      
+                            <div class="flex-shrink-0">
+                              <i class="fab fa-cc-apple-pay fa-fw fa-2x text-dark"></i>
+                            </div>
+      
+                            <div class="flex-grow-1 ms-3 ">
+                              <div class="text-dark">
+                                Visa ending in 1234
+                              </div>
+                              <div class="text-body small mb-0">
+                                Expiry 06/2024
+                              </div>
+                            </div>
+
+                            <div class="align-self-center">
+                                <button type="button" class="btn btn-link btn-sm text-body text-decoration-none">
+                                    <i class="fa fa-fw fa-check opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Set this card as default"></i>
+                                </button>
+                                <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalAddCreditCard" data-bs-toggle="modal">
+                                    <i class="fa fa-fw fa-pen  opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit this card"></i>
+                                </button>
+                                <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-target="#modalDanger" data-bs-toggle="modal">
+                                    <i class="fa fa-fw fa-trash opacity-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove this card"></i>
+                                </button>
+                            </div>
+                           
+                          </a>
+                        </li>
+                        <!-- END: Pill Card -->
+
+                        <!-- START: Pill Card -->
+                        <li class="nav-item">
+                            <a class="nav-link flex-sm-fill text-sm-center rounded-5 pt-4 px-4" data-bs-target="#modalAddCreditCard" data-bs-toggle="modal" role="button">
+                               <i class="fa fa-plus me-2"></i> Add New Payment Method
+                            </a>
+                          </li>
+                          <!-- END: Pill Card -->
+      
+                      </ul>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer hstack p-0 bg-light overflow-auto border-0">
+                    <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">Cancel</button>
+                    <a role="button" href="#" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0">Close</a>
+                </div>
+                
+            </div>
+            
+
+
+          </div>
+        </div>
+
+    </div>
+    <!-- END Modal: Edit Payments -->

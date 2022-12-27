@@ -1,0 +1,144 @@
+    <!-- START Modal: Create Project -->
+    <div class="modal fade" id="modalCreateProject" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    
+        <div class="modal-dialog position-relative">
+
+            <!-- Right Close Button -->
+            <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
+                <span class="fa-stack" style="font-size: 0.7em;">
+                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
+                    <i class="far fa-times fa-stack-1x text-white"></i>
+                </span>
+            </span>
+
+            <div class="modal-content rounded-5 shadow-sm overflow-auto">
+
+                <!-- Content -->
+                <div class="modal-body px-4 pt-4">
+                    <div class="d-flex flex-column">
+                        <h5 class="mb-5 text-center fw-normal">
+                            Create Project
+                        </h5>
+                        
+                        <!-- Title -->
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-right">
+                                Title
+                            </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-circle text-warning"></i>
+                                    </button>
+                                    <ul class="dropdown-menu shadow-sm">
+                                        <li><h6 class="dropdown-header">Select Color</h6></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-circle text-warning me-2"></i>
+                                                Yellow
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-circle text-primary me-2"></i>
+                                                Blue
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-circle text-success me-2"></i>
+                                                Green
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-circle text-danger me-2"></i>
+                                                Red
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-circle text-info me-2"></i>
+                                                Cyan
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                Select Custom...
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter Title...">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">
+                                Description
+                            </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Enter Description..."></textarea>
+                            </div>
+                        </div>
+            
+                        <!-- Status -->
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">
+                                Status
+                            </label>
+                            <div class="col-sm-9">
+                                <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
+                                    <i class="fa fa-play-circle fa-fw text-success me-2"></i> 
+                                    Active 
+                                    <i class="fa fa-caret-down text-muted ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <!-- Due Date -->
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">
+                                Due Date
+                            </label>
+                            <div class="col-sm-9">
+                            <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
+                                <i class="fa fa-calendar fa-fw text-muted me-2"></i> 
+                                    Without 
+                                <i class="fa fa-caret-down text-muted ms-2"></i>
+                            </button>
+                            </div>
+                        </div>
+            
+                        <!-- Members -->
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">
+                                Members
+                            </label>
+                            <div class="col-sm-9 d-flex align-items-center hstack gap-1">
+                            <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer hstack p-0 m-0 bg-light rounded-bottom">
+                    <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">Cancel</button>
+                    <a role="button" href="{{page.root}}/" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0">Create</a>
+                </div>
+                
+            </div>
+            
+
+
+          </div>
+        </div>
+
+    </div>
+    <!-- END Modal: Create Project -->

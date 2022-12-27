@@ -1,0 +1,476 @@
+
+    {% if include.withBadge %}
+        <div class="position-relative d-inline-flex">
+
+            <!-- Avatar Image -->
+            {% if include.contentAvatar %}
+                <img class="{% if include.sizeXS %} avatar-xs {% elsif include.sizeSM %} avatar-sm {% elsif include.sizeLG %} avatar-lg {% else %} avatar {% endif %} {% if include.pillShape %} rounded-pill {% else %} rounded-3 {% endif %}" src="{{page.root}}{{ site.data.avatars | sample }}" alt="">
+            {% else %}
+
+            <!-- Icon or Initials -->
+                <div class="{% if include.sizeXS %} avatar-xs {% elsif include.sizeSM %} avatar-sm {% elsif include.sizeLG %} avatar-lg {% else %} avatar {% endif %}  {% if include.pillShape %} rounded-pill {% else %} rounded-3 {% endif %} bg-secondary small text-white d-flex align-items-center justify-content-center">
+                    {% if include.contentIcon %}
+
+                    <!-- Icon -->
+                        <i class="fa fa-user" style="font-size: {% if include.sizeXS %} 9px {% elsif include.sizeSM %} 10px {% elsif include.sizeLG %} 21px {% else %} 15px {% endif %}; line-height: 0px;"></i>
+                    {% else %}
+                    <!-- Initials -->
+                        <span style="font-size: {% if include.sizeXS %} 9px {% elsif include.sizeSM %} 10px {% elsif include.sizeLG %} 19px {% else %} 15px {% endif %}; line-height: 0px;">UY</span>
+                    {% endif %}
+                </div>     
+            {% endif %}
+
+                <!-- PILL: Size LARGE -->
+                {% if include.pillLG %}
+                    
+                    <!-- PILL LG: Status,Icon,Badge + Positions -->
+                    {% if include.statusBadge %}
+                        <!-- LG: Status Badge -->
+                        <span class="position-absolute badge border border-light rounded-circle bg-{% if include.statusAvailable %}success {% elsif include.statusOffline %}danger {% elsif include.statusBusy %}warning {% elsif include.statusOffline %}offline {% else %}{{ site.data.statusColor | sample }} {% endif %}   p-1  
+                            {% if include.rightBottom %}
+                                top-100 start-100" style="transform: translate(-120%,-190%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0" style="transform: translate(30%,-180%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(80%,20%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-150%,40%);"
+                            {% endif %}"><span class="visually-hidden">unread messages</span></span>
+                        </span>
+                    {% elsif include.iconBadge %}
+                        <!-- LG: Icon Badge -->
+                        <span class="position-absolute   
+                            {% if include.rightBottom %}
+                                top-100 start-100" style="transform: translate(-110%,-90%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0" style="transform: translate(-0%,-90%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(-0%,-10%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-100%,-20%);"
+                            {% endif %}">
+
+                            <!-- Context Icon Badges -->
+                            {% if include.iconBadgeFacebook %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeTwitter %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeLinkedin %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-linkedin"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgePinterest %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-pinterest"></i>
+                                    <i class="fab fa-pinterest-p fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeApple %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                                    <i class="fab fa-apple fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeSucccess %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                    <i class="fa fa-check fa-stack-1x text-white"></i>
+                                </span>
+                            {% else %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                    <i class="fa fa-times fa-stack-1x text-white"></i>
+                                </span>
+                            {% endif %}
+                        </span>
+                    {% else %}
+                        <!-- LG: Badge -->
+                        <span class="badge rounded-pill bg-danger position-absolute   
+                            {% if include.rightBottom %}
+                                top-100 start-100"  style="transform: translate(-110%,-90%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0"  style="transform: translate(-0%,-90%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(-0%,-10%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-100%,-20%);"
+                            {% endif %}">
+                            9 <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+
+
+                <!-- PILL: Size STANDARD -->
+                {% elsif include.pillST %}
+
+                    <!-- PILL ST: Status,Icon,Badge + Positions -->
+                    {% if include.statusBadge %}
+                        <!-- ST: Status Badge -->
+                            <span class="position-absolute badge border border-light rounded-circle bg-{% if include.statusAvailable %}success {% elsif include.statusOffline %}danger {% elsif include.statusBusy %}warning {% elsif include.statusOffline %}offline {% else %}{{ site.data.statusColor | sample }} {% endif %} p-1  
+                            {% if include.rightBottom %}
+                                top-100 start-100" style="transform: translate(-130%,-100%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0" style="transform: translate(25%,-120%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(40%,0%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-80%,50%);"
+                            {% endif %}">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </span>
+                    {% elsif include.iconBadge %}
+                        <!-- ST: Icon Badge -->
+                            <span class="position-absolute   
+                                {% if include.rightBottom %}
+                                    top-100 start-100" style="transform: translate(-80%,-80%);"
+                                {% elsif include.leftBottom %}
+                                    top-100 start-0"  style="transform: translate(-15%,-80%);"
+                                {% elsif include.leftTop %}
+                                    top-0 start-0"  style="transform: translate(-20%,-20%);"
+                                {% else %}
+                                    top-0 start-100" style="transform: translate(-80%,-20%);"
+                                {% endif %}">
+
+                                <!-- Context Icon Badges -->
+                                {% if include.iconBadgeFacebook %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-facebook"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeTwitter %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-twitter"></i>
+                                        <i class="fab fa-twitter fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeLinkedin %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-linkedin"></i>
+                                        <i class="fab fa-linkedin-in fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgePinterest %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-pinterest"></i>
+                                        <i class="fab fa-pinterest-p fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeApple %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                                        <i class="fab fa-apple fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeSucccess %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                        <i class="fa fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                {% else %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                        <i class="fa fa-times fa-stack-1x text-white"></i>
+                                    </span>
+                                {% endif %}
+                            </span>
+                    {% else %}
+                        <!-- ST: Badge -->
+                        <span class="badge rounded-pill bg-danger position-absolute   
+                        {% if include.rightBottom %}
+                            top-100 start-100" style="transform: translate(-80%,-80%);"
+                        {% elsif include.leftBottom %}
+                            top-100 start-0"  style="transform: translate(-15%,-80%);"
+                        {% elsif include.leftTop %}
+                            top-0 start-0"  style="transform: translate(-20%,-20%);"
+                        {% else %}
+                            top-0 start-100" style="transform: translate(-80%,-20%);"
+                        {% endif %}">
+                            8 <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+
+
+
+                <!-- PILL: Size SMALL -->
+                {% elsif include.pillSM %}
+
+                    <!-- PILL SM: Status,Icon,Badge + Positions -->
+                    {% if include.statusBadge %}
+                        <!-- SM: Status Badge -->
+                            <span class="position-absolute badge border border-light rounded-circle bg-{% if include.statusAvailable %}success {% elsif include.statusOffline %}danger {% elsif include.statusBusy %}warning {% elsif include.statusOffline %}offline {% else %}{{ site.data.statusColor | sample }} {% endif %}  p-1  
+                            {% if include.rightBottom %}
+                                top-100 start-100" style="transform: translate(-80%,-80%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0" style="transform: translate(-15%,-80%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(-20%,-20%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-80%,-20%);"
+                            {% endif %}">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </span>
+                    {% elsif include.iconBadge %}
+                        <!-- SM: Icon Badge -->
+                            <span class="position-absolute   
+                                {% if include.rightBottom %}
+                                    top-100 start-100" style="transform: translate(-60%,-60%);"
+                                {% elsif include.leftBottom %}
+                                    top-100 start-0" style="transform: translate(-40%,-80%);"
+                                {% elsif include.leftTop %}
+                                    top-0 start-0" style="transform: translate(-50%,-40%);"
+                                {% else %}
+                                    top-0 start-100" style="transform: translate(-50%,-30%);"
+                                {% endif %}">
+
+                                <!-- Context Icon Badges -->
+                                    {% if include.iconBadgeFacebook %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-facebook"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeTwitter %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-twitter"></i>
+                                        <i class="fab fa-twitter fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeLinkedin %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-linkedin"></i>
+                                        <i class="fab fa-linkedin-in fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgePinterest %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-pinterest"></i>
+                                        <i class="fab fa-pinterest-p fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeApple %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                                        <i class="fab fa-apple fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeSucccess %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                        <i class="fa fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                {% else %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                        <i class="fa fa-times fa-stack-1x text-white"></i>
+                                    </span>
+                                {% endif %}
+
+                            </span>
+                    {% else %}
+                        <!-- SM: Badge -->
+                        <span class="badge rounded-pill bg-danger position-absolute   
+                        {% if include.rightBottom %}
+                            top-100 start-100 translate-middle
+                        {% elsif include.leftBottom %}
+                            top-100 start-0 translate-middle
+                        {% elsif include.leftTop %}
+                            top-0 start-0 translate-middle
+                        {% else %}
+                            top-0 start-100 translate-middle" style="transform: translate(-110%,-90%);"
+                        {% endif %}">
+                            7 <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+
+
+
+                <!-- PILL: Size EXTRA SMALL -->
+                {% elsif include.pillXS %}
+
+                    <!-- PILL XS: Status,Icon,Badge + Positions -->
+                    {% if include.statusBadge %}
+                        <!-- XS: Status Badge -->
+                            <span class="position-absolute badge border border-light rounded-circle bg-{% if include.statusAvailable %}success {% elsif include.statusOffline %}danger {% elsif include.statusBusy %}warning {% elsif include.statusOffline %}offline {% else %}{{ site.data.statusColor | sample }} {% endif %}  p-1  
+                            {% if include.rightBottom %}
+                                top-100 start-100" style="transform: translate(-60%,-80%);"
+                            {% elsif include.leftBottom %}
+                                top-100 start-0" style="transform: translate(-45%,-80%);"
+                            {% elsif include.leftTop %}
+                                top-0 start-0" style="transform: translate(-40%,-20%);"
+                            {% else %}
+                                top-0 start-100" style="transform: translate(-60%,-40%);"
+                            {% endif %}">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </span>
+                    {% elsif include.iconBadge %}
+                        <!-- XS: Icon Badge -->
+                            <span class="position-absolute   
+                                {% if include.rightBottom %}
+                                    top-100 start-100" style="transform: translate(-50%,-60%);"
+                                {% elsif include.leftBottom %}
+                                    top-100 start-0"  style="transform: translate(-50%,-60%);"
+                                {% elsif include.leftTop %}
+                                    top-0 start-0"  style="transform: translate(-50%,-40%);"
+                                {% else %}
+                                    top-0 start-100" style="transform: translate(-50%,-40%);"
+                                {% endif %}">
+
+                                <!-- Context Icon Badges -->
+                                    {% if include.iconBadgeFacebook %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-facebook"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeTwitter %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-twitter"></i>
+                                        <i class="fab fa-twitter fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeLinkedin %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-linkedin"></i>
+                                        <i class="fab fa-linkedin-in fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgePinterest %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-pinterest"></i>
+                                        <i class="fab fa-pinterest-p fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeApple %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                                        <i class="fab fa-apple fa-stack-1x text-white"></i>
+                                    </span>
+                                {% elsif include.iconBadgeSucccess %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                        <i class="fa fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                {% else %}
+                                    <span class="fa-stack" style="font-size: 0.7em;">
+                                        <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                        <i class="fa fa-times fa-stack-1x text-white"></i>
+                                    </span>
+                                {% endif %}
+
+                            </span>
+                    {% else %}
+                        <!-- XS: Badge -->
+                        <span class="badge rounded-pill bg-danger position-absolute   
+                        {% if include.rightBottom %}
+                            top-100 start-100 translate-middle
+                        {% elsif include.leftBottom %}
+                            top-100 start-0 translate-middle
+                        {% elsif include.leftTop %}
+                            top-0 start-0 translate-middle
+                        {% else %}
+                            top-0 start-100 translate-middle" style="transform: translate(-110%,-90%);"
+                        {% endif %}">
+                            6 <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+
+
+                {% else %}
+
+                    <!-- ROUNDED: Badge, Status + Positions -->
+                    {% if include.status %}
+                        <!-- Status -->
+                        <span class="position-absolute badge border border-light rounded-circle bg-{% if include.statusAvailable %}success {% elsif include.statusOffline %}danger {% elsif include.statusBusy %}warning {% elsif include.statusOffline %}offline {% else %}{{ site.data.statusColor | sample }} {% endif %}  p-1  
+                            {% if include.rightBottom %}
+                                top-100 start-100 translate-middle
+                            {% elsif include.leftBottom %}
+                                top-100 start-0 translate-middle
+                            {% elsif include.leftTop %}
+                                top-0 start-0 translate-middle
+                            {% else %}
+                                top-0 start-100 translate-middle
+                            {% endif %}"><span class="visually-hidden">unread messages</span></span>
+                        </span>
+                    {% elsif include.iconBadge %}
+                        <!-- Icon -->
+                        <span class="position-absolute   
+                            {% if include.rightBottom %}
+                                top-100 start-100 translate-middle
+                            {% elsif include.leftBottom %}
+                                top-100 start-0 translate-middle
+                            {% elsif include.leftTop %}
+                                top-0 start-0 translate-middle
+                            {% else %}
+                                top-0 start-100 translate-middle
+                            {% endif %}">
+
+                            <!-- Context Icon Badges -->
+                            {% if include.iconBadgeFacebook %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeTwitter %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeLinkedin %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-linkedin"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgePinterest %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-pinterest"></i>
+                                    <i class="fab fa-pinterest-p fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeApple %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                                    <i class="fab fa-apple fa-stack-1x text-white"></i>
+                                </span>
+                            {% elsif include.iconBadgeSucccess %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                    <i class="fa fa-check fa-stack-1x text-white"></i>
+                                </span>
+                            {% else %}
+                                <span class="fa-stack" style="font-size: 0.7em;">
+                                    <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                    <i class="fa fa-times fa-stack-1x text-white"></i>
+                                </span>
+                            {% endif %}
+
+                        </span>
+                    {% else %}
+                        <!-- Badge -->
+                        <span class="position-absolute badge rounded-pill bg-success 
+                            {% if include.rightBottom %}
+                                top-100 start-100 translate-middle
+                            {% elsif include.leftBottom %}
+                                top-100 start-0 translate-middle
+                            {% elsif include.leftTop %}
+                                top-0 start-0 translate-middle
+                            {% else %}
+                                top-0 start-100 translate-middle
+                            {% endif %}"> 5 <span class="visually-hidden">unread messages</span>
+                        </span>
+                    {% endif %}
+
+                {% endif %}
+        </div>
+    {% else %}
+        <!-- Content: Avatar Image -->
+        {% if include.contentAvatar %}
+            <img class="{% if include.sizeXS %} avatar-xs {% elsif include.sizeSM %} avatar-sm {% elsif include.sizeLG %} avatar-lg {% else %} avatar {% endif %} {% if include.pillShape %} rounded-pill {% else %} rounded-3 {% endif %} {{ include.customClass }}" src="{{page.root}}{{ site.data.avatars | sample }}" alt="">
+        {% else %}
+
+        <!-- Content: Icon or Initials -->
+            <div class="{% if include.sizeXS %} avatar-xs {% elsif include.sizeSM %} avatar-sm {% elsif include.sizeLG %} avatar-lg {% else %} avatar {% endif %}  {% if include.pillShape %} rounded-pill {% else %} rounded-3 {% endif %} bg-secondary small text-white d-flex align-items-center justify-content-center {{ include.customClass }}">
+                {% if include.contentIcon %}
+
+                <!-- Icon -->
+                    <i class="fa fa-user" style="font-size: {% if include.sizeXS %} 9px {% elsif include.sizeSM %} 10px {% elsif include.sizeLG %} 21px {% else %} 15px {% endif %}; line-height: 0px;"></i>
+                {% else %}
+                <!-- Initials -->
+                    <span style="font-size: {% if include.sizeXS %} 9px {% elsif include.sizeSM %} 10px {% elsif include.sizeLG %} 19px {% else %} 15px {% endif %}; line-height: 0px;">UY</span>
+                {% endif %}
+            </div>     
+        {% endif %}
+    {% endif %}

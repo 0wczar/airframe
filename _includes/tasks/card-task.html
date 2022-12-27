@@ -1,0 +1,155 @@
+<!-- START CARD TASK -->
+    <div class="card shadow-sm">
+
+      <!-- Card Header -->
+      <div class="card-body pb-0 d-flex justify-content-between">
+            <!-- START Dropdown: Priority -->
+            <div class="dropdown {% if include.tableView %} me-3 {% else %} {% endif %} ">
+              <button class="btn btn-link text-decoration-none {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% if include.important %} 
+                      <i class="fa-solid fa-circle fa-fw text-danger me-1"></i> 
+                      Important
+                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                  {% elsif include.importantIcon %} 
+                      <i class="fa-solid fa-circle fa-fw text-danger"></i> 
+                  {% elsif include.high %} 
+                      <i class="fa-solid fa-circle fa-fw text-warning me-1"></i> 
+                      High 
+                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                  {% elsif include.highIcon %} 
+                      <i class="fa-solid fa-circle fa-fw text-warning"></i> 
+                  {% elsif include.normal %} 
+                      <i class="fa-solid fa-circle fa-fw text-primary me-1"></i> 
+                      Normal
+                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                  {% elsif include.normalIcon %} 
+                      <i class="fa-solid fa-circle fa-fw text-primary"></i>  
+                  {% elsif include.low %} 
+                      <i class="fa-solid fa-circle fa-fw text-muted me-1"></i> 
+                      Low
+                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                  {% elsif include.lowIcon %} 
+                      <i class="fa-solid fa-circle fa-fw text-muted"></i> 
+                  {% else %} 
+                      <i class="fa-solid fa-circle fa-fw text-danger"></i> Important
+                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                  {% endif %}
+              </button>
+              {% include tasks/dropdown-priority.html %}  
+          </div>
+          <!-- END Dropdown: Priority -->
+      
+        <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Subtasks">
+          <i class="fa-solid fa-align-left text-body me-2"></i>2 / <span class="text-dark">5</span>
+        </button>
+      </div>
+
+      <!-- START Card Body -->
+      <div class="card-body pe-4">
+
+        <div class="d-flex pb-2">
+          <!-- START Dropdown: Status -->
+          <div class="dropdown {% if include.tableView %} me-2 d-flex align-items-center {% else %} me-2 {% endif %}">
+            <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              {% if include.finished %} 
+                <i class="fa-solid fa-check fa-fw text-success"></i>
+              {% elsif include.backlog %} 
+                <i class="fa-solid fa-history fa-fw text-secondary"></i>
+              {% elsif include.rejected %} 
+                <i class="fa-solid fa-times fa-fw text-danger"></i>
+              {% elsif include.doing %} 
+                <i class="fa-solid fa-clock fa-fw text-info"></i>
+              {% elsif include.todo %} 
+                <i class="fa-solid fa-circle-notch fa-fw text-warning"></i>
+              {% else %}
+                <i class="fa-solid fa-check fa-fw text-success"></i>
+              {% endif %}
+            </button>
+            {% include tasks/dropdown-status.html 
+            %}  
+          </div>
+          <!-- END Dropdown: Status -->
+
+          <a href="#" class="text-dark pt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
+            {{ site.data.projectsTitles | sample }}
+          </a>
+        </div>
+
+        <div class="mb-4">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi officia sint.
+          </p>   
+        </div>
+
+        <!-- Badges -->
+        <div class="mb-3 hstack gap-1">
+
+          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+            <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+            {{ site.data.tagsTitles | sample }}
+          </span>
+          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+            <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+            {{ site.data.tagsTitles | sample }}
+          </span>
+          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+            <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+            {{ site.data.tagsTitles | sample }}
+          </span>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
+              <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+            </button>
+            {% include tasks/dropdown-tags.html %}
+          </div>
+        </div>
+
+        <!-- Avatars -->
+        <div class="d-inline-flex mb-2">
+
+          <div class="avatars d-flex ms-2">
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+            </div>
+          </div>
+
+          <div class="btn-group ms-1">
+            <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small text-body"></i>
+            </button>
+            {% include tasks/dropdown-assigned.html %}
+          </div>
+
+
+
+          
+        </div>
+
+
+      </div>
+      <!-- END Card Body -->
+
+      <!-- START Cart Footer -->
+      <div class="card-footer border-0 px-2 d-flex justify-content-between">
+
+        <button type="button" class="btn btn-link btn-sm text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Favorites">
+          <i class="fa-solid fa-star"></i>
+        </button>
+
+        {% include tasks/dropdown-options.html 
+          modalDangerListTasks=""
+        %}
+      </div>
+
+    </div>
+    <!-- END CARD TASK -->

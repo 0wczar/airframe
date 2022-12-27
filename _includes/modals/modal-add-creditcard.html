@@ -1,0 +1,114 @@
+    <!-- START Modal: Add Credit Card -->
+    <div class="modal fade" id="modalAddCreditCard" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    
+        <div class="modal-dialog position-relative show">
+
+            <!-- Right Close Button -->
+            <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
+                <span class="fa-stack" style="font-size: 0.7em;">
+                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
+                    <i class="far fa-times fa-stack-1x text-white"></i>
+                </span>
+            </span>
+
+            <div class="modal-content rounded-5 shadow-sm overflow-auto">
+
+                <!-- Content -->
+                <div class="modal-body pb-2 pt-4 px-4">
+                    <h4 class="mb-1 text-center fw-normal">
+                        Edit Credit Card
+                    </h4>
+                    <p class="text-center mb-4">Editing now VISA</p>
+
+                    <div class="row">
+
+                        <h5 class="mb-3 fw-normal">Card Details</h5>
+      
+                        <div class="col-8">
+                          <label for="exampleInputEmail1" class="form-label">First and last name</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first and last name">
+                        </div>
+      
+                        <div class="mb-3 col-4">
+                          <label for="exampleInputEmail1" class="form-label">Expired</label>
+                          <div class="input-group">
+                            <input type="text" aria-label="First name" class="form-control" placeholder="00">
+                            <input type="text" aria-label="Last name" class="form-control" placeholder="2024">
+                          </div>
+                        </div>
+      
+                        <div class="mb-3 col-8">
+                          <label for="exampleInputEmail1" class="form-label">Card Number</label>
+                          <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                              <i class="fa fa-credit-card text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="0000 0000 0000 0000">
+                          </div>
+                          <div id="passwordHelpBlock" class="form-text">
+                            Selected Card: Visa
+                          </div>
+                        </div>
+      
+                        <div class="col-4">
+                          <label for="exampleInputEmail1" class="form-label">CVV</label>
+                          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="000">
+                        </div>
+      
+      
+                        <h5 class="mb-3 mt-4 fw-normal">Address</h5>
+      
+                        <div class="col-12 mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Street Address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter street address">
+                        </div>
+      
+                        <div class="col-12 mb-3">
+                          <label for="exampleInputEmail1" class="form-label">City</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter city">
+                        </div>
+      
+                        <div class="mb-3 col-7">
+                          <label for="exampleInputEmail1" class="form-label">State</label>
+                          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter state">
+                        </div>
+      
+                        <div class="col-5">
+                          <label for="exampleInputEmail1" class="form-label">Province</label>
+                          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter province">
+                        </div>
+      
+                        <div class="col-12 mb-4">
+                          <label for="exampleInputEmail1" class="form-label">Country</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">United Kingdom</option>
+                            <option value="2">United States</option>
+                            <option value="3">Ireland</option>
+                            <option value="3">Australia</option>
+                            <option value="3">New Zeland</option>
+                          </select>
+                        </div>
+      
+      
+                      </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer hstack p-0 bg-light border-0  overflow-auto">
+                    <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-danger text-decoration-none m-0 border-end" id="removeToastBtn">Remove this Card</button>
+                    <button type="button" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0" id="saveToastBtn">Save</button>
+                </div>
+                
+            </div>
+            
+
+
+          </div>
+        </div>
+
+    </div>
+    <!-- END Modal: Edit Credit Card -->
+
+

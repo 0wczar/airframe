@@ -1,0 +1,47 @@
+        <!-- START Dropdown: Options -->
+        <div class="dropdown {% if include.tableView %} dropdown {% else %} dropup {% endif %}">
+            <button class="btn btn-link text-decoration-none btn-sm text-secondary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-ellipsis-h fa-fw"></i>
+            </button>
+  
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownMenuButton1">
+              <li><h6 class="dropdown-header fw-normal">Options</h6></li>
+              <li>
+                <a class="dropdown-item gap-2 d-flex" href="#">
+                  <i class="fa fa-pen fa-fw me-2 opacity-75 align-self-center"></i> Edit this Project
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item gap-2 d-flex" href="#">
+                  <i class="fa fa-calendar fa-fw me-2 opacity-75 align-self-center"></i> Due Date
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item gap-2 d-flex" href="#">
+                  <i class="fa fa-list fa-fw me-2 opacity-75 align-self-center"></i> Add Task
+                </a>
+              </li>
+              <li>
+                <button class="dropdown-item gap-2 d-flex" type="button" data-bs-toggle="modal" data-bs-target="#modalShare">
+                  <i class="fa fa-link fa-fw me-2 opacity-75 align-self-center"></i> Share
+                </button>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                {% if include.modalDangerTasks %}
+                  <button type="button" class="dropdown-item gap-2 d-flex" data-bs-toggle="modal" data-bs-target="#modalDanger">
+                    <i class="fa fa-trash fa-fw me-2 opacity-75 align-self-center"></i> Delete
+                  </button>
+                {% elsif include.modalDangerListTasks %}
+                  <button type="button" class="dropdown-item gap-2 d-flex" data-bs-toggle="modal" data-bs-target="#modalDanger">
+                    <i class="fa fa-trash fa-fw me-2 opacity-75 align-self-center"></i> Delete
+                  </button>  
+                {% else %}
+                  <button type="button" class="dropdown-item gap-2 d-flex" data-bs-toggle="modal" data-bs-target="#modalDanger">
+                    <i class="fa fa-trash fa-fw me-2 opacity-75 align-self-center"></i> Delete
+                  </button>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+          <!-- END Dropdown: Options -->

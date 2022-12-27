@@ -1,0 +1,88 @@
+---
+layout: sidebar-list
+title:  'General'
+offNavbarFilters: 1
+onSettings: 1
+---
+<div class="col min-vh-100">
+
+    <div class="container-sm pt-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+
+                {% include settings/header-settings.html
+                    withTeam=""
+                    team="airframe"
+                    title="General"
+                    description="Manage your team settings"
+                %}
+
+                <div class="card shadow-sm rounded-5 mb-4">
+
+                    <div class="card-body p-4">
+                        <label for="inputPassword5" class="form-label h6 mb-3">Logo</label>
+                        <div class="d-flex d-flex align-items-center">
+                            <div class="avatar-lg rounded-5 bg-white small text-white d-flex align-items-center justify-content-center text-wrap small border border-secondary opacity-50 border-1" style="border-style: dashed !important;">
+                                <i class="fa fa-image fa-2x text-secondary"></i>
+                            </div>
+                            <div class="mb-0 ms-3">
+                                Pick a logo for your team. Recommended size is 256x256px.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="opacity: 0.12;" />
+
+                    <div class="card-body p-4">
+                        <form class="row gy-0 gx-3 mb-3">
+                            <div class="col-6">
+                                <label for="teamName" class="form-label h6">Team Name</label>
+                                <input type="text" value="airframe" class="form-control" placeholder="Enter your team name..." aria-label="Recipient's username" aria-describedby="teamName">
+                            </div>
+                            <div class="col-6">
+                                <label for="teamURL" class="form-label h6">Team URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon3">webkom.co/</span>
+                                    <input type="text" class="form-control" id="teamURL" aria-describedby="teamURL" value="airframe">
+                                  </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-footer border-0 py-3">
+                        <button type="button" class="btn btn-primary">
+                            Update
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="card rounded-5 bg-transparent">
+                  <div class="card-body p-4">
+                    <label for="inputPassword5" class="form-label h6">Delete team</label>
+                    <div id="passwordHelpBlock" class="mb-3">
+                      If you want to pernamently delete this team and all of its data, including but not limited to users, issues and commenents, you can do so below.
+                    </div>
+                    <button type="button" class="btn btn-danger px-4">
+                      Delete this team
+                    </button>
+                  </div>
+                </div>
+
+
+
+
+
+
+    
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% include modals/modal-invite-users.html 
+
+%}

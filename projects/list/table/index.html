@@ -1,0 +1,65 @@
+---
+layout: sidebar-list
+title:  'Projects List'
+projectsListTable-Sidebar: 1
+listProjects: 1
+projectsListTable: 1
+modalDangerListTasks: 1
+---
+
+<div class="col">
+  {% include layouts/navbar-filters.html 
+    1class=""
+    2class=""
+    list-link-inc_projects-list-list=""
+    grid-link-inc_projects-list-grid=""
+    table-link-inc_projects-list-table=""
+      table-active-inc_projects-list-table=""
+    badgesDisabled=""
+    title="Project: We need to program the bluetooth XSS application!"
+    closeProject=""
+%}
+  <table class="table table-hover">
+      <thead class="bg-light border-bottom small">
+        <tr>
+          <th scope="col">
+    
+          </th>
+          <th scope="col">
+            <i class="fas fa-fw fa-star ms-2"></i>
+          </th>
+          <th scope="col" class="text-center small fw-normal">Priority</th>
+          <th scope="col" class="text-center small fw-normal">Status</th>
+          <th scope="col" class="small fw-normal">Title</th>
+          <th scope="col" class="small fw-normal">Created</th>
+          <th scope="col" class="small fw-normal">Tags</th>
+          <th scope="col" class="small fw-normal">Assigned</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for table in site.data.tableTask %}
+        {% include tasks/tr-task.html 
+          avatar4=""
+          backlog=""
+          importantIcon=""
+        %}
+        {% include tasks/tr-task.html 
+          avatar3=""
+          rejected=""
+          highIcon=""
+        %}
+        {% include tasks/tr-task.html 
+          avatar2=""
+          doing=""
+          normalIcon=""
+        %}
+        {% include tasks/tr-task.html 
+          avatar1=""
+          todo=""
+          lowIcon=""
+        %}
+        {% endfor %}
+      </tbody>
+    </table>
+</div>

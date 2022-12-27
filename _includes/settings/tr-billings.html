@@ -1,0 +1,56 @@
+                    <!-- START TR: Billings -->
+                    <tr>
+                        <th scope="row" class="align-middle">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        </th>
+                        <td class="align-middle">
+                            <a href="#" class="text-dark text-decoration-none link-dark">
+                                {{ include.title }}
+                            </a>
+                        </td>
+                        <td class="align-middle">$43.11</td>
+                        <td class="align-middle">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</td>
+                        <td class="align-middle">
+                            {% if include.statusPaid %}
+                                <i class="fa fa-fw fa-check me-1 text-success"></i>
+                                Paid              
+                        {% else %}
+                                <i class="fa fa-fw fa-times me-1 text-danger"></i>
+                                Failed   
+                        {% endif %}     
+                        </td>
+                        <td class="align-middle text-nowrap">
+                            {% if include.paymentPaypal %}
+                                <i class="fab fa-paypal me-2 fa-fw text-primary"></i>
+                                PayPal:
+                                <span>Berta92@hotmail.com</span>
+                            {% else %}
+                                <i class="fa fa-credit-card me-2 fa-fw text-muted"></i>
+                                Visa:
+                                <span>4*** **** **** 9221</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-end align-middle">
+                            <!-- START Dropdown: Options -->
+                            <div class="btn-group">
+                                <button class="btn btn-link text-decoration-none btn-sm text-secondary rounded-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-h fa-fw"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-macos dropdown-menu-end shadow" aria-labelledby="dropdownMenuButton1">
+                                    <li><h6 class="dropdown-header">Options</h6></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                        <i class="fa fa-eye fa-fw me-2 opacity-50"></i> Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                        <i class="fa fa-arrow-down fa-fw me-2 opacity-50"></i> Download
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END Dropdown: Options -->
+                        </td>
+                      </tr>
+                      <!-- END TR: Billings -->

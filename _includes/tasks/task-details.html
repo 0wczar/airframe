@@ -1,0 +1,115 @@
+    <!-- Title Task -->
+    <h4 class="pb-4">We need to back up the primary USB alarm!</h4>
+
+    <!-- START Task Form -->
+    <dl class="row pb-3">
+        
+      <!-- Priority -->
+      <dt class="col-4 fw-normal col-form-label pt-2 text-body">
+        <i class="fa fa-list fa-fw me-2 text-body"></i> Priority
+      </dt>
+      <dd class="col-sm-8">
+        <div class="dropdown">
+          <button type="button" class="btn btn-link text-dark text-decoration-none"  data-bs-toggle="dropdown">
+            <i class="fa fa-circle fa-fw text-danger me-2"></i> 
+            Important 
+            <i class="fa-solid fa-angle-down text-body ms-2"></i>
+          </button>
+          {% include tasks/dropdown-priority.html 
+            buttonDefault=""  
+          %}
+        </div>
+      </dd>
+      
+      <!-- Status -->
+      <dt class="col-sm-4 fw-normal pt-2">
+        <i class="fa fa-clock fa-fw me-2 text-body text-opacity-75"></i> Status
+      </dt>
+      <dd class="col-sm-8">
+        <div class="dropdown">
+          <button type="button" class="btn btn-link text-dark text-decoration-none" data-bs-toggle="dropdown">
+            <i class="fa fa-circle-notch fa-fw text-warning me-2"></i> 
+            In Progress 
+            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+          </button>
+          {% include tasks/dropdown-status.html 
+            buttonDefault=""  
+          %}
+        </div>
+      </dd>
+      
+      <!-- Tags -->
+      <dt class="col-sm-4 fw-normal pt-2">
+        <i class="fa fa-tag fa-fw me-2 text-body text-opacity-75"></i> Tags
+      </dt>
+      <dd class="col-sm-8">
+        <div class="btn-group me-1">
+          <button type="button" class="btn ms-1 btn-link text-body rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+            <i class="fa-solid fa-pen small"></i>
+          </button>
+          {% include tasks/dropdown-tags.html %}
+        </div>
+
+        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+          <i class="fa fa-circle me-1 text-success ms-1"></i>
+          CSS
+          <span class="text-body opacity-50 ms-1">
+            <i class="fa fa-times-circle"></i>
+          </span>
+        </a>
+
+        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+          <i class="fa fa-circle me-1 text-primary ms-1"></i>
+          Usablity
+          <span class="text-body opacity-50 ms-1">
+            <i class="fa fa-times-circle"></i>
+          </span>
+        </a>
+      
+        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+          <i class="fa fa-circle me-1 text-info ms-1"></i>
+          Production
+          <span class="text-body opacity-50 ms-1">
+            <i class="fa fa-times-circle"></i>
+          </span>
+        </a>
+        
+      </dd>
+      
+      <!-- Assigned -->
+      <dt class="col-sm-4 text-body fw-normal pt-2">
+        <i class="fa fa-user-plus me-2 text-body text-opacity-75"></i> Assigned
+      </dt>
+      <dd class="col-sm-8">
+
+        <!-- Add / Remove Users -->
+        <div class="btn-group me-3">
+          <button type="button" class="btn btn-link ms-1 text-body rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+            <i class="fa-solid fa-plus small"></i>
+          </button>
+          {% include tasks/dropdown-assigned.html %}
+        </div>
+        
+        <!-- Avatars -->
+        <div class="d-inline-flex">
+          <div class="avatars d-flex">
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="https://randomuser.me/api/portraits/women/65.jpg" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="https://randomuser.me/api/portraits/men/25.jpg" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="https://randomuser.me/api/portraits/men/55.jpg" alt="">
+            </div>
+            <div class="avatars__item"> 
+              <img class="rounded-3" src="https://randomuser.me/api/portraits/women/65.jpg" alt="">
+            </div>
+          </div>
+      </dd>
+
+    </dl>
+    <!-- END TaskForm -->
+
+    <!-- Task Details -->
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

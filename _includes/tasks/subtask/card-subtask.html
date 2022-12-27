@@ -1,0 +1,91 @@
+<!-- START Card Subtask -->
+
+<div class="card shadow-sm rounded-5">
+    <input type="email" class="form-control border-top-0 border-end-0 border-start-0" id="exampleFormControlInput1" placeholder="Title Subtask..." style="border-radius: 6px 6px 0 0;">
+    <textarea class="form-control border-top-0 border-end-0 border-start-0 rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description for this subtask..."></textarea>
+
+    <!-- Options + Assigned -->
+    <div class="card-body p-2 bg-white d-flex">
+        <!-- START Dropdown: Priority -->
+        <div class="btn-group ">
+            <button class="btn btn-link btn-sm text-decoration-none rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-circle fa-fw text-danger"></i> 
+            </button>
+            {% include tasks/dropdown-priority.html %}  
+        </div>
+        <!-- END Dropdown: Priority -->
+
+        <!-- START Dropdown: Status -->
+        <div class="btn-group">
+            <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-check fa-fw text-success"></i>
+            </button>
+            {% include tasks/dropdown-status.html 
+            %}  
+        </div>
+        <!-- END Dropdown: Status -->
+
+        <!-- START Button: Attachments -->
+            <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-body" type="button">
+                <i class="fa fa-paperclip fa-fw text-body"></i>
+            </button>
+        <!-- END Button: Attachments -->
+
+        <!-- START Avatars -->
+        <div class="d-inline-flex ms-auto">
+            <!-- Edit -->
+            <div class="btn-group">
+                <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                    <i class="fa-solid fa-pen small text-body"></i>
+                </button>
+                {% include tasks/dropdown-assigned.html %}
+            </div>
+            <!-- Members -->
+            <div class="avatars d-flex">
+                <div class="avatars__item"> 
+                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                </div>
+                <div class="avatars__item"> 
+                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                </div>
+                <div class="avatars__item"> 
+                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                </div>
+                <div class="avatars__item"> 
+                    <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- END Avatars -->
+
+
+    </div>
+
+    <!-- Tags + Create Button -->
+    <div class="card-body rounded-bottom bg-white border-top d-flex p-2 align-items-center" style="border-radius: 0 0 6px 6px !important;">
+        <div class="d-flex gap-2">
+              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+                <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+                {{ site.data.tagsTitles | sample }}
+              </span>
+              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+                <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+                {{ site.data.tagsTitles | sample }}
+              </span>
+              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+                <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+                {{ site.data.tagsTitles | sample }}
+              </span>
+              <div class="btn-group">
+                <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
+                  <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+                </button>
+                {% include tasks/dropdown-tags.html %}
+              </div>
+        </div>
+        <button type="button" class="btn btn-primary ms-auto btn-sm px-3">Create</button>
+    </div>
+</div>
+
+
+<!-- END Card Subtask -->

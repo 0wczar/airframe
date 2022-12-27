@@ -1,0 +1,16 @@
+                <!-- START Offcanvas {{ include.title }} -->
+                <div class="offcanvas {{ include.position }} shadow-sm h-100"
+                {% if include.demoStyle %} style="position:static; visibility:visible; z-index:auto; top:auto; left:auto; transform:initial;" {% else %} {% endif %} tabindex="-1" {% if include.demoStyle %} {% else %} id="offcanvas-{{ include.title }}" {% endif %}  aria-labelledby="offcanvas-{{ include.title }}">
+                    <!-- Offcanvas Header -->
+                    <div class="offcanvas-header pb-0">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas {{ include.title }}</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <!-- Offcanvas Body -->
+                    <div class="offcanvas-body">
+                        Content for the offcanvas goes here. You can place just about any Bootstrap component or custom
+                        elements here.
+                    </div>
+                </div>
+                <!-- END Offcanvas {{ include.title }} -->

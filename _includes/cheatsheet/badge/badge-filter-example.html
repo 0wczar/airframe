@@ -1,0 +1,38 @@
+<!-- START Badge Filter {{ include.comment }} -->
+<{% if include.asLink %}a{% else %}span{% endif %} class="badge {% if include.outlineStyle %} badge-outline-light shadow-sm {% else %} badge-light-light {% endif %} rounded-pill text-dark {% if include.customClass %} {{ include.customClass }} {% else %} {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
+
+    <!-- Left Side -->
+    {% if include.avatarIcon %}
+        <i class="fa fa-user-circle me-1 text-body opacity-75"></i>
+    {% elsif include.icon %}
+        <i class="fa fa-calendar me-2 ms-1 text-body opacity-75"></i>
+    {% elsif include.iconColor %}
+        <i class="fa fa-circle me-1 text-{{ site.data.colors | sample }}"></i>
+    {% else %}
+    {% endif %}
+
+    <!-- Subtitle -->
+    {% if include.withSubtitle %}
+        <span class="text-muted me-1">Person</span>
+    {% else %}
+    {% endif %}
+
+    <!-- Title -->
+    <span>{{ site.data.firstName | sample }} {{ site.data.lastName | sample }}</span>
+
+    <!-- Result -->
+    {% if include.withResult %}
+        <span class="text-muted mx-1">12</span>
+    {% else %}
+    {% endif %}
+
+    <!-- Close -->
+    {% if include.withClose %}
+    <a href="#" class="link-secondary opacity-75 ms-1">
+        <i class="fa fa-times-circle"></i>
+    </a>
+    {% else %}
+    {% endif %}
+
+</{% if include.asLink %}a{% else %}span{% endif %}>
+<!-- END Badge Filter {{ include.comment }} -->
