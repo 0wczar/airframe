@@ -8,9 +8,9 @@ A premium and open source dashboard template with a responsive and high-quality 
 
 <h4 align="center">
 <a href="http://airframe.vercel.app">Demo</a> &bull;
-<a href="http://airframe.vercel.app">Documentation</a> &bull;
-<a href="http://airframe.vercel.app">Website</a> &bull;
-<a href="http://airframe.vercel.app">Contact</a>
+<a href="https://zeroheight.com/71219a745/p/499357-design-build-scale">Documentation</a> &bull;
+Website &bull;
+<a href="mailto:tomasz.owczarczyk@gmail.com">Contact</a>
 </h4>
 
 <p align="center" width="100%">
