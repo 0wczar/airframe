@@ -1,0 +1,40 @@
+<!-- START Card -->
+<div class="col">
+  <div class="card card-gallery rounded-0 overflow-auto text-bg-dark border-0 h-100">
+    <img src="{{ site.data.landscapes | sample }}" class="object-fit-cover rounded-0" alt="...">
+
+    <!-- START Image Container -->
+    <div class="card-img-overlay bg-dark bg-gradient text-dark bg-opacity-50 rounded-0 p-4 d-flex align-items-start flex-column">
+
+      <!-- Top -->
+      <div class="d-flex w-100 mb-3">
+        <h6 class="fw-semibold text-white">Card Title</h6>
+        <div class="hstack gap-3 ms-auto">
+          <button type="button" class="btn btn-sm btn-link text-white p-0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Options">
+            <i class="fas fa-ellipsis"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-link text-white p-0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Preview">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="card-text text-white opacity-50 align-self-stretch">
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </div>
+
+      <!-- Footer -->
+      <p class="card-text small text-white opacity-50 mt-auto">
+        <small>
+          <i class="fa fa-clock me-2"></i>Update 3 mins ago 
+          <i class="fa fa-user ms-3 me-2"></i>Mark W.
+        </small>
+      </p>
+
+    </div>
+    <!-- END Image Container -->
+
+  </div>
+</div>
+<!-- END Card -->

@@ -1666,3 +1666,9 @@ a.badge-outline-light:hover {
     border-top-right-radius: 4px;
    }
 }
+
+.card-gallery .card-img-overlay:hover {
+  box-shadow: inset 0px 0px 0px 5px var(--bs-blue);
+  --bs-bg-opacity: .8;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}

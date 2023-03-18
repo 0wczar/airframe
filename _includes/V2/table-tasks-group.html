@@ -1,0 +1,99 @@
+<table class="table table-hover">
+
+      <!-- TH -->
+      <thead class="text-body bg-secondary border-bottom-1 border-white" style="--bs-bg-opacity: .1;">
+        <tr>
+          <th scope="col" class="fw-normal">
+            <span class="me-2">
+              <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </span>
+            Group
+          </th>
+          <th scope="col" width="30">
+            <i class="fas fa-fw fa-star ms-2"></i>
+          </th>
+          <th scope="col" class="text-center small fw-normal" width="30">Status</th>
+          <th scope="col" class="small fw-normal">Created</th>
+          <th scope="col" class="small fw-normal">Tags</th>
+          <th scope="col" class="small fw-normal">Assigned</th>
+          <th scope="col" class="text-end"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- TH GROUP HIGH -->
+        <tr class="bg-secondary border-bottom-1 border-white" style="--bs-bg-opacity: .1;">
+          <td scope="row" colspan="7" class="fw-normal text-dark">
+            <a class="link-secondary opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <span class="me-2">
+              <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </span>
+            <i class="fa fa-circle text-warning small me-2"></i>
+            High<span class="small text-muted fw-normal ms-2">2</span>
+          </td>
+        </tr>
+
+        {% for table in site.data.tableTask %}
+          {% include V2/tr-task-group.html 
+            avatar4=""
+            backlog=""
+            importantIcon=""
+          %}
+          {% include V2/tr-task-group.html 
+            avatar3=""
+            rejected=""
+            highIcon=""
+          %}
+        {% endfor %}
+
+        <!-- TH GROUP IMPORTANT -->
+        <tr class="bg-secondary border-bottom-1 border-white" style="--bs-bg-opacity: .1;">
+          <td scope="row" colspan="7" class="fw-normal text-dark">
+            <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <span class="me-2">
+              <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </span>
+            <i class="fa fa-circle text-danger small me-2"></i>
+            Important<span class="small text-muted fw-normal ms-2">2</span>
+          </td>
+        </tr>
+
+        <!-- TH GROUP NORMAL -->
+        <tr class="bg-secondary border-bottom-1 border-white" style="--bs-bg-opacity: .1;">
+          <td scope="row" colspan="7" class="fw-normal text-dark">
+            <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <span class="me-2">
+              <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </span>
+            <i class="fa fa-circle text-primary small me-2"></i>
+            Normal<span class="small text-muted fw-normal ms-2">2</span>
+          </td>
+        </tr>
+
+        <!-- TH GROUP LOW -->
+        <tr class="bg-secondary border-bottom-1 border-white" style="--bs-bg-opacity: .1;">
+          <td scope="row" colspan="7" class="fw-normal text-dark">
+            <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            <span class="me-2">
+              <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </span>
+            <i class="fa fa-circle text-secondary small me-2"></i>
+            Low<span class="small text-muted fw-normal ms-2">2</span>
+          </td>
+        </tr>
+
+      </div>
+    <!-- END Table Resposive -->
+
+    </tbody>
+
+  </table>

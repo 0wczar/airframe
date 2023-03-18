@@ -40,19 +40,135 @@
 				{% include V2/navbar-filters.html %}
 
 				<div class="table-responsive">
-					{% include V2/table-tasks-group.html %}
+					{% if page.tableTasksGroup %} 
+						{% include V2/table-tasks-group.html %}
+					{% elsif page.gridTasksGroup %} 
+						<div class="row row-cols-1 g-3 p-3">
+							<div class="col">
+								{% include tasks/card-task.html 
+									important=""
+									finished="" 
+								%}
+							</div>
+							<div class="col">
+								{% include tasks/card-task.html 
+									high=""
+									backlog="" 
+								%}
+							</div>
+							<div class="col">
+								{% include tasks/card-task.html 
+									normal=""
+									rejected="" 
+								%}
+							</div>
+							<div class="col">
+								{% include tasks/card-task.html 
+									low=""
+									doing="" 
+								%}
+							</div>
+							<div class="col">
+								{% include tasks/card-task.html 
+									important=""
+									finished="" 
+								%}
+							</div>
+							<div class="col">
+								{% include tasks/card-task.html 
+									high=""
+									backlog="" 
+								%}
+							</div>
+						</div>
+					{% elsif page.listGridTasksGroup %} 
+						<div class="p-0">
+							<!-- START Group 1 -->
+							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
+								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<i class="fa fa-angle-right"></i>
+								</a>
+								<span class="me-2">
+									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+								</span>
+								<i class="fa fa-circle text-warning small me-2"></i>
+								High<span class="small text-muted fw-normal ms-2">2</span>
+							</div>
+							<!-- END Group 1 -->
+						
+							<!-- START Cards 1 -->
+							<div class="collapse show container py-3" id="collapseExample">  
+								<div class="row row-cols-1 g-3">
+									<div class="col">
+										{% include tasks/card-task.html 
+											important=""
+											finished="" 
+										%}
+									</div>
+									<div class="col">
+										{% include tasks/card-task.html 
+											high=""
+											backlog="" 
+										%}
+									</div>
+								</div>
+							</div>
+							<!-- END Cards 1 -->
+						
+							<!-- START Group 2 -->
+							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
+								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<i class="fa fa-angle-right"></i>
+								</a>
+								<span class="me-2">
+									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+								</span>
+								<i class="fa fa-circle text-danger small me-2"></i>
+								Important<span class="small text-muted fw-normal ms-2">2</span>
+							</div>
+							<!-- END Group 2 -->
+						
+							<!-- START Group 3 -->
+							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
+								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<i class="fa fa-angle-right"></i>
+								</a>
+								<span class="me-2">
+									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+								</span>
+								<i class="fa fa-circle text-primary small me-2"></i>
+								Normal<span class="small text-muted fw-normal ms-2">2</span>
+							</div>
+							<!-- END Group 3 -->
+						
+							<!-- START Group 4 -->
+							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
+								<a class="link-secondary opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<i class="fa fa-angle-right"></i>
+								</a>
+								<span class="me-2">
+									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+								</span>
+								<i class="fa fa-circle text-secondary small me-2"></i>
+								Low<span class="small text-muted fw-normal ms-2">2</span>
+							</div>
+							<!-- END Group 4 -->
+						
+						</div>
+					{% else %}
+						{% include V2/table-tasks.html %}
+					{% endif %}
 				</div>
-			
 
-		</div>
-		<!-- END LIST -->
+			</div>
+			<!-- END LIST -->
 		
+			{{ content }}
+			
+		</div>
 
-		{{ content }}
 	</div>
 
-	</div>
-	</div>
 
 	<!-- Modal: Create New Tag -->
 	{% include tasks/modal-select-users.html %}

@@ -1,0 +1,174 @@
+    <!-- START TR Task Group -->
+    <tr class="collapse show" id="collapseExample">
+
+      <!-- Title -->
+      <td class="ps-5 text-nowrap text-dark">
+        <span class="me-2">
+          <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+        </span>
+        <a href="#" class="text-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          {{ table.title }}
+        </a>
+      </td>
+
+      <!-- Add to Favorites -->
+      <td class="align-middle">
+        <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+        <label class="btn btn-link btn-sm text-body" for="btn-check-outlined">
+          <i class="fa-solid fa-fw fa-star"></i>
+        </label>
+      </td>
+    
+      <!-- Status -->
+      <td class="align-middle text-nowrap">
+        <!-- START Dropdown: Status -->
+        <div class="btn-group {% if include.tableView %} me-2 d-flex align-items-center {% else %}  {% endif %}">
+          <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {% if include.buttonDefault %} 
+            <i class="fa-solid fa-check fa-fw text-danger"></i>
+              Finished
+              <i class="fa-solid fa-caret-down fa-fw"></i>
+            {% elsif include.finished %} 
+              <i class="fa-solid fa-check fa-fw text-success"></i>
+            {% elsif include.backlog %} 
+              <i class="fa-solid fa-history fa-fw text-secondary"></i>
+            {% elsif include.rejected %} 
+              <i class="fa-solid fa-times fa-fw text-danger"></i>
+            {% elsif include.doing %} 
+              <i class="fa-solid fa-clock fa-fw text-info"></i>
+            {% elsif include.todo %} 
+              <i class="fa-solid fa-circle-notch fa-fw text-warning"></i>
+            {% else %}
+              <i class="fa-solid fa-check fa-fw text-success"></i>
+            {% endif %}
+          </button>
+          {% include tasks/dropdown-status.html 
+          %}  
+        </div>
+        <!-- END Dropdown: Status -->
+      </td>
+
+      <!-- Created -->
+      <td class="align-middle text-nowrap">
+        {{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}
+      </td>
+
+      <!-- Tags -->
+      <td class="align-middle text-nowrap ">
+        <div class="btn-group">
+          <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
+            <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+          </button>
+          {% include tasks/dropdown-tags.html %}
+        </div>
+        <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+          {{ site.data.tagsTitles | sample }}
+        </span>
+        <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+          {{ site.data.tagsTitles | sample }}
+        </span>
+        <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
+          {{ site.data.tagsTitles | sample }}
+        </span>
+      </td>
+
+      <!-- Assigned -->
+      <td class="ps-3 align-middle">
+        {% if include.avatar4 %} 
+            <!-- START Avatars #4 -->
+            <div class="d-inline-flex">
+                <!-- Edit -->
+                <div class="btn-group">
+                    <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                        <i class="fa-solid fa-pen small text-body"></i>
+                    </button>
+                    {% include tasks/dropdown-assigned.html %}
+                </div>
+                <!-- Members -->
+                <div class="avatars d-flex">
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- END Avatars #4 -->
+        {% elsif include.avatar3 %}
+            <!-- START Avatars #3 -->
+            <div class="d-inline-flex">
+                <!-- Edit -->
+                <div class="btn-group">
+                    <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                        <i class="fa-solid fa-pen small text-body"></i>
+                    </button>
+                    {% include tasks/dropdown-assigned.html %}
+                </div>
+                <!-- Members -->
+                <div class="avatars d-flex">
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- END Avatars #3 -->
+        {% elsif include.avatar2 %}
+            <!-- START Avatars #2 -->
+            <div class="d-inline-flex">
+                <!-- Edit -->
+                <div class="btn-group">
+                    <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                        <i class="fa-solid fa-pen small text-body"></i>
+                    </button>
+                    {% include tasks/dropdown-assigned.html %}
+                </div>
+                <!-- Members -->
+                <div class="avatars d-flex">
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                    <div class="avatars__item"> 
+                        <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- END Avatars #2 -->
+        {% elsif include.avatar1 %}
+            <!-- START Avatars #1 -->
+            <div class="d-inline-flex">
+                <!-- Edit -->
+                <div class="btn-group">
+                    <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                        <i class="fa-solid fa-plus small text-body"></i>
+                    </button>
+                    {% include tasks/dropdown-assigned.html %}
+                </div>
+            </div>
+            <!-- END Avatars #1 -->
+        {% endif %}
+      </td>
+
+      <!-- Options -->
+      <td class="align-middle text-end">
+        {% include tasks/dropdown-options.html 
+          tableView=""
+        %}
+      </td>
+    </tr>
+    <!-- END TR Task Group -->
