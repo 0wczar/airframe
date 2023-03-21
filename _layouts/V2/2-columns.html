@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="bg-light">
+<body class="bg-light vh-100 fixed-top">
 	<div class="container-fluid px-0">
 		<div class="row g-0">
 			<!-- START SIDEBAR -->
@@ -35,7 +35,7 @@
 
 			<!-- START LIST -->
 			<div
-				class="col-xl-3 col-xxl-3 col-md-4 border-gray-300 shadow-sm bg-white border-end">
+				class="col-xl-3 col-xxl-3 col-md-4 border-gray-300 shadow-sm bg-white border-end vh-100">
 				{% include V2/navbar-list.html %}
 				{% include V2/navbar-filters.html %}
 
@@ -43,7 +43,7 @@
 					{% if page.tableTasksGroup %} 
 						{% include V2/table-tasks-group.html %}
 					{% elsif page.gridTasksGroup %} 
-						<div class="row row-cols-1 g-3 p-3">
+						<div class="row row-cols-1 g-3 p-3 overflow-auto vh-100">
 							<div class="col">
 								{% include tasks/card-task.html 
 									important=""
@@ -156,7 +156,9 @@
 						
 						</div>
 					{% else %}
-						{% include V2/table-tasks.html %}
+						<div class="overflow-auto vh-100">
+							{% include V2/table-tasks.html %}
+						</div>
 					{% endif %}
 				</div>
 
