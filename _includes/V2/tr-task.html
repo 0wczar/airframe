@@ -71,9 +71,15 @@
           <!-- END Dropdown: Status -->
         </td>
         <td class="align-middle">
-          <a href="#" class="text-dark text-nowrap" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            {{ table.title }}
-          </a>
+          {% if page.linkTasksListTable %}
+            <a href="{{page.root}}/tasks/list/table/details/" class="text-dark text-nowrap">
+              {{ table.title }}
+            </a>
+          {% else %}
+            <a href="#" class="text-dark text-nowrap" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              {{ table.title }}
+            </a>
+          {% endif %}
         </td>
         <td class="align-middle text-nowrap">
           {{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}

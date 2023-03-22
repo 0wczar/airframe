@@ -1,0 +1,158 @@
+---
+layout: V2/2-columns
+title:  'List Table Task Details'
+fullScreenTableTasks: 1
+grpApplyListTableTasks: 1
+layoutListTableTasks: 1
+linkTasksListTable: 1
+closeTasksListTable: 1
+---
+<div class="col vh-100 overflow-auto">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="pt-5">
+                    {% include tasks/task-details.html %}
+
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <!-- START Section Files -->
+                    <div class="mb-5">
+
+                        <!-- Small Header -->
+                        <div class="mb-4 text-body">
+                            <i class="fa fa-paperclip me-2"></i> Files
+                        </div>
+
+                        <!-- Attachments -->
+                        <div class="d-flex gap-3">
+
+                          {% include tasks/subtask/files.html %}
+
+                        </div>
+
+                    </div>
+                    <!-- END Section Files -->
+
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <div class="mb-3">
+
+                      <!-- Small Header -->
+                      <div class="d-flex mb-3 align-items-center">
+                          <div class="text-body">
+                              <i class="fa fa-list me-2"></i> Subtasks
+                          </div>
+                          <button class="btn btn-primary btn-sm rounded-circle ms-auto">
+                            <i class="fas fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add Subtask" aria-label="Add Task"></i>
+                          </button>
+                      </div>
+
+                      {% include tasks/subtask/card-subtask.html %}
+                    </div>
+
+                    {% include tasks/subtask/table-subtasks.html %}
+
+                        <hr class="mt-5 mb-3 opacity-25">
+                        
+                        <!-- Small Header -->
+                        <div class="mb-4 text-body">
+                            <i class="fa fa-comment me-2"></i> Comments
+                        </div>
+
+                        <!-- START Timeline Item #3 -->
+                        <div class="d-flex pb-3">
+                            <!-- Left Side -->
+                            <div class="flex-shrink-0 flex-column d-flex">
+                            <!-- Avatar Image Small Rounded with Icon -->
+                            <div>
+                            <div class="avatar-sm rounded-pill bg-secondary d-flex justify-content-center align-items-center">
+                                <i class="fa fa-user text-white" style="font-size: 0.8em;"></i>
+                            </div>
+                                </div>
+                            <div class="vr align-self-center h-100"></div>
+                            </div>
+                        
+                            <!-- Right Side -->
+                            <div class="flex-grow-1 ms-3 mb-3 text-body">
+                                <a href="#" class="text-dark">Maria Georgina-Lopez</a> invite <a href="#" class="text-dark">Phillip Michael Thomas</a> to project.
+                            <div class="small text-body">
+                                6 hours ago
+                            </div>
+                            </div>
+                            
+                        </div>
+                        <!-- END Timeline Item #3  -->
+
+
+                        <!-- START Timeline Item #2 -->
+                        <div class="d-flex pb-3">
+                            <!-- Left Side -->
+                            <div class="flex-shrink-0 flex-column d-flex">
+                            <!-- Avatar Image Small Rounded with Icon -->
+                            <div>
+                            <div class="avatar-sm rounded-pill bg-secondary d-flex justify-content-center align-items-center">
+                                <small><i class="fa fa-tag small text-white"></i></small>
+                            </div>
+                                </div>
+                            <div class="vr align-self-center h-100"></div>
+                            </div>
+                        
+                            <!-- Right Side -->
+                            <div class="flex-grow-1 ms-3 mb-3 text-body">
+                            <a href="#" class="text-dark">Darko Kovacevic</a> just added two badges
+                            <span class="badge badge-light-light rounded-pill text-dark px-1 fw-normal pe-2">
+                                <i class="fa fa-circle me-1 text-danger"></i>
+                                Usability
+                            </span>
+                            <span class="badge badge-light-light rounded-pill text-dark px-1 fw-normal pe-2">
+                                <i class="fa fa-circle me-1 text-primary"></i>
+                                Javascript
+                            </span>
+                            to project <a href="#" class="text-dark text-decoration-none">Redesign existing internal app</a>
+                            
+                            <div class="small text-body">
+                                12 Jan 2009, 11:23 pm
+                            </div>
+                            </div>
+                            
+                        </div>
+                        <!-- END Timeline Item #2 -->
+
+                        <!-- START Timeline Item #4 -->
+                        <div class="d-flex pb-3">
+                            <!-- Left Side -->
+                            <div class="flex-shrink-0 flex-column d-flex">
+                                <div class="position-relative d-inline-flex">
+                                    <img class="avatar-sm rounded-pill" src="https://randomuser.me/api/portraits/women/65.jpg" alt="">
+                                  </div>
+                            </div>
+                        
+                            <!-- Right Side -->
+                            <div class="flex-grow-1 ms-3 mb-3">
+                                <div class="d-flex mb-2">
+                                    <div class="me-2 text-dark">Jeff Toyum</div>
+                                    <span class="text-body small mb-1">Commented 4 days ago</span>
+                                </div>
+                                <!-- START Card Comment -->
+                                <div class="card rounded-5 overflow-auto shadow-sm">
+                                    <textarea class="form-control border-top-0 border-end-0 border-start-0 rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Please enter comment..."></textarea>
+                                    <!-- Tags + Create Button -->
+                                    <div class="card-body d-flex p-2 align-items-center">
+                                        <!-- START Button: Attachments -->
+                                        <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-body" type="button">
+                                            <i class="fa fa-paperclip fa-fw text-body"></i>
+                                        </button>
+                                        <!-- END Button: Attachments -->
+                                        <button type="button" class="btn btn-primary ms-auto btn-sm px-3">Comment</button>
+                                    </div>
+                                </div>
+                                <!-- END Card Comment -->
+                            </div>
+                        </div>
+                        <!-- END Timeline Item #4 -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
