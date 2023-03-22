@@ -69,15 +69,10 @@
             %}  
           </div>
           <!-- END Dropdown: Status -->
-          {% if page.linkTasksListGrid %}
-            <a href="{{page.root}}/tasks/list/grid/details/" class="text-dark pt-1"> 
-              {{ site.data.projectsTitles | sample }}
-            </a>
-          {% else %}
-            <a href="#" class="text-dark pt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
-              {{ site.data.projectsTitles | sample }}
-            </a>
-          {% endif %}
+
+          <a href="#" class="text-dark pt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
+            {{ site.data.projectsTitles | sample }}
+          </a>
         </div>
 
         <div class="mb-4">
