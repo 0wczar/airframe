@@ -155,6 +155,22 @@
 							<!-- END Group 4 -->
 						
 						</div>
+					{% elsif page.tasksListTableEmpty %} 
+						<div class="overflow-auto vh-100 d-flex justify-content-center flex-column align-items-center">
+							<div class="text-center">
+								<!-- Icon -->
+									<i class="fa-solid fa-folder-open text-body text-opacity-50 fa-4x pb-4"></i>
+								<!-- Text with Description -->
+								<h5 class="text-center">Empty Tasks</h5>
+								<p class="mb-4 text-body px-5">
+									In the upper right corner there is a blue button +.
+								</p>
+								<!-- Button -->
+								<button type="button" href="#" class="btn btn-primary px-4 rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
+									<i class="fa-solid fa-plus me-1"></i> Add Task
+								</button>
+							</div>
+						</div>		
 					{% else %}
 						<div class="overflow-auto vh-100">
 							{% include V2/table-tasks.html %}
