@@ -137,7 +137,13 @@
   <!-- Offcanvas Footer -->
   <div class="card-footer border-0 p-3 d-flex justify-content-end bg-light">
     <button type="button" class="btn btn-link text-dark text-decoration-none px-4">Cancel</button>
-    <button type="button" class="btn btn-primary px-4 shadow-sm">Create Task</button>
+    {% if page.offcanvasCreateTaskTasksListEmpty %}
+      <a role="button" class="btn btn-primary px-4 shadow-sm" href="{{page.root}}/tasks/list/table/">Create Task</a>
+    {% elsif page.offcanvasCreateTaskTasksEmpty %}
+      <a role="button" class="btn btn-primary px-4 shadow-sm" href="{{page.root}}/tasks/table/">Create Task</a>
+    {% else %}
+      <button type="button" class="btn btn-primary px-4 shadow-sm">Create Task</button>
+    {% endif %}
   </div>
 </div>
 <!-- END OFF CANVAS: CREATE TASK -->

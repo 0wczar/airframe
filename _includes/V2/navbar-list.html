@@ -14,7 +14,7 @@
 
         <!-- START Dropdown: Bulk -->
         <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body" type="button"
+            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownBulkDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
                 <i class="fa-solid fa-ellipsis text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -26,7 +26,7 @@
 
         <!-- START Dropdown: Filter -->
         <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body" type="button"
+            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownFilterDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
                 <i class="fa-solid fa-filter-list text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -37,7 +37,7 @@
 
         <!-- START Dropdown: Groups -->
         <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body" type="button"
+            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownGroupsDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
                 {% if page.grpNotify %} 
@@ -54,7 +54,7 @@
 
         <!-- START Dropdown: Sort -->
         <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body" type="button"
+            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownSortDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
                 <i class="fa-solid fa-bars-sort text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -132,7 +132,11 @@
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% else %}
-        
+            <!-- Layout Disabled -->
+            <a class="btn btn-link btn-sm rounded-circle text-body disabled" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="#">
+                    <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-original-title="Change Layout"></i>
+            </a>
         {% endif %}
 
 
@@ -203,6 +207,24 @@
         {% elsif page.fullScreenGridTasksGroup %}
             <!-- Switch Layout to List-Table Tasks -->
             <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
+            role="button"
+            style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
+            aria-label="Table View" data-bs-original-title="Switch to Full Screen">
+            <i class="fa-solid fa-expand" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-original-title="Switch to Full Screen"></i>
+            </a>
+        {% elsif page.fullScreenTasksEmpty %}
+            <!-- Switch Layout -->
+            <a href="{{page.root}}/tasks/list/empty" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
+            role="button"
+            style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
+            aria-label="Table View" data-bs-original-title="Switch to Full Screen">
+            <i class="fa-solid fa-expand" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-original-title="Switch to Full Screen"></i>
+            </a>
+        {% elsif page.fullScreenTasksListEmpty %}
+            <!-- Switch Layout -->
+            <a href="{{page.root}}/tasks/empty" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
