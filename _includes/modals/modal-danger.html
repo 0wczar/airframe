@@ -32,6 +32,10 @@
                 <a role="button" href="{{page.root}}/tasks/empty.html" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
               {% elsif include.modalDangerListTasks %}
                 <a role="button" href="{{page.root}}/tasks/empty.html" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
+              {% elsif page.modalDangerTasksEmpty %}
+                <a role="button" href="{{page.root}}/tasks/empty/" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
+              {% elsif page.modalDangerTasksListEmpty %}
+                <a role="button" href="{{page.root}}/tasks/list/empty/" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
               {% else %}
                 <a role="button" href="{{page.root}}/projects/empty.html" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
               {% endif %}
