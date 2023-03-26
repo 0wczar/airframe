@@ -83,19 +83,11 @@
 						</div>
 					{% elsif page.listGridTasksGroup %} 
 						<div class="p-0">
-							<!-- START Group 1 -->
-							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-									<i class="fa fa-angle-right"></i>
-								</a>
-								<span class="me-2">
-									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-								</span>
-								<i class="fa fa-circle text-warning small me-2"></i>
-								High<span class="small text-muted fw-normal ms-2">2</span>
-							</div>
-							<!-- END Group 1 -->
-						
+							{% include V2/collapse-group-grid.html 
+								collapseLink="collapseExample"
+								collapseIconColor="warning"
+								collapseGroupTitle="High"
+							%}
 							<!-- START Cards 1 -->
 							<div class="collapse show container py-3" id="collapseExample">  
 								<div class="row row-cols-1 g-3">
@@ -115,60 +107,32 @@
 							</div>
 							<!-- END Cards 1 -->
 						
-							<!-- START Group 2 -->
-							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-									<i class="fa fa-angle-right"></i>
-								</a>
-								<span class="me-2">
-									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-								</span>
-								<i class="fa fa-circle text-danger small me-2"></i>
-								Important<span class="small text-muted fw-normal ms-2">2</span>
-							</div>
-							<!-- END Group 2 -->
-						
-							<!-- START Group 3 -->
-							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-								<a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-									<i class="fa fa-angle-right"></i>
-								</a>
-								<span class="me-2">
-									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-								</span>
-								<i class="fa fa-circle text-primary small me-2"></i>
-								Normal<span class="small text-muted fw-normal ms-2">2</span>
-							</div>
-							<!-- END Group 3 -->
-						
-							<!-- START Group 4 -->
-							<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-								<a class="link-secondary opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-									<i class="fa fa-angle-right"></i>
-								</a>
-								<span class="me-2">
-									<input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-								</span>
-								<i class="fa fa-circle text-secondary small me-2"></i>
-								Low<span class="small text-muted fw-normal ms-2">2</span>
-							</div>
-							<!-- END Group 4 -->
+							{% include V2/collapse-group-grid.html 
+								collapseLink="collapseExample2"
+								collapseIconColor="danger"
+								collapseGroupTitle="Important"
+							%}
+
+							{% include V2/collapse-group-grid.html 
+								collapseLink="collapseExample3"
+								collapseIconColor="primary"
+								collapseGroupTitle="Normal"
+							%}
+
+							{% include V2/collapse-group-grid.html 
+								collapseLink="collapseExample4"
+								collapseIconColor="secondary"
+								collapseGroupTitle="Low"
+							%}
 						
 						</div>
-					{% elsif page.tasksListTableEmpty %} 
+					{% elsif page.tasksListTableEmpty %}
 						<div class="overflow-auto vh-100 d-flex justify-content-center flex-column align-items-center bg-light">
 							<div class="text-center">
-								<!-- Icon -->
-									<i class="fa-solid fa-folder-open text-body text-opacity-50 fa-4x pb-4"></i>
-								<!-- Text with Description -->
-								<h5 class="text-center">Empty Tasks</h5>
-								<p class="mb-4 text-body px-5">
-									In the upper right corner there is a blue button +.
-								</p>
-								<!-- Button -->
-								<button type="button" href="#" class="btn btn-primary px-4 rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
-									<i class="fa-solid fa-plus me-1"></i> Add Task
-								</button>
+								<!-- Include empty placholder -->
+								{% include empty-placeholder.html 
+									emptyTask=""
+								%}
 							</div>
 						</div>		
 					{% else %}

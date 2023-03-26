@@ -36,6 +36,18 @@
         <p class="mb-4 text-body">
             You have tasks, and if you press one then you will see details.
         </p>
+    {% elsif include.emptyTask %}
+        <!-- Icon -->
+        <i class="fa-solid fa-folder-open text-body text-opacity-50 fa-4x pb-4"></i>
+        <!-- Text with Description -->
+        <h5 class="text-center">Empty Tasks</h5>
+        <p class="mb-4 text-body px-5">
+            In the upper right corner there is a blue button +.
+        </p>
+        <!-- Button -->
+        <button type="button" href="#" class="btn btn-primary px-4 rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask">
+            <i class="fa-solid fa-plus me-1"></i> Add Task
+        </button>
     {% else %}
         <!-- START Empty State Placeholder -->
         <div class="text-center">

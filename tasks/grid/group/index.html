@@ -7,18 +7,11 @@ layoutGridTasksGroup: 1
 fullScreenGridTasksGroup: 1
 ---
 <div class="p-0">
-    <!-- START Group 1 -->
-    <div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-        <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa fa-angle-right"></i>
-        </a>
-        <span class="me-2">
-            <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-        </span>
-        <i class="fa fa-circle text-warning small me-2"></i>
-        High<span class="small text-muted fw-normal ms-2">2</span>
-    </div>
-    <!-- END Group 1 -->
+    {% include V2/collapse-group-grid.html 
+        collapseLink="collapseExample"
+        collapseIconColor="warning"
+        collapseGroupTitle="High"
+    %}
 
     <!-- START Cards 1 -->
     <div class="container-fluid collapse show py-3"  id="collapseExample">  
@@ -99,43 +92,22 @@ fullScreenGridTasksGroup: 1
     </div>
     <!-- END Cards 1 -->
 
-    <!-- START Group 2 -->
-    <div class="bg-secondary border-bottom border-white text-dark  px-3 py-2" style="--bs-bg-opacity: .1;">
-        <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa fa-angle-right"></i>
-        </a>
-        <span class="me-2">
-            <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-        </span>
-        <i class="fa fa-circle text-danger small me-2"></i>
-        Important<span class="small text-muted fw-normal ms-2">2</span>
-    </div>
-    <!-- END Group 2 -->
+    {% include V2/collapse-group-grid.html 
+        collapseLink="collapseExample2"
+        collapseIconColor="danger"
+        collapseGroupTitle="Important"
+    %}
 
-    <!-- START Group 3 -->
-    <div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-        <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa fa-angle-right"></i>
-        </a>
-        <span class="me-2">
-            <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-        </span>
-        <i class="fa fa-circle text-primary small me-2"></i>
-        Normal<span class="small text-muted fw-normal ms-2">2</span>
-    </div>
-    <!-- END Group 3 -->
+    {% include V2/collapse-group-grid.html 
+        collapseLink="collapseExample3"
+        collapseIconColor="primary"
+        collapseGroupTitle="Normal"
+    %}
 
-    <!-- START Group 4 -->
-    <div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-        <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa fa-angle-right"></i>
-        </a>
-        <span class="me-2">
-            <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-        </span>
-        <i class="fa fa-circle text-secondary small me-2"></i>
-        Low<span class="small text-muted fw-normal ms-2">2</span>
-    </div>
-    <!-- END Group 4 -->
+    {% include V2/collapse-group-grid.html 
+        collapseLink="collapseExample4"
+        collapseIconColor="info"
+        collapseGroupTitle="Low"
+    %}
 
 </div>
