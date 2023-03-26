@@ -17,46 +17,37 @@ closeTasksListTable: 1
                     <hr class="mt-5 mb-3 opacity-25">
                     <!-- START Section Files -->
                     <div class="mb-5">
-
-                        <!-- Small Header -->
-                        <div class="mb-4 text-body">
-                            <i class="fa fa-paperclip me-2"></i> Files
-                        </div>
+                        {% include V2/header-small.html
+                            headerSmallIcon="paperclip"
+                            headerSmallTitle="Files"
+                        %}
 
                         <!-- Attachments -->
                         <div class="d-flex gap-3">
-
                           {% include tasks/subtask/files.html %}
-
                         </div>
-
                     </div>
                     <!-- END Section Files -->
 
                     <hr class="mt-5 mb-3 opacity-25">
                     <div class="mb-3">
+                        {% include V2/header-small.html
+                            headerSmallButton="true"
+                                headerSmallIcon="list"
+                                headerSmallTitle="Subtasks"
+                        %}
 
-                      <!-- Small Header -->
-                      <div class="d-flex mb-3 align-items-center">
-                          <div class="text-body">
-                              <i class="fa fa-list me-2"></i> Subtasks
-                          </div>
-                          <button class="btn btn-primary btn-sm rounded-circle ms-auto">
-                            <i class="fas fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add Subtask" aria-label="Add Task"></i>
-                          </button>
-                      </div>
-
-                      {% include tasks/subtask/card-subtask.html %}
+                        {% include tasks/subtask/card-subtask.html %}
                     </div>
 
                     {% include tasks/subtask/table-subtasks.html %}
 
                         <hr class="mt-5 mb-3 opacity-25">
-                        
-                        <!-- Small Header -->
-                        <div class="mb-4 text-body">
-                            <i class="fa fa-comment me-2"></i> Comments
-                        </div>
+                        {% include V2/header-small.html
+                            headerSmallButton="true"
+                                headerSmallIcon="comment"
+                                headerSmallTitle="Comments"
+                        %}
 
                         <!-- START Timeline Item #3 -->
                         <div class="d-flex pb-3">

@@ -4,17 +4,14 @@
     <hr class="mt-5 mb-3 opacity-25">
     <!-- START Section Files -->
     <div class="mb-5">
-
-        <!-- Small Header -->
-        <div class="small mb-4 text-body">
-            <i class="fa fa-paperclip me-2"></i> Files
-        </div>
+        {% include V2/header-small.html
+            headerSmallIcon="paperclip"
+            headerSmallTitle="Files"
+        %}
 
         <!-- Attachments -->
         <div class="d-flex gap-3">
-
           {% include tasks/subtask/files.html %}
-
         </div>
 
     </div>
@@ -23,15 +20,11 @@
     <hr class="mt-5 mb-3 opacity-25">
     <div class="mb-3">
 
-      <!-- Small Header -->
-      <div class="d-flex mb-3 align-items-center">
-          <div class="small text-body">
-              <i class="fa fa-list me-2"></i> Subtasks
-          </div>
-          <button class="btn btn-primary btn-sm rounded-circle ms-auto">
-            <i class="fas fa-plus" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add Subtask" aria-label="Add Task"></i>
-          </button>
-      </div>
+      {% include V2/header-small.html
+        headerSmallButton="true"
+          headerSmallIcon="list"
+          headerSmallTitle="Subtasks"
+      %}
 
       {% include tasks/subtask/card-subtask.html %}
     </div>
