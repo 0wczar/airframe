@@ -36,12 +36,21 @@
 			<!-- START LIST -->
 			<div
 				class="col-xl-3 col-xxl-3 col-md-4 border-gray-300 shadow-sm bg-white border-end vh-100">
-				{% include V2/navbar-list.html %}
-				{% include V2/navbar-filters.html %}
+				{% if page.navbarListDisabled %}
+				{% else %}
+					{% include V2/navbar-list.html %}
+				{% endif %}
+
+				{% if page.navbarFiltersDisabled %}
+				{% else %}
+					{% include V2/navbar-filters.html %}
+				{% endif %}
 
 				<div class="table-responsive">
 					{% if page.tableTasksGroup %} 
 						{% include V2/table-tasks-group.html %}
+					{% elsif page.settingsMenu %}
+						{% include settings/pills-settings.html %} 
 					{% elsif page.gridTasksGroup %} 
 						<div class="row row-cols-1 g-3 p-3 overflow-auto vh-100">
 							<div class="col">
