@@ -1,0 +1,77 @@
+---
+layout: V2/2-columns
+title:  'Tasks List Table Group Details'
+tableTasksGroup: 1
+fullScreenTableTasksGroup: 1
+layoutListTableTasksGroup: 1
+grpApplyListTableTasksGroup: 1
+grpNotify: 1
+modalDangerTasksListEmpty: 1
+linkTasksListTableGroupDetails: 1
+closeTasksListTableGroupDetails: 1
+---
+<div class="col vh-100 overflow-auto">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="pt-5">
+                    {% include tasks/task-details.html %}
+
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <!-- START Section Files -->
+                    <div class="mb-5">
+                        {% include V2/header-small.html
+                            headerSmallIcon="paperclip"
+                            headerSmallTitle="Files"
+                        %}
+
+                        <!-- Attachments -->
+                        <div class="d-flex gap-3">
+                          {% include tasks/subtask/files.html %}
+                        </div>
+                    </div>
+                    <!-- END Section Files -->
+
+                    <hr class="mt-5 mb-3 opacity-25">
+                    <div class="mb-3">
+                        {% include V2/header-small.html
+                            headerSmallButton="true"
+                                headerSmallIcon="list"
+                                headerSmallTitle="Subtasks"
+                        %}
+
+                        {% include tasks/subtask/card-subtask.html %}
+                    </div>
+
+                    {% include tasks/subtask/table-subtasks.html %}
+
+                        <hr class="mt-5 mb-3 opacity-25">
+                        {% include V2/header-small.html
+                            headerSmallButton="true"
+                                headerSmallIcon="comment"
+                                headerSmallTitle="Comments"
+                        %}
+
+                        {% include V2/timeline-item.html 
+                            timelineItemAvatarIcon="true"
+                                timelineItemIcon="user"
+                            timelineItemDescription="true"
+                        %}
+
+                        {% include V2/timeline-item.html 
+                            timelineItemAvatarIcon="true"
+                                timelineItemIcon="user"
+                            timelineItemDescription="true"
+                        %}
+
+                        {% include V2/timeline-item.html
+                            timelineItemDescriptionWithComments="true"
+                            timelineItemVerticalLineDisabled="true"
+                        %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-between">
       <h4 class="pb-4">We need to back up the primary USB alarm!</h4>
       <div>
-        <a href="{{page.root}}/{% if page.offcanvasTasksTableDrawer %}tasks/list/table/details/{% elsif page.offcanvasTasksGrid %}tasks/list/grid/details/{% elsif page.offcanvasTasksListGridDetails %}tasks/grid/drawer/{% else %}tasks/table/drawer/{% endif %}" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" aria-label="Table View" data-bs-original-title="Switch to Full Screen">
+        <a href="{{page.root}}/{% if page.offcanvasTasksTableDrawer %}tasks/list/table/details/{% elsif page.offcanvasTasksGrid %}tasks/list/grid/details/{% elsif page.offcanvasTasksListGridDetails %}tasks/grid/drawer/{% elsif page.offcanvasTasksListTableGroupDetails %}tasks/list/table/group/details/{% else %}tasks/table/drawer/{% endif %}" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" aria-label="Table View" data-bs-original-title="Switch to Full Screen">
           <i class="fa-solid fa-expand" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Switch to Full Screen"></i>
         </a>
         
@@ -12,6 +12,10 @@
           </a>
         {% elsif page.closeTasksListGridDetails %}
           <a href="{{page.root}}/tasks/list/grid/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+            <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
+          </a>
+        {% elsif page.closeTasksListTableGroupDetails %}
+          <a href="{{page.root}}/tasks/list/table/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
         {% else %}

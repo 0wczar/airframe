@@ -6,9 +6,15 @@
         <span class="me-2">
           <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
         </span>
-        <a href="#" class="text-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          {{ table.title }}
-        </a>
+        {% if page.linkTasksListTableGroupDetails %} 
+          <a href="{{page.root}}/tasks/list/table/group/details/" class="text-dark">
+            {{ table.title }}
+          </a>
+        {% else %}
+          <a href="#" class="text-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            {{ table.title }}
+          </a>
+        {% endif %}
       </td>
 
       <!-- Add to Favorites -->
