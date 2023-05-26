@@ -131,6 +131,16 @@
                     <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
+        {% elsif page.layoutTasksListTableGroupDetails %}
+            <a class="btn btn-link btn-sm rounded-circle text-body" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/grid/group/details/">
+                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-original-title="Change Layout"></i>
+            </a>
+        {% elsif page.layoutTasksListGridGroupDetails %}
+            <a class="btn btn-link btn-sm rounded-circle text-body" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/group/details/">
+                    <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-original-title="Change Layout"></i>
+            </a>
         {% else %}
             <!-- Layout Disabled -->
             <a class="btn btn-link btn-sm rounded-circle text-body disabled" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="#">

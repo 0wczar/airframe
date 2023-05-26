@@ -18,6 +18,10 @@
           <a href="{{page.root}}/tasks/list/table/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
+        {% elsif page.closeTasksListGridGroupDetails %}
+          <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+            <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
+          </a>
         {% else %}
           <button type="button" class="btn btn-link btn-sm rounded-circle text-body" role="button" style="width: 28px; height: 28px; line-height: 28px; text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasRight">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
