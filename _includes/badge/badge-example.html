@@ -1,5 +1,5 @@
           <!-- START Badge Filter Large {{ include.comment }} -->
-          <{% if include.asLink %}a{% else %}span{% endif %} class="badge badge-avatar hstack {% if include.outlineStyle %} badge-outline-filter shadow-sm {% else %} badge-filter bg-gray-200 {% endif %} rounded-pill text-dark {% if include.customClass %} {{ include.customClass }} {% else %} py-1 {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
+          <{% if include.asLink %}a{% else %}span{% endif %} class="badge badge-avatar hstack {% if include.outlineStyle %} badge-outline-filter shadow-sm {% else %} badge-filter {% endif %} rounded-pill {% if include.customClass %} {{ include.customClass }} {% else %} py-1 {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
 
             <!-- Left Side -->
             {% if include.avatar %}
@@ -25,7 +25,7 @@
 
             <!-- Subtitle -->
             {% if include.withSubtitle %}
-              <span class="text-body me-1">{{ include.withSubtitleTitle }}</span>
+              <span class="opacity-50 me-1">{{ include.withSubtitleTitle }}</span>
             {% else %}
             {% endif %}
 
@@ -42,7 +42,7 @@
 
             <!-- Result -->
             {% if include.withResult %}
-              <span class="text-body small mx-2">({{ site.data.numbers | sample }})</span>
+              <span class="opacity-50  small mx-2">({{ site.data.numbers | sample }})</span>
             {% else %}
             {% endif %}
 

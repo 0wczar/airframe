@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
 	<head>
 		<meta charset="utf-8">
 		<title>{{ site.title }} - {{ page.title }}</title>
@@ -27,7 +27,7 @@
 
 	</head>
 
-	<body class="bg-light">
+	<body class="">
 		<div class="container-fluid px-0">
 			<div class="row g-0">
 				<!-- START #1 Sidebar -->
@@ -35,7 +35,7 @@
 				<!-- END #1 Sidebar -->
 
 				<!-- START #2 List -->
-                <div class="{% if page.projectsList %} col-xl-3 col-xxl-3 col-md-4 border-end bg-white border-gray-300 shadow-sm {% elsif page.onSettings %} col-xl-2 col-xxl-2 col-md-2 border-end bg-white border-gray-300 {% else %} col-xl-3 col-xxl-3 col-md-4 border-end border-gray-300 shadow-sm {% endif %}">
+                <div class="{% if page.projectsList %} col-xl-3 col-xxl-3 col-md-4 border-end  shadow-sm {% elsif page.onSettings %} col-xl-2 col-xxl-2 col-md-2 border-end bg-white {% else %} col-xl-3 col-xxl-3 col-md-4 border-end shadow-sm {% endif %}">
 					<!-- Tasks Filters List -->
 					{% if page.listBackOff %}
 						{% include layouts/navbar-filters.html 
@@ -145,7 +145,7 @@
 
 					{% if page.listProjects %}
 						<!-- START Projects List -->
-						<ul class="list-group list-group-flush bg-white min-vh-100 overflow-auto border-top border-light">
+						<ul class="list-group list-group-flush min-vh-100 overflow-auto border-top">
 							{% include tasks/list-project.html 
 								cancelled=""
 								avatar4=""
@@ -170,7 +170,7 @@
 						<!-- END Projects List -->
 					{% elsif page.tasksListDetails %}
 						<!-- START Tasks List -->
-						<ul class="list-group list-group-flush bg-white min-vh-100 overflow-auto border-top border-light">
+						<ul class="list-group list-group-flush min-vh-100 overflow-auto border-top">
 							{% include tasks/list-task.html 
 								linkTasksListDetails=""
 								finished=""
@@ -243,7 +243,7 @@
 						{% include settings/pills-settings.html %}
 					{% else %}
 						<!-- START Tasks List -->
-						<ul class="list-group list-group-flush bg-white min-vh-100 overflow-auto border-top border-light">
+						<ul class="list-group list-group-flush min-vh-100 overflow-auto border-top">
 							{% include tasks/list-task.html 
 								finished=""
 								high=""

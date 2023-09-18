@@ -14,27 +14,27 @@
                                         {{ site.data.percents | sample }}%
                                     </span>
                                     {% if include.cancelled %}
-                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                        <span class="badge badge-light-light rounded-pill py-1 fw-normal pe-3 ps-1">
                                             <i class="fa-solid fa-times-circle me-1 text-danger"></i>
                                             Cancelled
                                         </span>
                                     {% elsif include.paused %}
-                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                        <span class="badge badge-light-light rounded-pill py-1 fw-normal pe-3 ps-1">
                                             <i class="fa-solid fa-pause-circle me-1 text-warning"></i>
                                             Paused
                                         </span>
                                     {% elsif include.active %}
-                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                        <span class="badge badge-light-light rounded-pill py-1 fw-normal pe-3 ps-1">
                                             <i class="fa-solid fa-play-circle me-1 text-success"></i>
                                             Active
                                         </span>
                                     {% elsif include.completed %}
-                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                        <span class="badge badge-light-light rounded-pill py-1 fw-normal pe-3 ps-1">
                                             <i class="fa-solid fa-check-circle me-1 text-primary"></i>
                                             Completed
                                         </span>
                                     {% elsif include.planned %}
-                                        <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-3 ps-1">
+                                        <span class="badge badge-light-light rounded-pill py-1 fw-normal pe-3 ps-1">
                                             <i class="fa-solid fa-clock me-1 text-info"></i>
                                             Planned
                                         </span> 
@@ -44,7 +44,7 @@
 
                             <!-- List Title -->
                             <div class="mb-3">
-                                <a href="{{page.root}}/projects/list/list" class="text-dark ps-2 align-items-center"> 
+                                <a href="{{page.root}}/projects/list/list" class="ps-2 align-items-center"> 
                                     <i class="fa-solid fa-circle fa-fw me-2 text-{{ site.data.colors | sample }}"></i>{{ site.data.projectsTitles | sample }}
                                 </a>
                             </div>
