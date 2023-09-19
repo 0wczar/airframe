@@ -187,12 +187,8 @@
 }
 
 @include color-mode(dark) {
-// BADGE FILTER
-.badge-filter {
-  color: $white;
-  font-weight: $font-weight-normal;
-  background-color: $gray-800;
-  border: 1px solid $gray-800;
-  height: 30px;
+// Example
+.element-dark {
+
 }
 }

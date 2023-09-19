@@ -1,5 +1,5 @@
           <!-- START Badge Filter Large {{ include.comment }} -->
-          <{% if include.asLink %}a{% else %}span{% endif %} class="badge badge-avatar hstack {% if include.outlineStyle %} badge-outline-filter shadow-sm {% else %} badge-filter {% endif %} rounded-pill {% if include.customClass %} {{ include.customClass }} {% else %} py-1 {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
+          <{% if include.asLink %}a{% else %}span{% endif %} class="badge badge-avatar bg-body-secondary border border-0 text-body hstack {% if include.outlineStyle %} badge-outline-filter shadow-sm {% else %} badge-filter {% endif %} rounded-pill {% if include.customClass %} {{ include.customClass }} {% else %} py-1 {% endif %}" {% if include.asLink %}role="button"{% else %}{% endif %}>
 
             <!-- Left Side -->
             {% if include.avatar %}
@@ -13,7 +13,7 @@
                 <i class="fa fa-user" style="font-size: 10px; line-height: 0px;"></i>
               </div>
             {% elsif include.icon %}
-              <i class="fa fa-{{ include.iconName }} mx-2 text-body"></i>
+              <i class="fa fa-{{ include.iconName }} mx-2 text-body opacity-50"></i>
             {% elsif include.iconMs2Me1 %}
               <i class="fa fa-{{ include.iconMs2Me1-Name }} ms-2 me-1 text-{{ include.iconMs2Me1-Color }}"></i>
             {% elsif include.iconColor %}
@@ -25,7 +25,7 @@
 
             <!-- Subtitle -->
             {% if include.withSubtitle %}
-              <span class="opacity-50 me-1">{{ include.withSubtitleTitle }}</span>
+              <span class="opacity-50 text-body me-1">{{ include.withSubtitleTitle }}</span>
             {% else %}
             {% endif %}
 

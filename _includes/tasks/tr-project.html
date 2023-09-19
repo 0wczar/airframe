@@ -7,7 +7,7 @@
         </th>
         <td class="align-middle">
           <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-          <label class="btn btn-link btn-sm text-body" for="btn-check-outlined">
+          <label class="btn btn-link btn-sm text-body opacity-25" for="btn-check-outlined">
             <i class="fa-solid fa-fw fa-star"></i>
           </label>
         </td>
@@ -17,10 +17,10 @@
             {{ site.data.projectsTitles | sample }}
           </a>
         </td>
-        <td class="align-middle">
+        <td class="align-middle text-secondary">
             {{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}
         </td>
-        <td class="align-middle">
+        <td class="align-middle text-secondary">
             {{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}
         </td>
         <td class="align-middle">
@@ -29,8 +29,8 @@
                 <div class="d-inline-flex">
                     <!-- Edit -->
                     <div class="btn-group">
-                        <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                        <button type="button" class="me-3 btn btn-link btn-sm border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                            <i class="fa-solid fa-pen small"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -56,8 +56,8 @@
                 <div class="d-inline-flex">
                     <!-- Edit -->
                     <div class="btn-group">
-                        <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                        <button type="button" class="me-3 btn btn-link btn-sm  border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                            <i class="fa-solid fa-pen small"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -80,8 +80,8 @@
                 <div class="d-inline-flex">
                     <!-- Edit -->
                     <div class="btn-group">
-                        <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                        <button type="button" class="me-3 btn btn-link btn-sm border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                            <i class="fa-solid fa-pen small"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -101,8 +101,8 @@
                 <div class="d-inline-flex">
                     <!-- Edit -->
                     <div class="btn-group">
-                        <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-plus small text-body"></i>
+                        <button type="button" class="me-3 btn btn-link btn-sm border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                            <i class="fa-solid fa-plus small"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -113,33 +113,33 @@
         </td>
         <td class="ps-3 align-middle">
             {% if include.cancelled %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-times-circle me-1 text-danger"></i>
                     Cancelled
                 </span>
             {% elsif include.paused %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-pause-circle me-1 text-warning"></i>
                     Paused
                 </span>
             {% elsif include.active %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-play-circle me-1 text-success"></i>
                     Active
                 </span>
             {% elsif include.completed %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-check-circle me-1 text-primary"></i>
                     Completed
                 </span>
             {% elsif include.planned %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-clock me-1 text-info"></i>
                     Planned
                 </span> 
             {% endif %}
         </td>
-        <td class="align-middle text-end">
+        <td class="align-middle text-end text-secondary">
             {{ site.data.percents | sample }}%
           </td>
         <td class="align-middle text-end">

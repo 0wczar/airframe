@@ -1093,14 +1093,10 @@ thead th {
 
 // Badge Add Filter
 .badge-add-filter {
-    color: $dark;
     font-weight: $font-weight-normal;
-    border: dashed 1px $gray-400;
+    border: dashed 1px $secondary;
     padding: 6px;
     padding-left: 10px;
-}
-.badge-add-filter .fa-plus {
-    color: $secondary;
 }
 .badge-add-filter:hover {
     border: dashed 1px $gray-600;
@@ -1131,9 +1127,9 @@ a.badge-filter:hover {
 
 // Filter for badge-light-light
 a.badge-light-light {
-  color: $dark;
+  color: $body-bg;
   font-weight: $font-weight-normal;
-  background-color: $gray-200;
+  background-color: $body-bg;
   text-decoration: none;
   border: 1px solid $gray-200;
 }
@@ -1292,8 +1288,8 @@ a.badge-outline-light:hover {
   color: $cyan-800;
 }
 .badge-light-light {
-  background-color: $gray-200;
-  border: 1px solid $gray-200;
+  background-color: $body-bg;
+  border: 1px solid $body-bg;
   color: $gray-800;
 }
 .badge-light-dark {
