@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-end border-gray-300 border-start shadow" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width: 50%;">
+<div class="offcanvas offcanvas-end border-start shadow" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width: 50%;">
   <div class="offcanvas-body p-5">
     {% include tasks/task-details.html %}
     <hr class="mt-5 mb-3 opacity-25">
@@ -6,7 +6,7 @@
     <div class="mb-5">
 
         <!-- Small Header -->
-        <div class="small mb-4 text-body">
+        <div class="small mb-4 text-secondary">
             <i class="fa fa-paperclip me-2"></i> Files
         </div>
 
@@ -25,7 +25,7 @@
 
       <!-- Small Header -->
       <div class="d-flex mb-3 align-items-center">
-          <div class="small text-body">
+          <div class="small text-secondary">
               <i class="fa fa-list me-2"></i> Subtasks
           </div>
           <button class="btn btn-primary btn-sm rounded-circle ms-auto">
@@ -38,7 +38,7 @@
 
     {% include tasks/subtask/table-subtasks.html %}
   </div>
-  <div class="card-footer border-0 d-flex justify-content-end p-4">
+  <div class="card-footer bg-body-secondary d-flex justify-content-end p-4">
     <button type="button" class="btn btn-link text-decoration-none px-3">Edit this Task</button>
   </div>
 </div>

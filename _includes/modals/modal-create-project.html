@@ -6,7 +6,7 @@
             <!-- Right Close Button -->
             <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
                 <span class="fa-stack" style="font-size: 0.7em;">
-                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
+                    <i class="fas fa-circle fa-stack-2x text-secondary"></i>
                     <i class="far fa-times fa-stack-1x text-white"></i>
                 </span>
             </span>
@@ -14,7 +14,7 @@
             <div class="modal-content rounded-5 shadow-sm overflow-auto">
 
                 <!-- Content -->
-                <div class="modal-body px-4 pt-4">
+                <div class="modal-body border-0 px-4 pt-4">
                     <div class="d-flex flex-column">
                         <h5 class="mb-5 text-center fw-normal">
                             Create Project
@@ -27,7 +27,7 @@
                             </label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <button class="btn btn-outline-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-link border-light-subtle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-circle text-warning"></i>
                                     </button>
                                     <ul class="dropdown-menu shadow-sm">
@@ -90,10 +90,10 @@
                                 Status
                             </label>
                             <div class="col-sm-9">
-                                <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
+                                <button type="button" class="btn text-body-emphasis btn-link border-secondary-subtle text-decoration-none">
                                     <i class="fa fa-play-circle fa-fw text-success me-2"></i> 
                                     Active 
-                                    <i class="fa fa-caret-down text-muted ms-2"></i>
+                                    <i class="fa fa-angle-down text-body-tertiary ms-2"></i>
                                 </button>
                             </div>
                         </div>
@@ -104,10 +104,10 @@
                                 Due Date
                             </label>
                             <div class="col-sm-9">
-                            <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
-                                <i class="fa fa-calendar fa-fw text-muted me-2"></i> 
+                            <button type="button" class="btn text-body-emphasis btn-link border-secondary-subtle text-decoration-none">
+                                <i class="fa fa-calendar fa-fw me-2"></i> 
                                     Without 
-                                <i class="fa fa-caret-down text-muted ms-2"></i>
+                                <i class="fa fa-angle-down text-body-tertiary ms-2"></i>
                             </button>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 Members
                             </label>
                             <div class="col-sm-9 d-flex align-items-center hstack gap-1">
-                            <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center">
+                            <button type="button" class="btn btn-badge text-body-emphasis btn-link border-secondary-subtle rounded-pill text-decoration-none p-0 align-self-center">
                                 <i class="fa fa-plus"></i>
                             </button>
                             </div>
@@ -128,9 +128,9 @@
                 </div>
 
                 <!-- Footer -->
-                <div class="modal-footer hstack p-0 m-0 bg-light rounded-bottom">
+                <div class="modal-footer hstack p-0 m-0 bg-body-tertiary rounded-bottom">
                     <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">Cancel</button>
-                    <a role="button" href="{{page.root}}/" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0">Create</a>
+                    <a role="button" href="{{page.root}}/" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-body-emphasis text-decoration-none m-0">Create</a>
                 </div>
                 
             </div>

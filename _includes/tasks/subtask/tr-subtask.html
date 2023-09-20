@@ -32,7 +32,7 @@
 <td class="align-middle" width="30">
   <!-- START Dropdown: Status -->
   <div class="btn-group {% if include.tableView %} me-2 d-flex align-items-center {% else %}  {% endif %}">
-    <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-secondary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       {% if include.buttonDefault %} 
       <i class="fa fa-check fa-fw text-danger"></i>
         Finished
@@ -67,8 +67,8 @@
   <div class="d-inline-flex">
       <!-- Edit -->
       <div class="btn-group">
-          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-pen small text-body"></i>
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none text-secondary p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}
       </div>
@@ -94,8 +94,8 @@
   <div class="d-inline-flex">
       <!-- Edit -->
       <div class="btn-group">
-          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-pen small text-body"></i>
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center link-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}
       </div>
@@ -118,8 +118,8 @@
   <div class="d-inline-flex">
       <!-- Edit -->
       <div class="btn-group">
-          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-pen small text-body"></i>
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center link-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}
       </div>
@@ -139,8 +139,8 @@
   <div class="d-inline-flex">
       <!-- Edit -->
       <div class="btn-group">
-          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-plus small text-body"></i>
+          <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center link-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-plus small"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}
       </div>

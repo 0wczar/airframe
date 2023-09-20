@@ -1204,7 +1204,7 @@ a.badge-outline-light:hover {
   flex-direction: row;
 	&__item{
 		background-color: $gray-200;
-	  border: 2px solid $body-bg;
+	  border: 2px solid $white;
 	  border-radius: 100%;
 	  color: $white;
 	  display: block;
@@ -1385,9 +1385,6 @@ a.badge-outline-light:hover {
   // State: IDLE
   .list-modal .list-group-item {
     border-bottom: 1px solid transparent;
-  }
-  .list-modal .list-group-item small {
-    color: $body-color;
   }
 
   // State: Active

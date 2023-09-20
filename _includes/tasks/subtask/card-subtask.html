@@ -5,11 +5,11 @@
     <textarea class="form-control border-top-0 border-end-0 border-start-0 rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description for this subtask..."></textarea>
 
     <!-- Options + Assigned -->
-    <div class="card-body p-2 bg-white d-flex">
+    <div class="card-body p-2 bg-body-tertiary d-flex">
         <!-- START Dropdown: Priority -->
         <div class="btn-group ">
             <button class="btn btn-link btn-sm text-decoration-none rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-circle fa-fw text-danger"></i> 
+                    <i class="fa fa-circle fa-fw link-danger"></i> 
             </button>
             {% include tasks/dropdown-priority.html %}  
         </div>
@@ -17,8 +17,8 @@
 
         <!-- START Dropdown: Status -->
         <div class="btn-group">
-            <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-check fa-fw text-success"></i>
+            <button class="btn btn-link btn-sm rounded-3 text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-check fa-fw link-success"></i>
             </button>
             {% include tasks/dropdown-status.html 
             %}  
@@ -26,8 +26,8 @@
         <!-- END Dropdown: Status -->
 
         <!-- START Button: Attachments -->
-            <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-body" type="button">
-                <i class="fa fa-paperclip fa-fw text-body"></i>
+            <button class="btn btn-link btn-sm rounded-3 text-decoration-none" type="button">
+                <i class="fa fa-paperclip fa-fw link-secondary"></i>
             </button>
         <!-- END Button: Attachments -->
 
@@ -36,7 +36,7 @@
             <!-- Edit -->
             <div class="btn-group">
                 <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                    <i class="fa-solid fa-pen small text-body"></i>
+                    <i class="fa-solid fa-pen small link-secondary"></i>
                 </button>
                 {% include tasks/dropdown-assigned.html %}
             </div>
@@ -62,23 +62,23 @@
     </div>
 
     <!-- Tags + Create Button -->
-    <div class="card-body rounded-bottom bg-white border-top d-flex p-2 align-items-center" style="border-radius: 0 0 6px 6px !important;">
+    <div class="card-body rounded-bottom bg-body-tertiary border-top d-flex p-2 align-items-center" style="border-radius: 0 0 6px 6px !important;">
         <div class="d-flex gap-2">
-              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+              <span class="badge bg-body-secondary text-body-emphasis rounded-pill  ps-1 pe-2 fw-normal">
                 <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
                 {{ site.data.tagsTitles | sample }}
               </span>
-              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+              <span class="badge bg-body-secondary text-body-emphasis rounded-pill ps-1 pe-2 fw-normal">
                 <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
                 {{ site.data.tagsTitles | sample }}
               </span>
-              <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+              <span class="badge bg-body-secondary text-body-emphasis rounded-pill ps-1 pe-2 fw-normal">
                 <i class="fa fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
                 {{ site.data.tagsTitles | sample }}
               </span>
               <div class="btn-group">
                 <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
-                  <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+                  <i class="fa-solid fa-pen small link-secondary" style="font-size: 10px;"></i>
                 </button>
                 {% include tasks/dropdown-tags.html %}
               </div>
