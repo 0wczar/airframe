@@ -7,7 +7,7 @@
         </th>
         <td class="align-middle">
           <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-          <label class="btn btn-link btn-sm text-body" for="btn-check-outlined">
+          <label class="btn btn-link btn-sm text-body-emphasis opacity-25" for="btn-check-outlined">
             <i class="fa-solid fa-fw fa-star"></i>
           </label>
         </td>
@@ -72,11 +72,11 @@
         </td>
         <td class="align-middle">
           {% if page.linkTasksListTable %}
-            <a href="{{page.root}}/tasks/list/table/details/" class="text-dark text-nowrap">
+            <a href="{{page.root}}/tasks/list/table/details/" class="text-body-emphasis text-nowrap">
               {{ table.title }}
             </a>
           {% else %}
-            <a href="#" class="text-dark text-nowrap" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <a href="#" class="text-body-emphasis text-nowrap" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               {{ table.title }}
             </a>
           {% endif %}
@@ -87,20 +87,20 @@
         <td class="align-middle text-nowrap">
           <div class="btn-group">
             <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
-              <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+              <i class="fa-solid fa-pen small text-secondary" style="font-size: 10px;"></i>
             </button>
             {% include tasks/dropdown-tags.html %}
           </div>
 
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
@@ -112,8 +112,8 @@
               <div class="d-inline-flex">
                   <!-- Edit -->
                   <div class="btn-group">
-                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                          <i class="fa-solid fa-pen small text-body"></i>
+                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none text-secondary p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                          <i class="fa-solid fa-pen small"></i>
                       </button>
                       {% include tasks/dropdown-assigned.html %}
                   </div>
@@ -139,8 +139,8 @@
               <div class="d-inline-flex">
                   <!-- Edit -->
                   <div class="btn-group">
-                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                          <i class="fa-solid fa-pen small text-body"></i>
+                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center text-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                          <i class="fa-solid fa-pen small"></i>
                       </button>
                       {% include tasks/dropdown-assigned.html %}
                   </div>
@@ -163,8 +163,8 @@
               <div class="d-inline-flex">
                   <!-- Edit -->
                   <div class="btn-group">
-                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                          <i class="fa-solid fa-pen small text-body"></i>
+                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center text-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                          <i class="fa-solid fa-pen small"></i>
                       </button>
                       {% include tasks/dropdown-assigned.html %}
                   </div>
@@ -184,8 +184,8 @@
               <div class="d-inline-flex">
                   <!-- Edit -->
                   <div class="btn-group">
-                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                          <i class="fa-solid fa-plus small text-body"></i>
+                      <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center text-secondary" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+                          <i class="fa-solid fa-plus small"></i>
                       </button>
                       {% include tasks/dropdown-assigned.html %}
                   </div>

@@ -50,7 +50,7 @@ $link-shade-percentage:                   20% !default;
 
 $link-hover-decoration:                   underline !default; //changed
 
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+// $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 
 
 // stylelint-disable value-keyword-case
@@ -74,9 +74,9 @@ $mark-bg:                     #fcf8e3 !default; //changed
 $table-color:                 $body-color !default; //changed
 $table-th-font-weight:        $font-weight-normal !default; //changed
 $table-striped-bg:            rgba($gray-500, .075) !default; // changed
-$table-hover-color:           $dark !default; //changed
+// $table-hover-color:           $dark !default; //changed
 $table-hover-bg:              rgba($gray-500, .075) !default; //changed
-$table-border-color:          $gray-200 !default; //changed
+// $table-border-color:          $gray-200 !default; //changed
 
 $form-label-color:                      $dark !default; //changed
 
@@ -121,8 +121,8 @@ $dropdown-header-color:             $body-color !default; // change
 $pagination-color:                  $body-color !default; // change
 $pagination-bg:                     transparent !default;
 $pagination-border-color:           none !default;
-$pagination-focus-color:            $link-hover-color !default; //changed
-$pagination-hover-color:            $link-hover-color !default; //change
+//$pagination-focus-color:            $link-hover-color !default; //changed
+//$pagination-hover-color:            $link-hover-color !default; //change
 $pagination-active-color:           $dark !default; // change
 $pagination-active-bg:              $gray-200 !default; //change
 $pagination-active-border-color:    $gray-300 !default; // change

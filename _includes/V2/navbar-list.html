@@ -1,23 +1,23 @@
 <!-- START Navbar -->
-<div class="p-3 d-flex bg-white border-bottom shadow-sm">
+<div class="p-3 d-flex border-bottom shadow-sm">
 
     <!-- Left Side-->
     <div class="d-flex flex-grow-1">
-        <button class="btn btn-link btn-sm rounded-circle text-body"  data-bs-toggle="tooltip" data-bs-placement="bottom"
+        <button class="btn btn-link btn-sm rounded-circle text-secondary"  data-bs-toggle="tooltip" data-bs-placement="bottom"
         data-bs-original-title="Back to Projects" type="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-            <i class="fa-solid fa-angle-left text-body"></i>
+            <i class="fa-solid fa-angle-left"></i>
         </button>
         <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap ms-1">
             Tasks
         </h6>
 
         <!-- START Dropdown: Bulk -->
-        <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownBulkDisabled %}disabled{% else %}{% endif %}" type="button"
+        <div class="dropdown" data-bs-theme="auto">
+            <button class="btn btn-link btn-sm rounded-circle text-secondary {% if page.dropdownBulkDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-                <i class="fa-solid fa-ellipsis text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                <i class="fa-solid fa-ellipsis" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-original-title="Bulk Options"></i>
             </button>
             {% include tasks/dropdown-bulk.html %}
@@ -25,26 +25,26 @@
         <!-- END Dropdown: Bulk -->
 
         <!-- START Dropdown: Filter -->
-        <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownFilterDisabled %}disabled{% else %}{% endif %}" type="button"
+        <div class="dropdown" data-bs-theme="auto">
+            <button class="btn btn-link btn-sm rounded-circle text-secondary {% if page.dropdownFilterDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-                <i class="fa-solid fa-filter-list text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                <i class="fa-solid fa-filter-list" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-original-title="Filters"></i>
             </button>
         </div>
         <!-- END Dropdown: Filter -->
 
         <!-- START Dropdown: Groups -->
-        <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownGroupsDisabled %}disabled{% else %}{% endif %}" type="button"
+        <div class="dropdown" data-bs-theme="auto">
+            <button class="btn btn-link btn-sm rounded-circle text-secondary {% if page.dropdownGroupsDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
                 {% if page.grpNotify %} 
-                    <i class="fa-solid fa-layer-group text-body position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-layer-group position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Groups"><span class="position-absolute top-0 start-100 translate-middle badge border border-white rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span></i>
 				{% else %}
-                    <i class="fa-solid fa-layer-group text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-layer-group" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Groups"></i>
 				{% endif %}
             </button>
@@ -53,11 +53,11 @@
         <!-- END Dropdown: Groups -->
 
         <!-- START Dropdown: Sort -->
-        <div class="dropdown">
-            <button class="btn btn-link btn-sm rounded-circle text-body {% if page.dropdownSortDisabled %}disabled{% else %}{% endif %}" type="button"
+        <div class="dropdown" data-bs-theme="auto">
+            <button class="btn btn-link btn-sm rounded-circle text-secondary {% if page.dropdownSortDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-                <i class="fa-solid fa-bars-sort text-body" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                <i class="fa-solid fa-bars-sort" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-original-title="Sort"></i>
             </button>
             {% include V2/dropdown-sort.html %}
@@ -198,7 +198,7 @@
             </a>
         {% elsif page.fullScreenListGridTasks %}
             <!-- Switch Layout to List-Table Tasks -->
-            <a href="{{page.root}}/tasks/grid/" class="btn btn-link btn-sm rounded-circle text-body active" aria-current="page"
+            <a href="{{page.root}}/tasks/grid/" class="btn btn-link btn-sm rounded-circle text-secondary active" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
@@ -207,7 +207,7 @@
             </a>
         {% elsif page.fullScreenListGridTasksGroup %}
             <!-- Switch Layout to List-Table Tasks -->
-            <a href="{{page.root}}/tasks/grid/group/" class="btn btn-link btn-sm rounded-circle text-body active" aria-current="page"
+            <a href="{{page.root}}/tasks/grid/group/" class="btn btn-link btn-sm rounded-circle text-secondary active" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
@@ -216,7 +216,7 @@
             </a>
         {% elsif page.fullScreenGridTasksGroup %}
             <!-- Switch Layout to List-Table Tasks -->
-            <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
+            <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
@@ -225,7 +225,7 @@
             </a>
         {% elsif page.fullScreenTasksEmpty %}
             <!-- Switch Layout -->
-            <a href="{{page.root}}/tasks/list/empty" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
+            <a href="{{page.root}}/tasks/list/empty" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
@@ -234,7 +234,7 @@
             </a>
         {% elsif page.fullScreenTasksListEmpty %}
             <!-- Switch Layout -->
-            <a href="{{page.root}}/tasks/empty" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page"
+            <a href="{{page.root}}/tasks/empty" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page"
             role="button"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;"
             aria-label="Table View" data-bs-original-title="Switch to Full Screen">
