@@ -5,7 +5,7 @@
       <div class="card-body pb-0 d-flex justify-content-between">
             <!-- START Dropdown: Priority -->
             <div class="dropdown {% if include.tableView %} me-3 {% else %} {% endif %} ">
-              <button class="btn btn-link text-decoration-none {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-link text-body-emphasis text-decoration-none {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   {% if include.important %} 
                       <i class="fa-solid fa-circle fa-fw text-danger me-1"></i> 
                       Important
@@ -32,15 +32,15 @@
                       <i class="fa-solid fa-circle fa-fw text-muted"></i> 
                   {% else %} 
                       <i class="fa-solid fa-circle fa-fw text-danger"></i> Important
-                      <i class="fa-solid fa-angle-down text-body opacity-75 ms-1"></i>
+                      <i class="fa-solid fa-angle-down text-body-tertiary ms-1"></i>
                   {% endif %}
               </button>
               {% include tasks/dropdown-priority.html %}  
           </div>
           <!-- END Dropdown: Priority -->
       
-        <button type="button" class="btn btn-link btn-sm text-body text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Subtasks">
-          <i class="fa-solid fa-align-left text-body me-2"></i>2 / <span class="text-dark">5</span>
+        <button type="button" class="btn btn-link btn-sm text-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Subtasks">
+          <i class="fa-solid fa-align-left text-secondary me-2"></i>2 <span class="text-secondary">/ 5</span>
         </button>
       </div>
 
@@ -70,12 +70,12 @@
           </div>
           <!-- END Dropdown: Status -->
 
-          <a href="#" class="text-dark pt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
+          <a href="#" class="text-body-emphasis pt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
             {{ site.data.projectsTitles | sample }}
           </a>
         </div>
 
-        <div class="mb-4">
+        <div class="mb-4 text-secondary">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi officia sint.
           </p>   
@@ -84,22 +84,22 @@
         <!-- Badges -->
         <div class="mb-3 hstack gap-1">
 
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
-          <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+          <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
             <i class="fa-solid fa-circle me-1 text-{{ site.data.tagsColors | sample }}"></i>
             {{ site.data.tagsTitles | sample }}
           </span>
 
           <div class="btn-group">
-            <button type="button" class="btn btn-badge border-0 rounded-pill  text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
-              <i class="fa-solid fa-pen small text-body" style="font-size: 10px;"></i>
+            <button type="button" class="btn border-0 rounded-pill link-secondary text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 22px !important; width: 22px !important;">
+              <i class="fa-solid fa-pen small" style="font-size: 10px;"></i>
             </button>
             {% include tasks/dropdown-tags.html %}
           </div>
@@ -124,8 +124,8 @@
           </div>
 
           <div class="btn-group ms-1">
-            <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-pen small text-body"></i>
+            <button type="button" class="me-3 btn border-0 rounded-pill link-secondary text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small"></i>
             </button>
             {% include tasks/dropdown-assigned.html %}
           </div>

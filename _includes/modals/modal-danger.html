@@ -6,19 +6,19 @@
             <!-- Right Close Button -->
             <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
                 <span class="fa-stack" style="font-size: 0.7em;">
-                    <i class="fa-solid fa-circle fa-stack-2x text-body"></i>
-                    <i class="fa-solid fa-times fa-stack-1x text-white"></i>
+                  <i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
+                  <i class="fa-solid fa-times fa-stack-1x text-light"></i>
                 </span>
             </span>
 
-          <div class="modal-content rounded-5 shadow-sm overflow-auto">
+          <div class="modal-content rounded-5 border-secondary-subtle overflow-auto shadow-sm">
             
             <!-- Content -->
             <div class="modal-body px-5 pt-5">
               <div class="d-flex justify-content-center flex-column align-items-center">
                 <span class="fa-stack fa-2x mb-3">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-times fa-stack-1x fa-inverse"></i>
+                  <i class="fas fa-circle fa-stack-2x text-danger opacity-25"></i>
+                  <i class="fas fa-times fa-stack-1x text-danger-emphasis"></i>
                 </span>
                 <h5 class="mb-3 text-center fw-normal">Are you sure do you want delete these files?</h5>
                 <p class="text-center">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
@@ -26,7 +26,7 @@
             </div>
             
             <!-- Footer -->
-            <div class="modal-footer hstack p-0 m-0 bg-light">
+            <div class="modal-footer hstack p-0 m-0 bg-body-secondary border-light-subtle">
               <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">Close</button>
               {% if include.modalDangerTasks %}
                 <a role="button" href="{{page.root}}/tasks/empty.html" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-danger text-decoration-none m-0">Yes, Delete Now</a>
