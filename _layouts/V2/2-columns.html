@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  data-bs-theme="auto">
+<html data-bs-theme="auto">
 
 <head>
 	<meta charset="utf-8">
@@ -10,6 +10,7 @@
 
 	<!-- Generated from SCSS (Bootstrap 5.02 and saved as styles.css)-->
 	<link href="{{page.root}}/css/styles.css" rel="stylesheet">
+	<script type="module" src="{{page.root}}/js/color-modes.js"></script>
 
 	<!-- Google Fonts Roboto -->
 	<link rel="stylesheet"
@@ -26,7 +27,7 @@
 
 </head>
 
-<body class="bg-light vh-100 fixed-top">
+<body class="vh-100 fixed-top">
 	<div class="container-fluid px-0">
 		<div class="row g-0">
 			<!-- START SIDEBAR -->
@@ -35,7 +36,7 @@
 
 			<!-- START LIST -->
 			<div
-				class="col-xl-3 col-xxl-3 col-md-4 border-gray-300 shadow-sm bg-white border-end vh-100">
+				class="col-xl-3 col-xxl-3 col-md-4 shadow-sm border-end vh-100">
 				{% if page.navbarListDisabled %}
 				{% else %}
 					{% include V2/navbar-list.html %}
@@ -262,9 +263,7 @@
 
 
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{{page.root}}/js/holder.min.js"></script>
 
 	<!-- initialize all tooltips on a page -->
