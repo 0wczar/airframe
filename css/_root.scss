@@ -204,7 +204,7 @@
 }
 
 @include color-mode(dark) {
-  // Example
+
   // Avatars Stacked from Codepen
   .avatars {
     display: flex;
@@ -246,4 +246,130 @@
       img{width:100%}
     }
   }
+
   }
+
+
+  @include color-mode(dark) {
+
+  // MODAL LIST (Autocomplete, Filters)
+  // State: Default
+  .list-modal .list-group-item {
+    border-bottom: 1px solid transparent;
+  }
+  .list-modal .list-group-item small {
+    color: $body-color;
+  }
+
+  // State: Active
+  .list-modal .list-group-item.active {
+    background-color: $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid $gray-900 !important;
+    border-top: 1px solid $gray-900 !important;
+  }
+
+    // State: Hover
+    .list-modal .list-group-item:hover {
+      background-color: $gray-800;
+      color: $white;
+      border-right: 0px solid transparent !important;
+      border-left: 0px solid transparent !important;
+      border-bottom: 1px solid $gray-900 !important;
+      border-top: 0px solid $gray-900 !important;
+    }
+
+  // State: Press
+  .list-modal .list-group-item:active {
+    background-color: $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid  $gray-900 !important;
+    border-top: 0px solid  $gray-900 !important;
+  }
+
+  // State: Active + Press
+  .list-modal .list-group-item.active:active {
+    background-color:  $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid $gray-900 !important;
+    border-top: 1px solid $gray-900 !important;
+  }
+
+
+
+  // State: First Child
+  .list-modal .list-group-item.active:first-child {
+    background-color: $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid $gray-900 !important;
+    border-top: 0px solid $body-bg !important;
+  }
+  // State: Active + Press
+  .list-modal .list-group-item.active:active:first-child {
+    background-color: $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid $gray-900 !important;
+    border-top: 0px solid $gray-900 !important;
+  }
+  // State: Press
+  .list-modal .list-group-item:active:first-child {
+    background-color: $gray-900;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 1px solid $gray-900 !important;
+    border-top: 0px solid $gray-900 !important;
+  }
+    // State: First Child
+    .list-modal .list-group-item:first-child:hover {
+      background-color: $gray-800;
+      color: $white;
+      border-right: 0px solid transparent !important;
+      border-left: 0px solid transparent !important;
+      border-bottom: 1px solid $gray-900 !important;
+      border-top: 0px solid $body-bg !important;
+    }
+
+
+
+
+
+  // State: Last Child
+  .list-modal .list-group-item.active:last-child {
+    background-color: $gray-800;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 0px solid $body-bg !important;
+    border-top: 1px solid $gray-900 !important;
+  }
+  // State: Active/Press
+  .list-modal .list-group-item.active:active:last-child {
+    background-color: $black;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 0px solid $body-bg !important;
+    border-top: 1px solid $gray-900 !important;
+  }
+  // State: Active/Press
+  .list-modal .list-group-item:active:last-child {
+    background-color: $black;
+    color: $white;
+    border-right: 0px solid transparent !important;
+    border-left: 0px solid transparent !important;
+    border-bottom: 0px solid $body-bg !important;
+    border-top: 0px solid $body-bg !important;
+  }
+
+}

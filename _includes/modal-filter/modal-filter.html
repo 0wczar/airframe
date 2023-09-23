@@ -5,18 +5,18 @@
         <!-- Close Button -->
         <button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle" style="z-index: 999;" data-bs-dismiss="modal">
             <span class="fa-stack" style="font-size: 0.7em;">
-                <i class="fa-solid fa-circle fa-stack-2x text-body"></i>
+                <i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
                 <i class="fa-solid fa-times fa-stack-1x"></i>
             </span>
         </button>
 
-      <div class="modal-content rounded-4 shadow-lg overflow-hidden">
+      <div class="modal-content rounded-4 border-secondary border-opacity-25 shadow-lg overflow-hidden">
 
         <!-- START Filter Input + Back -->
         <div class="input-group input-group-lg border-bottom">
             {% if include.inputBack %}
-                <button class="btn btn-link link-dark bg-light" type="button" data-bs-toggle="modal" href="#modalStart">
-                    <i class="fa fas fa-chevron-left small opacity-50"></i>
+                <button class="btn btn-link link-secondary" type="button" data-bs-toggle="modal" href="#modalStart">
+                    <i class="fa fas fa-chevron-left small opacity-75"></i>
                 </button>
             {% else %}
             {% endif %}
@@ -29,14 +29,14 @@
                 placeholder="{{ include.placholderTitle }}"
             >
             {% if include.inputCheck %}
-                <button class="btn btn-link link-success bg-light {{ include.rightCheckClass }}" type="button" data-bs-dismiss="modal">
+                <button class="btn btn-link link-success {{ include.rightCheckClass }}" type="button" data-bs-dismiss="modal">
                     <i class="fa fas small fa-check"></i>
                 </button>
             {% else %}
             {% endif %}
 
             {% if include.inputClose %}
-                <button class="btn btn-link link-dark bg-light" type="button" data-bs-dismiss="modal">
+                <button class="btn btn-link link-danger" type="button" data-bs-dismiss="modal">
                     <i class="fa fas fa-times small opacity-50"></i>
                 </button>
             {% else %}
@@ -45,14 +45,14 @@
         <!-- END Filter Input + Back -->
 
         <!-- START Mini Navbar: Results with Reset -->
-        <div class="bg-light {% if include.navbarStyleAlone %} px-3 pt-2 pb-2 border-bottom border-white {% else %} px-3 py-2 {% endif %}">
+        <div class="bg-body-secondary {% if include.navbarStyleAlone %} px-3 pt-2 pb-2 {% else %} px-3 py-2 {% endif %}">
             <!-- Reset -->
             <div class="d-flex justify-content-between align-items-center overflow-auto">
-                <span class="small text-body">
+                <span class="small text-secondary">
                     {{ include.navbarTitle }}
                 </span>
                 {% if include.navbarReset %}
-                    <a href="#" class="link-dark small">
+                    <a href="#" class="link-secondary small">
                         Reset All Filters
                     </a>
                 {% else %}
@@ -66,7 +66,7 @@
 
         {% if include.navbarBadgesAssignee %}
             <!-- START Badges: Assignee -->
-            <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+            <div class="bg-body-secondary pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
                 {% include badge/badge-example.html 
                     avatar=""
                     withSubtitle=""
@@ -99,7 +99,7 @@
                 
         {% elsif include.navbarBadgesStatus %}
                 <!-- START Badges: Status -->
-                <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+                <div class="bg-body-secondary pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
 
                     {% include badge/badge-example.html
                         iconMs2Me1=""
@@ -162,7 +162,7 @@
 
                 {% elsif include.navbarBadgesPriority %}
                     <!-- START Badges: Priority -->
-                    <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+                    <div class="bg-body-secondary pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
 
                         {% include badge/badge-example.html
                             iconColorSelected=""
@@ -209,7 +209,7 @@
 
                 {% elsif include.navbarBadgesTag %}
                     <!-- START Badges: Tag -->
-                    <div class="bg-light pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
+                    <div class="bg-body-secondary pt-1 pb-2 border-bottom hstack gap-1 overflow-auto">
 
                         {% include badge/badge-example.html
                             iconColorSelected=""
@@ -258,16 +258,16 @@
 
             {% endif %}
 
-        <div class="list-group list-group-flush list-modal overflow-scroll" style="border-bottom-right-radius: calc(.5rem - 1px) !important; border-bottom-left-radius: calc(.5rem - 1px) !important;">
+        <div class="list-group list-group-flush list-modal  overflow-scroll" style="border-bottom-right-radius: calc(.5rem - 1px) !important; border-bottom-left-radius: calc(.5rem - 1px) !important;">
             {% if include.modalAssignee %}
                 {% for user in site.data.users %}
                 <!-- START Li Modal Assignee -->
-                <a class="list-group-item list-group-item-action p-33 d-flex {{ user.class }}" data-bs-toggle="button">
+                <a class="list-group-item list-group-item-action p-3 d-flex {{ user.class }}" data-bs-toggle="button">
                     <div class="me-3 d-flex align-items-center">
                         <img class="avatar-sm rounded-pill" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                     </div>
                     <div class="flex-grow-1">
-                        <div>{{ user.title }} <small class="text-body ms-3"> {{ site.data.numbers | sample }} </small></div>
+                        <div>{{ user.title }} <small class="text-secondary ms-3"> {{ site.data.numbers | sample }} </small></div>
                         <small>{{ user.subtitle }}</small>
                     </div>
                     <div class="me-3 d-flex align-items-center">
@@ -283,12 +283,12 @@
                     <div class="me-2 d-flex align-items-center">
                         <span class="fa-stack" style="vertical-align: top;">
                             <i class="fas fa-stack-2x"></i>
-                            <i class="fas fa-search fa-stack-1x opacity-50"></i>
+                            <i class="fas fa-search fa-stack-1x"></i>
                         </span>
                     </div>
                     <div class="flex-grow-1">
-                        <div class="text-dark">{{ filter.title }}</div>
-                        <small>{{ filter.subtitle }}</small>
+                        <div class="text-body-emphasis">{{ filter.title }}</div>
+                        <small class="text-secondary">{{ filter.subtitle }}</small>
                     </div>
                     <div class="me-3 d-flex align-items-center">
                         {% if filter.rightBadge %}

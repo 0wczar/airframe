@@ -1,23 +1,23 @@
 						<!-- START Dropdown: Group by -->
-						<div class="dropdown-menu shadow-sm pb-0">
+						<div class="dropdown-menu border border-secondary-subtle shadow-sm pb-0">
 
 							<!-- START Dropdown Body -->
 							<div class="px-3 pb-3 pt-2">
 
-								<div class="mb-3 fw-normal text-dark small">Group by</div>
+								<div class="mb-3 fw-normal text-body-emphasis small">Group by</div>
 
 								<!-- START Sort 1 -->
 								<div class="mb-2 d-flex">
-									<div class="btn-group" role="group" aria-label="Basic example">
+									<div class="btn-group me-1" role="group" aria-label="Basic example">
 										<div class="btn-group" role="group">
-											<button type="button" class="btn btn-outline-light text-nowrap"
+											<button type="button" class="btn btn-link text-body-emphasis text-decoration-none text-nowrap border-secondary-subtle"
 												data-bs-toggle="dropdown" aria-expanded="false">
-												<i class="fa fa-a fa-fw me-1"></i> Title <i
-													class="fa-solid fa-angle-down opacity-75 ms-2"></i>
+												<i class="fa fa-a fa-fw me-1 text-secondary"></i> Title <i
+												class="fa-solid fa-angle-down text-secondary ms-2"></i>
 											</button>
-											<ul class="dropdown-menu shadow-sm">
+											<ul class="dropdown-menu border border-secondary-subtle shadow-sm">
 												<li>
-													<h6 class="dropdown-header">Sort by</h6>
+													<h6 class="dropdown-header fw-normal text-body-emphasis">Sort by</h6>
 												</li>
 												<li>
 													<a class="dropdown-item active" href="#">
@@ -53,13 +53,13 @@
 										</div>
 
 										<div class="btn-group" role="group">
-											<button type="button" class="btn btn-outline-light rounded-end text-nowrap"
+											<button type="button" class="btn btn-link text-body-emphasis text-decoration-none text-nowrap border-secondary-subtle rounded-end"
 												data-bs-toggle="dropdown" aria-expanded="false">
-												A <i class="fa fa-arrow-right fa-fw mx-1"></i> Z <i class="fa-solid fa-angle-down ms-2"></i>
+												A <i class="fa fa-arrow-right fa-fw mx-1 text-secondary"></i> Z <i class="fa-solid fa-angle-down text-secondary ms-2"></i>
 											</button>
-											<ul class="dropdown-menu shadow-sm">
+											<ul class="dropdown-menu border border-secondary-subtle shadow-sm">
 												<li>
-													<h6 class="dropdown-header fw-normal text-dark">Show</h6>
+													<h6 class="dropdown-header fw-normal text-body-emphasis">Show</h6>
 												</li>
 												<li>
 													<a class="dropdown-item active" href="#">
@@ -76,9 +76,9 @@
 
 									</div>
 
-									<button type="button" class="btn btn-link text-body">
-										<i class="fa fa-close fa-fw" data-bs-toggle="tooltip"
-											data-bs-title="Remove Sort" data-bs-placement="right"></i>
+									<button type="button" class="btn btn-link text-secondary">
+										<i class="fa fa-close" data-bs-toggle="tooltip"
+											data-bs-title="Remove Group" data-bs-placement="right"></i>
 									</button>
 
 								</div>
@@ -86,13 +86,13 @@
 
 								<!-- START Add Next Sort -->
 								<div class="btn-group" role="group">
-									<button type="button" class="btn btn-link text-decoration-none text-body rounded-end"
+									<button type="button" class="btn btn-link text-decoration-none text-body-emphasis rounded-end"
 										data-bs-toggle="dropdown" aria-expanded="false">
-										<i class="fa fa-plus fa-fw me-1 "></i> Add Next Group
+										<i class="fa fa-plus fa-fw me-1 text-secondary"></i> Add Next Group
 									</button>
-									<ul class="dropdown-menu shadow-sm">
+									<ul class="dropdown-menu border border-secondary-subtle shadow-sm">
 										<li>
-											<h6 class="dropdown-header  fw-normal text-dark">Add Next Group</h6>
+											<h6 class="dropdown-header fw-normal text-body-emphasis">Add Next Group</h6>
 										</li>
 										<li><a class="dropdown-item" href="#"><i class="fa fa-clock fa-fw me-1"></i>
 												Status</a></li>
@@ -111,81 +111,81 @@
 							{% if page.grpApplyListTableTasks %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3 disabled" href="#">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3 disabled" href="#">Reset</a>
 									<a role="button" class="btn btn-primary px-3" href="{{page.root}}/tasks/list/table/group/">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyTableTasks %}
 								<!-- START Dropdown Footer -->
 								<div
-								class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+								class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 								<a role="button"
-									class="btn btn-link text-dark text-decoration-none px-3 disabled" href="#">Reset</a>
+									class="btn btn-link text-body-emphasis text-decoration-none px-3 disabled" href="#">Reset</a>
 								<a role="button" class="btn btn-primary px-3" href="{{page.root}}/tasks/table/group/">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyListTableTasksGroup %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3" href="{{page.root}}/tasks/list/table/group/">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3" href="{{page.root}}/tasks/list/table/group/">Reset</a>
 									<a role="button" class="btn btn-primary px-3 disabled" href="#">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyTableTasksGroup %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3" href="{{page.root}}/tasks/table/">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3" href="{{page.root}}/tasks/table/">Reset</a>
 									<a role="button" class="btn btn-primary px-3 disabled" href="#">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyGridTasksGroup %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3" href="{{page.root}}/tasks/grid/">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3" href="{{page.root}}/tasks/grid/">Reset</a>
 									<a role="button" class="btn btn-primary px-3 disabled" href="#">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyGridTasks %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3 disabled" href="#">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3 disabled" href="#">Reset</a>
 									<a role="button" class="btn btn-primary px-3" href="{{page.root}}/tasks/grid/group/">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyListGridTasksGroup %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3" href="{{page.root}}/tasks/list/grid/">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3" href="{{page.root}}/tasks/list/grid/">Reset</a>
 									<a role="button" class="btn btn-primary px-3 disabled" href="#">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% elsif page.grpApplyListGridTasks %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3 disabled" href="#">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3 disabled" href="#">Reset</a>
 									<a role="button" class="btn btn-primary px-3" href="{{page.root}}/tasks/list/grid/group/">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->
 							{% else %}
 								<!-- START Dropdown Footer -->
 								<div
-									class="dropdown-item p-3 bg-light border-top-0 d-flex justify-content-end rounded-bottom">
+									class="dropdown-item p-3 bg-body-secondary border-top-0 d-flex justify-content-end rounded-bottom">
 									<a role="button"
-										class="btn btn-link text-dark text-decoration-none px-3 disabled" href="#">Reset</a>
+										class="btn btn-link text-body-emphasis text-decoration-none px-3 disabled" href="#">Reset</a>
 									<a role="button" class="btn btn-primary px-3 disabled" href="#">Apply</a>
 								</div>
 								<!-- START Dropdown Footer -->

@@ -1,12 +1,12 @@
 <!-- START Collapse Group/Grid {{ include.collapseLink }} -->
-<div class="bg-secondary border-bottom border-white text-dark px-3 py-2" style="--bs-bg-opacity: .1;">
-    <a class="text-body opacity-50 text-decoration-none ms-2" data-bs-toggle="collapse" href="#{{ include.collapseLink }}" role="button" aria-expanded="false" aria-controls="{{ include.collapseLink }}">
+<div class="bg-secondary bg-opacity-10 border-bottom border-secondary border-opacity-25 text-body-emphasis px-3 py-2">
+    <a class="link-secondary text-decoration-none ms-2" data-bs-toggle="collapse" href="#{{ include.collapseLink }}" role="button" aria-expanded="false" aria-controls="{{ include.collapseLink }}">
         <i class="fa fa-angle-right"></i>
     </a>
     <span class="me-2">
         <input class="form-check-input ms-2" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
     </span>
     <i class="fa fa-circle text-{{ include.collapseIconColor }} small me-2"></i>
-    {{ include.collapseGroupTitle }}<span class="small text-muted fw-normal ms-2">2</span>
+    {{ include.collapseGroupTitle }}<span class="small text-secondary fw-normal ms-2">2</span>
 </div>
 <!-- END Collapse Group/Grid {{ include.collapseLink }} -->

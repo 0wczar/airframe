@@ -80,7 +80,7 @@ $table-hover-bg:              rgba($gray-500, .075) !default; //changed
 
 $form-label-color:                      $dark !default; //changed
 
-$input-bg:                              $body-bg !default; //changed
+$input-bg:                              transparent !default; //changed
 $input-disabled-bg:                     $body-bg !default; //changed
 $input-disabled-bg:                     $body-bg !default; //changed
 
@@ -150,12 +150,13 @@ $progress-height:                   1rem !default; // changed
 $progress-border-radius:            $border-radius-pill !default; //changed
 
 $list-group-color:                  $body-color !default;
-$list-group-border-color:           $gray-200 !default; // changed
+$list-group-border-color:           yellow !default; // changed
 $list-group-border-radius:          $border-radius-lg !default; // changed
 $list-group-item-padding-y:         .75rem !default; // changed
 $list-group-item-padding-x:         1.25rem !default; // changed
+$list-group-hover-bg:               $gray-200 !default;
 $list-group-active-color:           $dark !default; // change
-$list-group-active-bg:              $gray-100 !default; // change
+$list-group-active-bg:              $gray-200 !default; // change
 $list-group-active-border-color:    $gray-200 !default; // change
 $list-group-disabled-color:         $text-muted !default; //changed
 $list-group-action-color:           $body-color !default; // change
