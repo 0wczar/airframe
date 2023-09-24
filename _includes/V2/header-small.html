@@ -1,7 +1,7 @@
 <!-- START Small Header -->
 {% if include.headerSmallButton %}
 <div class="d-flex mb-3 align-items-center">
-    <div class="text-body">
+    <div class="text-secondary">
         <i class="fa fa-{{ include.headerSmallIcon }} me-2"></i> {{ include.headerSmallTitle }}
     </div>
     <button class="btn btn-primary btn-sm rounded-circle ms-auto">
@@ -9,7 +9,7 @@
     </button>
 </div>
 {% else %}
-    <div class="mb-4 text-body">
+    <div class="mb-4 text-secondary">
         <i class="fa fa-{{ include.headerSmallIcon }} me-2"></i> {{ include.headerSmallTitle }}
     </div>
 {% endif %}

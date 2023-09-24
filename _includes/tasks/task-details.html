@@ -2,28 +2,28 @@
     <div class="d-flex justify-content-between">
       <h4 class="pb-4">We need to back up the primary USB alarm!</h4>
       <div>
-        <a href="{{page.root}}/{% if page.offcanvasTasksTableDrawer %}tasks/list/table/details/{% elsif page.offcanvasTasksGrid %}tasks/list/grid/details/{% elsif page.offcanvasTasksListGridDetails %}tasks/grid/drawer/{% elsif page.offcanvasTasksListTableGroupDetails %}tasks/list/table/group/details/{% else %}tasks/table/drawer/{% endif %}" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" aria-label="Table View" data-bs-original-title="Switch to Full Screen">
+        <a href="{{page.root}}/{% if page.offcanvasTasksTableDrawer %}tasks/list/table/details/{% elsif page.offcanvasTasksGrid %}tasks/list/grid/details/{% elsif page.offcanvasTasksListGridDetails %}tasks/grid/drawer/{% elsif page.offcanvasTasksListTableGroupDetails %}tasks/list/table/group/details/{% else %}tasks/table/drawer/{% endif %}" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" aria-label="Table View" data-bs-original-title="Switch to Full Screen">
           <i class="fa-solid fa-expand" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Switch to Full Screen"></i>
         </a>
         
         {% if page.closeTasksListTable %}
-          <a href="{{page.root}}/tasks/list/table/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+          <a href="{{page.root}}/tasks/list/table/" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
         {% elsif page.closeTasksListGridDetails %}
-          <a href="{{page.root}}/tasks/list/grid/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+          <a href="{{page.root}}/tasks/list/grid/" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
         {% elsif page.closeTasksListTableGroupDetails %}
-          <a href="{{page.root}}/tasks/list/table/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+          <a href="{{page.root}}/tasks/list/table/group/" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
         {% elsif page.closeTasksListGridGroupDetails %}
-          <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-body" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+          <a href="{{page.root}}/tasks/list/grid/group/" class="btn btn-link btn-sm rounded-circle text-secondary" aria-current="page" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </a>
         {% else %}
-          <button type="button" class="btn btn-link btn-sm rounded-circle text-body" role="button" style="width: 28px; height: 28px; line-height: 28px; text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasRight">
+          <button type="button" class="btn btn-link btn-sm rounded-circle text-secondary" role="button" style="width: 28px; height: 28px; line-height: 28px; text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasRight">
             <i class="fa-solid fa-xmark" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Close Details"></i>
           </button>
         {% endif %}
@@ -34,15 +34,15 @@
     <dl class="row pb-3">
         
       <!-- Priority -->
-      <dt class="col-4 fw-normal col-form-label pt-2 text-body">
-        <i class="fa fa-list fa-fw me-2 text-body"></i> Priority
+      <dt class="col-4 fw-normal col-form-label pt-2 text-secondary">
+        <i class="fa fa-list fa-fw me-2"></i> Priority
       </dt>
       <dd class="col-sm-8">
         <div class="dropdown">
-          <button type="button" class="btn btn-link text-dark text-decoration-none"  data-bs-toggle="dropdown">
+          <button type="button" class="btn btn-link text-body-emphasis text-decoration-none"  data-bs-toggle="dropdown">
             <i class="fa fa-circle fa-fw text-danger me-2"></i> 
             Important 
-            <i class="fa-solid fa-angle-down text-body ms-2"></i>
+            <i class="fa-solid fa-angle-down text-secondary ms-2"></i>
           </button>
           {% include tasks/dropdown-priority.html 
             buttonDefault=""  
@@ -51,15 +51,15 @@
       </dd>
       
       <!-- Status -->
-      <dt class="col-sm-4 fw-normal pt-2">
-        <i class="fa fa-clock fa-fw me-2 text-body text-opacity-75"></i> Status
+      <dt class="col-sm-4 fw-normal pt-2 text-secondary">
+        <i class="fa fa-clock fa-fw me-2"></i> Status
       </dt>
       <dd class="col-sm-8">
         <div class="dropdown">
-          <button type="button" class="btn btn-link text-dark text-decoration-none" data-bs-toggle="dropdown">
+          <button type="button" class="btn btn-link text-body-emphasis text-decoration-none" data-bs-toggle="dropdown">
             <i class="fa fa-circle-notch fa-fw text-warning me-2"></i> 
             In Progress 
-            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+            <i class="fa fa-angle-down text-secondary ms-2"></i>
           </button>
           {% include tasks/dropdown-status.html 
             buttonDefault=""  
@@ -68,37 +68,37 @@
       </dd>
       
       <!-- Tags -->
-      <dt class="col-sm-4 fw-normal pt-2">
-        <i class="fa fa-tag fa-fw me-2 text-body text-opacity-75"></i> Tags
+      <dt class="col-sm-4 fw-normal pt-2 text-secondary">
+        <i class="fa fa-tag fa-fw me-2"></i> Tags
       </dt>
       <dd class="col-sm-8">
         <div class="btn-group me-1">
-          <button type="button" class="btn ms-1 btn-link text-body rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          <button type="button" class="btn ms-1 btn-link text-secondary rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
             <i class="fa-solid fa-pen small"></i>
           </button>
           {% include tasks/dropdown-tags.html %}
         </div>
 
-        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+        <a href="#" class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-2 text-decoration-none fw-normal">
           <i class="fa fa-circle me-1 text-success ms-1"></i>
           CSS
-          <span class="text-body opacity-50 ms-1">
+          <span class="link-secondary ms-1">
             <i class="fa fa-times-circle"></i>
           </span>
         </a>
 
-        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+        <a href="#" class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-2 text-decoration-none fw-normal">
           <i class="fa fa-circle me-1 text-primary ms-1"></i>
           Usablity
-          <span class="text-body opacity-50 ms-1">
+          <span class="link-secondary ms-1">
             <i class="fa fa-times-circle"></i>
           </span>
         </a>
       
-        <a href="#" class="badge badge-light-light text-dark rounded-pill py-2 text-decoration-none fw-normal">
+        <a href="#" class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-2 text-decoration-none fw-normal">
           <i class="fa fa-circle me-1 text-info ms-1"></i>
           Production
-          <span class="text-body opacity-50 ms-1">
+          <span class="link-secondary ms-1">
             <i class="fa fa-times-circle"></i>
           </span>
         </a>
@@ -106,14 +106,14 @@
       </dd>
       
       <!-- Assigned -->
-      <dt class="col-sm-4 text-body fw-normal pt-2">
-        <i class="fa fa-user-plus me-2 text-body text-opacity-75"></i> Assigned
+      <dt class="col-sm-4 text-secondary fw-normal pt-2">
+        <i class="fa fa-user-plus me-2"></i> Assigned
       </dt>
       <dd class="col-sm-8">
 
         <!-- Add / Remove Users -->
         <div class="btn-group me-3">
-          <button type="button" class="btn btn-link ms-1 text-body rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          <button type="button" class="btn btn-link ms-1 text-secondary rounded-pill" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
             <i class="fa-solid fa-plus small"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}

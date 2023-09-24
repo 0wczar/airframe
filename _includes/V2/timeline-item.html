@@ -24,29 +24,29 @@
     </div>
 
     <!-- Right Side -->
-    <div class="flex-grow-1 ms-3 mb-3 text-body">
+    <div class="flex-grow-1 ms-3 mb-3">
 
         {% if include.timelineItemDescription %}
             <!-- Inline Description -->
-            <a href="#" class="text-dark">{{ site.data.names | sample }}</a> invite <a href="#" class="text-dark">Phillip Michael Thomas</a> to project.
-            <div class="small text-body">
+            <a href="#" class="link-body-emphasis">{{ site.data.names | sample }}</a> invite <a href="#" class="link-body-emphasis">Phillip Michael Thomas</a> to project.
+            <div class="small text-secondary">
                 6 hours ago
             </div>
 
         {% elsif include.timelineItemDescriptionWithComments %}
             <!-- Inline Description with Comments -->
             <div class="d-flex mb-2">
-                <div class="me-2 text-dark">{{ site.data.names | sample }}</div>
-                <span class="text-body small mb-1">Commented 4 days ago</span>
+                <div class="me-2 link-body-emphasis">{{ site.data.names | sample }}</div>
+                <span class="text-secondary small align-self-baseline">Commented 4 days ago</span>
             </div>
             <!-- START Card Comment -->
             <div class="card rounded-5 overflow-auto shadow-sm">
-                <textarea class="form-control border-top-0 border-end-0 border-start-0 rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Please enter comment..."></textarea>
+                <textarea class="form-control border-top-0 border-end-0 border-start-0 rounded-0 border-secondary-subtle" id="exampleFormControlTextarea1" rows="3" placeholder="Please enter comment..."></textarea>
                 <!-- Tags + Create Button -->
-                <div class="card-body d-flex p-2 align-items-center">
+                <div class="card-body d-flex p-2 align-items-center bg-body-secondary">
                     <!-- START Button: Attachments -->
-                    <button class="btn btn-link btn-sm rounded-3 text-decoration-none text-body" type="button">
-                        <i class="fa fa-paperclip fa-fw text-body"></i>
+                    <button class="btn btn-link btn-sm rounded-3 text-secondary text-decoration-none text-body" type="button">
+                        <i class="fa fa-paperclip fa-fw"></i>
                     </button>
                     <!-- END Button: Attachments -->
                     <button type="button" class="btn btn-primary ms-auto btn-sm px-3">Comment</button>
@@ -56,17 +56,17 @@
 
         {% else %}
             <!-- Inline Description with Badges -->
-            <a href="#" class="text-dark">{{ site.data.names | sample }}</a> just added two badges
-            <span class="badge badge-light-light rounded-pill text-dark px-1 fw-normal pe-2">
+            <a href="#" class="link-body-emphasis">{{ site.data.names | sample }}</a> just added two badges
+            <span class="badge badge-light-light rounded-pill text-body-emphasis px-1 fw-normal pe-2">
                 <i class="fa fa-circle me-1 text-danger"></i>
                 Usability
             </span>
-            <span class="badge badge-light-light rounded-pill text-dark px-1 fw-normal pe-2">
+            <span class="badge badge-light-light rounded-pill text-body-emphasis px-1 fw-normal pe-2">
                 <i class="fa fa-circle me-1 text-primary"></i>
                 Javascript
             </span>
-            to project <a href="#" class="text-dark text-decoration-none">Redesign existing internal app</a>
-            <div class="small text-body">
+            to project <a href="#" class="link-body-emphasis text-decoration-none">Redesign existing internal app</a>
+            <div class="small text-secondary">
                 12 Jan 2009, 11:23 pm
             </div>
         {% endif %}
