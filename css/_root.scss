@@ -373,3 +373,47 @@
   }
 
 }
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .dropdown-menu {
+      --#{$prefix}dropdown-border-color:  #{$gray-700};
+      --#{$prefix}dropdown-header-color:  #{$white};
+      --#{$prefix}dropdown-divider-bg: #{$gray-800};
+      --#{$prefix}dropdown-link-hover-color: #{$white};
+      --#{$prefix}dropdown-link-hover-bg: #{$gray-800};
+      --#{$prefix}dropdown-link-active-color: #{$white};
+      --#{$prefix}dropdown-link-active-bg: #{$gray-800};
+      --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
+    }
+
+    .list-group {
+      --#{$prefix}list-group-action-hover-color: #{$white};
+      --#{$prefix}list-group-action-hover-bg: #{$gray-800};
+      --#{$prefix}list-group-action-active-color: #{$white};
+      --#{$prefix}list-group-action-active-bg: #{$gray-800};
+      --#{$prefix}list-group-active-color: #{$white};
+      --#{$prefix}list-group-active-bg: #{$gray-800};
+      --#{$prefix}list-group-active-border-color: #{$gray-900};
+    }
+
+    .modal {
+      --#{$prefix}modal-border-color: transparent;
+    }
+
+    .modal-backdrop {
+      --#{$prefix}backdrop-bg: #{$black};
+      --#{$prefix}backdrop-opacity: .8;
+    }
+
+    .offcanvas {
+      --#{$prefix}offcanvas-border-color: transparent;
+    }
+
+    .offcanvas-backdrop.show {
+      background-color: black;
+      opacity: 0.5;
+    }
+
+  }
+}
