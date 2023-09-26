@@ -2,7 +2,7 @@
 <div class="offcanvas offcanvas-end w-50 shadow-sm" tabindex="-1" id="offcanvasCreateTask" aria-labelledby="offcanvasLabel">
   
   <!-- Offcanvas Header -->
-  <div class="offcanvas-header bg-light d-flex px-4 pt-4 pb-2 align-items-start">
+  <div class="offcanvas-header d-flex px-4 pt-4 pb-2 align-items-start">
     <div>
       <h6 class="mb-1">Create Task</h6>
       <p>Get started by filling in the information below to create your new task</p>
@@ -135,10 +135,10 @@
   </div>
   
   <!-- Offcanvas Footer -->
-  <div class="card-footer border-0 p-3 d-flex justify-content-end bg-light">
-    <button type="button" class="btn btn-link text-dark text-decoration-none px-4">Cancel</button>
+  <div class="card-footer border-0 p-3 d-flex justify-content-end bg-body-secondary">
+    <button type="button" class="btn btn-link text-decoration-none text-secondary px-4">Cancel</button>
     {% if page.offcanvasCreateTaskTasksListEmpty %}
-      <a role="button" class="btn btn-primary px-4 shadow-sm" href="{{page.root}}/tasks/list/table/">Create Task</a>
+      <a role="button" class="btn btn-link text-decoration-none text-secondary px-4" href="{{page.root}}/tasks/list/table/">Create Task</a>
     {% elsif page.offcanvasCreateTaskTasksEmpty %}
       <a role="button" class="btn btn-primary px-4 shadow-sm" href="{{page.root}}/tasks/table/">Create Task</a>
     {% else %}

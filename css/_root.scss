@@ -401,6 +401,11 @@
       --#{$prefix}modal-border-color: transparent;
     }
 
+    .modal-footer {
+      --#{$prefix}modal-footer-bg: #{$gray-800};
+      --#{$prefix}modal-footer-border-color: #{$gray-700};
+    }
+
     .modal-backdrop {
       --#{$prefix}backdrop-bg: #{$black};
       --#{$prefix}backdrop-opacity: .8;
@@ -410,9 +415,25 @@
       --#{$prefix}offcanvas-border-color: transparent;
     }
 
+    .offcanvas-header {
+      background-color: #{$gray-800};
+    }
+
+    .offcanvas-footer {
+      background-color: #{$gray-800};
+    }
+
     .offcanvas-backdrop.show {
       background-color: black;
       opacity: 0.5;
+    }
+
+    .form-label {
+      color: white;
+    }
+
+    .col-form-label {
+      color: white;
     }
 
   }
