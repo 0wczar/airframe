@@ -398,6 +398,7 @@
     }
 
     .modal {
+      --#{$prefix}modal-bg: #{$gray-900};
       --#{$prefix}modal-border-color: transparent;
     }
 
