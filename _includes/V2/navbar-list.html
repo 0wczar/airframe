@@ -3,14 +3,31 @@
 
     <!-- Left Side-->
     <div class="d-flex flex-grow-1">
-        <button class="btn btn-link btn-sm rounded-circle text-secondary"  data-bs-toggle="tooltip" data-bs-placement="bottom"
-        data-bs-original-title="Back to Projects" type="button"
-            style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-            <i class="fa-solid fa-angle-left"></i>
-        </button>
-        <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap ms-1">
-            Tasks
-        </h6>
+        {% if page.navbarBackDisabled %}
+
+        {% elsif page.navbarBack %}
+            <a role="button" class="btn btn-link btn-sm rounded-circle text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-original-title="Back to Projects"
+                style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/">
+                <i class="fa-solid fa-angle-left"></i>
+    </a>
+            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap ms-1">
+                {{ page.navbarTitle }}
+            </h6>
+        {% elsif page.showTitle %}
+            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap ms-1">
+                {{ page.navbarTitle }}
+            </h6>
+        {% elsif page.navbarBreadcrumb %}
+            <a class="align-self-center h6 mb-0 fw-normal text-secondary" href="{{page.root}}/">{{ page.navbarLink }}</a>
+            <span class="mx-2 text-body align-self-center fw-normal opacity-50">/</span>
+            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap">
+                {{ page.navbarTitle }}
+            </h6>
+        {% else %}
+
+            
+        {% endif %}
 
         <!-- START Dropdown: Bulk -->
         <div class="dropdown" data-bs-theme="auto">
@@ -140,6 +157,18 @@
             <a class="btn btn-link btn-sm rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/group/details/">
                     <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
+            </a>
+        {% elsif page.layoutProjectsTable %}
+            <!-- Layout Project Table > Grid  -->
+            <a class="btn btn-link btn-sm rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/grid"  data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-original-title="Grid View">
+                    <i class="fa-solid fa-grid-2"></i>
+            </a>
+        {% elsif page.layoutProjectsGrid %}
+            <!-- Layout Project Grid > Table  -->
+            <a class="btn btn-link btn-sm rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/table"  data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-original-title="Table View">
+                    <i class="fa-solid fa-bars"></i>
             </a>
         {% else %}
             <!-- Layout Disabled -->

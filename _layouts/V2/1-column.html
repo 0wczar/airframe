@@ -35,9 +35,13 @@
 				{% include layouts/slim-sidebar.html %}
 				
 				<div class="col-11 col-xl col-xxl px-0">
-                    {% include V2/navbar-list.html %}
-                    {% include V2/navbar-filters.html %}
+					{% if page.navbarsDisabled %}
 
+					{% else %}
+						{% include V2/navbar-list.html %}
+						{% include V2/navbar-filters.html %}
+					{% endif %}
+					
 					<!-- START Content -->
 					<div class="{% if page.containerClass %} container-xxl {% else %} container-fluid px-0 {% endif %}">
 						{{ content }}
