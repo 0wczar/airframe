@@ -5,6 +5,28 @@ showTitle: true
 navbarTitle: 'Projects Grid'
 layoutProjectsGrid: true
 ---
-<div class="table-responsive overflow-auto vh-100">
-    to-do grid projects <a href="{{page.root}}/tasks/grid/">tasks/grid/</a> <a href="{{page.root}}/projects/empty.html">Projects Empty</a>
+<div class="container-fluid pt-3">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+        <div class="col">
+            {% include tasks/card-project.html %}
+        </div>
+    </div>
 </div>

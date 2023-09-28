@@ -16,13 +16,13 @@
       <div class="card-body pe-4">
 
         <div class="d-flex pb-3">
-            <a href="{{page.root}}/tasks/grid/" class="text-dark align-items-center"> 
+            <a href="{{page.root}}/tasks/grid/" class="text-body-emphasis align-items-center"> 
                 <i class="fa-solid fa-circle fa-fw me-2 text-{{ site.data.colors | sample }}"></i>{{ site.data.projectsTitles | sample }}
             </a>
         </div>
 
         <!-- List Description -->
-        <dl class="row mb-2">
+        <dl class="row mb-2 text-secondary">
             <dt class="col-sm-3 mb-1 fw-normal">Updated:</dt>
             <dd class="col-sm-9 mb-1">{{ site.data.days | sample }}, {{ site.data.numbers | sample }} {{ site.data.months | sample }}, {{ site.data.years | sample }}</dd>
             
@@ -49,8 +49,8 @@
           </div>
 
           <div class="btn-group ms-1">
-            <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-              <i class="fa-solid fa-pen small text-body"></i>
+            <button type="button" class="me-3 btn link-secondary border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
+              <i class="fa-solid fa-pen small"></i>
             </button>
             {% include tasks/dropdown-assigned.html %}
           </div>

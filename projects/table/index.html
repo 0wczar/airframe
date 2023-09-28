@@ -7,5 +7,44 @@ layoutProjectsTable: true
 
 ---
 <div class="table-responsive overflow-auto vh-100">
-    to-do table projects <a href="{{page.rooot}}/tasks/table/">tasks/table/</a> <a href="{{page.root}}/projects/empty.html">Projects Empty</a>
+    <table class="table table-hover mt-2">
+        <thead>
+          <tr>
+            <th scope="col" width=30 class="border-secondary-subtle"></th>
+            <th scope="col" width=30 class="border-secondary-subtle"></th>
+            <th scope="col" class="small fw-normal border-secondary-subtle">Title</th>
+            <th scope="col" class="small fw-normal border-secondary-subtle">Last Updated</th>
+            <th scope="col" class="small fw-normal border-secondary-subtle">Due Date</th>
+            <th scope="col" class="small fw-normal border-secondary-subtle">Members</th>
+            <th scope="col" class="small fw-normal border-secondary-subtle">Status</th>
+            <th scope="col" class="small fw-normal text-end border-secondary-subtle">Progress</th>
+            <th scope="col" class="small fw-normal border-secondary-subtle"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for table in site.data.tableTask %}
+            {% include tasks/tr-project.html
+                avatar4=""
+                paused=""    
+            %}
+            {% include tasks/tr-project.html
+                avatar3=""
+                cancelled=""    
+            %}
+            {% include tasks/tr-project.html
+                avatar2=""
+                active=""    
+            %}
+            {% include tasks/tr-project.html
+                avatar1=""
+                completed=""    
+            %}
+            {% include tasks/tr-project.html
+                avatar2="" 
+                planned=""    
+            %}
+          {% endfor %}
+        </tbody>
+      </table>
+  </div>
 </div>

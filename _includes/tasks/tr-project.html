@@ -7,13 +7,13 @@
         </th>
         <td class="align-middle">
           <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-          <label class="btn btn-link btn-sm text-body" for="btn-check-outlined">
+          <label class="btn btn-link btn-sm text-secondary" for="btn-check-outlined">
             <i class="fa-solid fa-fw fa-star"></i>
           </label>
         </td>
         <td class="align-middle">
             <i class="fa-solid fa-circle fa-fw me-2 text-{{ site.data.colors | sample }}"></i>
-          <a href="{{page.root}}/tasks/table" class="text-dark pb-0">
+          <a href="{{page.root}}/tasks/table" class="text-body-emphasis pb-0">
             {{ site.data.projectsTitles | sample }}
           </a>
         </td>
@@ -30,7 +30,7 @@
                     <!-- Edit -->
                     <div class="btn-group">
                         <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                            <i class="fa-solid fa-pen small text-secondary"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -57,20 +57,20 @@
                     <!-- Edit -->
                     <div class="btn-group">
                         <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                            <i class="fa-solid fa-pen small text-secondary"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
                     <!-- Members -->
                     <div class="avatars d-flex">
                         <div class="avatars__item"> 
-                            <img class="rounded-3" src="{{ site.data.avatars | sample }}" alt="">
+                            <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                         </div>
                         <div class="avatars__item"> 
-                            <img class="rounded-3" src="{{ site.data.avatars | sample }}" alt="">
+                            <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                         </div>
                         <div class="avatars__item"> 
-                            <img class="rounded-3" src="{{ site.data.avatars | sample }}" alt="">
+                            <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -81,17 +81,17 @@
                     <!-- Edit -->
                     <div class="btn-group">
                         <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-pen small text-body"></i>
+                            <i class="fa-solid fa-pen small text-secondary"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
                     <!-- Members -->
                     <div class="avatars d-flex">
                         <div class="avatars__item"> 
-                            <img class="rounded-3" src="{{ site.data.avatars | sample }}" alt="">
+                            <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                         </div>
                         <div class="avatars__item"> 
-                            <img class="rounded-3" src="{{ site.data.avatars | sample }}" alt="">
+                            <img class="rounded-3" src="{{page.root}}/{{ site.data.avatars | sample }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     <!-- Edit -->
                     <div class="btn-group">
                         <button type="button" class="me-3 btn btn-badge border-0 rounded-pill text-decoration-none p-0 align-self-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="height: 26px !important; width: 26px !important;">
-                            <i class="fa-solid fa-plus small text-body"></i>
+                            <i class="fa-solid fa-plus small text-secondary"></i>
                         </button>
                         {% include tasks/dropdown-assigned.html %}
                     </div>
@@ -113,27 +113,27 @@
         </td>
         <td class="ps-3 align-middle">
             {% if include.cancelled %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-times-circle me-1 text-danger"></i>
                     Cancelled
                 </span>
             {% elsif include.paused %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-pause-circle me-1 text-warning"></i>
                     Paused
                 </span>
             {% elsif include.active %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-play-circle me-1 text-success"></i>
                     Active
                 </span>
             {% elsif include.completed %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-check-circle me-1 text-primary"></i>
                     Completed
                 </span>
             {% elsif include.planned %}
-                <span class="badge badge-light-light rounded-pill text-dark py-1 fw-normal pe-2 ps-1">
+                <span class="badge bg-body-secondary text-body-emphasis border border-secondary border-opacity-10 rounded-pill py-1 fw-normal pe-2 ps-1">
                     <i class="fa-solid fa-clock me-1 text-info"></i>
                     Planned
                 </span> 
