@@ -5,7 +5,7 @@
   <div class="offcanvas-header d-flex px-4 pt-4 pb-2 align-items-start">
     <div>
       <h6 class="mb-1">Create Task</h6>
-      <p>Get started by filling in the information below to create your new task</p>
+      <p class="text-secondary">Get started by filling in the information below to create your new task</p>
     </div>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -14,7 +14,7 @@
   <div class="offcanvas-body p-5">
     <!-- Title -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Title
       </label>
       <div class="col-sm-10">
@@ -24,16 +24,16 @@
     
     <!-- Priority -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Priority
       </label>
       <div class="col-sm-10">
 
         <div class="dropdown">
-          <button type="button" class="btn btn-outline-light text-dark text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-link border-secondary-subtle text-body-emphasis text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-circle fa-fw text-danger me-2"></i> 
             Important 
-            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+            <i class="fa fa-angle-down text-secondary ms-2"></i>
           </button>
           {% include tasks/dropdown-priority.html %} 
         </div>
@@ -42,16 +42,16 @@
     
     <!-- Status -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Status
       </label>
       <div class="col-sm-10">
 
         <div class="dropdown">
-          <button type="button" class="btn btn-outline-light text-dark text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-link border-secondary-subtle text-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-circle-notch fa-fw text-warning me-2"></i> 
             In Progress 
-            <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+            <i class="fa fa-angle-down text-secondary ms-2"></i>
           </button>
           {% include tasks/dropdown-status.html %} 
 
@@ -62,27 +62,27 @@
     
     <!-- Due Date -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Due Date
       </label>
       <div class="col-sm-10">
-        <button type="button" class="btn btn-outline-light text-dark text-decoration-none">
-          <i class="fa fa-ellipsis-h fa-fw text-muted me-2"></i> 
+        <button type="button" class="btn btn-link border-secondary-subtle text-body-emphasis text-decoration-none">
+          <i class="fa fa-ellipsis-h fa-fw text-secondary me-2"></i> 
           Without 
-          <i class="fa fa-angle-down text-body opacity-75 ms-2"></i>
+          <i class="fa fa-angle-down text-secondary ms-2"></i>
         </button>
       </div>
     </div>
     
     <!-- Tags -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Tags
       </label>
       <div class="col-sm-10 d-flex align-items-center hstack gap-1">
 
         <div class="dropdown">
-          <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-badge rounded-circle border-secondary-subtle text-body-emphasis text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-plus"></i>
           </button>
           {% include tasks/dropdown-tags.html %} 
@@ -94,14 +94,14 @@
     
     <!-- Assigned -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Assigned
       </label>
       <div class="col-sm-10 d-flex align-items-center hstack gap-1">
 
         <div class="dropdown">
 
-          <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-badge rounded-circle border-secondary-subtle text-body-emphasis text-decoration-none p-0 align-self-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-plus"></i>
           </button>
           {% include tasks/dropdown-assigned.html %}
@@ -113,7 +113,7 @@
     
     <!-- Description -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Description
       </label>
       <div class="col-sm-10">
@@ -123,11 +123,11 @@
     
     <!-- Attachemnts -->
     <div class="mb-3 row">
-      <label for="inputPassword" class="col-sm-2 col-form-label text-body">
+      <label for="inputPassword" class="col-sm-2 col-form-label">
         Attachments
       </label>
       <div class="col-sm-10 d-flex align-items-center hstack gap-1">
-        <button type="button" class="btn btn-badge rounded-pill text-decoration-none p-0 align-self-center">
+        <button type="button" class="btn btn-badge rounded-circle border-secondary-subtle text-body-emphasis text-decoration-none p-0 align-self-center">
           <i class="fa fa-plus"></i>
         </button>
       </div>

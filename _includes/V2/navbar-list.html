@@ -274,14 +274,23 @@
 
         {% endif %}
 
-
-        <!-- Add Task/Project -->
+        {% if page.navbarBtnAddTask %}
+        <!-- Add Task -->
+        <button class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask"
+            style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
+            <i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                aria-label="Add Project" data-bs-original-title="Add Task"></i>
+        </button>
+        {% else %}
+        <!-- Add Project -->
         <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
             data-bs-target="#modalCreateProject"
             style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
             <i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 aria-label="Add Project" data-bs-original-title="Add Project"></i>
         </button>
+        {% endif %}
+
     </div>
 </div>
 <!-- END Navbar -->
