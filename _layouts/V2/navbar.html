@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ site.title }} - {{ page.title }}</title>
+
+		<!-- Font Awesome 6.x -->
+		<script src="https://kit.fontawesome.com/2b04deb584.js" crossorigin="anonymous"></script>
+
+		<!-- Generated from SCSS (Bootstrap 5.02 and saved as styles.css) -->
+		<link href="{{page.root}}/css/styles.css" rel="stylesheet">
+		<script type="module" src="{{page.root}}/js/color-modes.js"></script>
+
+		<!-- Google Fonts Roboto -->
+		<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" 
+		/>
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{{page.root}}/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{page.root}}/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{page.root}}/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+
+	</head>
+
+	<body class="{{ page.bodyClass }} vh-100 fixed-top">
+		<div class="container-fluid">
+			<div class="row">
+				
+				<div class="col-12 col-xl col-xxl px-0">
+					{% if page.navbarsDisabled %}
+
+					{% else %}
+					<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-2">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#">
+								<img src="https://bs-5-jekyll-hewox0q3s-tomaszowczarczyk.vercel.app/images/logo-airframe-white.svg" alt=""
+									width="100">
+							</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<!-- Left Side -->
+								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+									<li class="nav-item">
+										<a class="nav-link active" aria-current="page" href="#">
+											<i class="fa fa-home"></i>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Applications</a>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+											data-bs-toggle="dropdown" aria-expanded="false">
+											Users
+										</a>
+										<!-- Dropdown -->
+										<ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown">
+											<li><a class="dropdown-item" href="#">All Users</a></li>
+											<li><a class="dropdown-item" href="#">Pending Invitations</a></li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="#">Add User</a></li>
+										</ul>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link disabled">Projects</a>
+									</li>
+								</ul>
+								<ul class="navbar-nav mb-2 mb-lg-0">
+									<li class="nav-item">
+										<a class="nav-link" aria-current="page" href="#">
+											<i class="fa fa-bell"></i>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" aria-current="page" href="#">
+											<i class="fa fa-envelope position-relative">
+												<span
+													class="position-absolute top-0 start-100 translate-middle badge border border-primary rounded-circle bg-danger p-1"><span
+														class="visually-hidden">unread messages</span></span>
+											</i>
+										</a>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											<img class="avatar-xs rounded-pill " src="{{page.root}}/images/avatars/40.jpg"
+												alt="">
+										</a>
+										<!-- Dropdown -->
+										<ul class="dropdown-menu shadow-sm dropdown-menu-end" aria-labelledby="navbarDropdown">
+											<li><a class="dropdown-item" href="#" data-bs-theme-value="light" type="button">Light</a></li>
+											<li><a class="dropdown-item" href="#" data-bs-theme-value="dark" type="button">Dark</a></li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="#">Add User</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+						{% include V2/navbar-list.html %}
+						{% include V2/navbar-filters.html %}
+					{% endif %}
+					
+					<!-- START Content -->
+					<div class="{% if page.containerClass %} container-xxl {% else %} container-fluid px-0 {% endif %}">
+						{{ content }}
+					</div>
+					<!-- END Content -->
+				</div>
+				
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="{{page.root}}/js/holder.min.js"></script>
+
+		<!-- initialize all tooltips on a page -->
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
+	</body>
+
+	<!-- Modal: Create New Tag -->
+	{% include tasks/modal-create-tag.html %}
+
+	<!-- Modal: Inviste Users -->
+	{% include modals/modal-invite-users.html %}
+
+	<!-- Offcanvas: Create Task -->
+	{% include tasks/offcanvas-create-task.html %}
+
+	<!-- Modal: Create Project -->
+	{% include modals/modal-create-project.html %}
+
+	<!-- Modal: Add Tag -->
+	{% include modals/modal-create-project.html %}
+
+	<!-- Modal: Select users -->
+	{% include tasks/modal-select-users.html %}
+
+	<!-- Modal: Share -->
+	{% include modals/modal-share.html %}
+
+	<!-- Offcanvas: View Task Details -->
+	{% include tasks/offcanvas-task-view.html %}
+
+	<!-- Modal: Danger -->
+	{% if page.modalDangerTasks %}
+		{% include modals/modal-danger.html 
+			modalDangerTasks=""
+		%}
+	{% elsif page.modalDangerListTasks %}
+		{% include modals/modal-danger.html 
+			modalDangerListTasks=""
+		%}
+	{% else %}
+		{% include modals/modal-danger.html %}
+	{% endif %}
+
+	<!-- Modal: Filter(s) -->
+	{% include modal-filter/modal-filter.html 
+		modalName="modalStart"
+		navbarStyleAlone=""
+		placholderTitle="Filter..."
+		navbarReset=""
+		navbarTitle="Select below"
+		modalFilterBy=""
+	  %}
+	  
+	  {% include modal-filter/modal-filter.html
+		inputBack=""
+		inputCheck=""
+		inputClose=""
+		navbarReset=""
+		navbarBadgesAssignee=""
+		modalName="modalAssignee"
+		placholderTitle="Filter by Assignee..."
+		navbarTitle="6 Results"
+		modalAssignee=""
+	  %}
+	  
+	  {% include modal-filter/modal-filter.html
+		inputBack=""
+		inputCheck=""
+		navbarReset=""
+		navbarBadgesStatus=""
+		modalName="modalStatus"
+		placholderTitle="Filter by Status..."
+		navbarTitle="16 Results"
+		modalStatusBy=""
+	  %}
+	  
+	  {% include modal-filter/modal-filter.html
+		inputBack=""
+		inputCheck=""
+		navbarReset=""
+		navbarBadgesTag=""
+		modalName="modalTags"
+		placholderTitle="Filter by Tag..."
+		navbarTitle="16 Results"
+		modalTagBy=""
+	  %}
+	  
+	  {% include modal-filter/modal-filter.html
+		inputBack=""
+		inputCheck=""
+		navbarReset=""
+		navbarBadgesPriority=""
+		modalName="modalPriority"
+		placholderTitle="Filter by Priority..."
+		navbarTitle="26 Results"
+		modalPriorityBy=""
+	  %}
+</html>
