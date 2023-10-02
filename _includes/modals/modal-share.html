@@ -7,7 +7,7 @@
 		<button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle"
 			style="z-index: 999;" data-bs-dismiss="modal">
 			<span class="fa-stack" style="font-size: 0.7em;">
-				<i class="fa-solid fa-circle fa-stack-2x text-body"></i>
+				<i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
 				<i class="fa-solid fa-times fa-stack-1x text-white"></i>
 			</span>
 		</button>
@@ -15,7 +15,7 @@
 		<!-- START CONTENT -->
 		<div class="modal-content shadow-sm rounded-5 overflow-auto">
 			<!-- START Header with Search -->
-			<div class="d-flex flex-column px-4 pt-4 pb-2 justify-content-center border-bottom border-gray-200">
+			<div class="d-flex flex-column px-4 pt-4 pb-2 justify-content-center border-bottom border-secondary-subtle border-opacity-50">
 				<h5 class="text-center fw-normal pb-3">
 					Share
 				</h5>
@@ -23,9 +23,9 @@
 				<div class="input-group mb-3">
 					<input type="text" class="form-control" aria-label="Text input with dropdown button"
 						placeholder="Enter email...">
-					<button class="btn btn-outline-light text-dark px-3" type="button" data-bs-toggle="dropdown"
+					<button class="btn btn-link text-body-emphasis px-3 border-secondary-subtle text-decoration-none" type="button" data-bs-toggle="dropdown"
 						aria-expanded="false">Can View <i
-							class="fa fa-angle-down ms-1 text-body text-opacity-50"></i></button>
+							class="fa fa-angle-down ms-1 text-secondary"></i></button>
 					<ul class="dropdown-menu dropdown-menu-end shadow-sm">
 						<li><a class="dropdown-item" href="#">Can Edit</a></li>
 						<li><a class="dropdown-item" href="#">Can View</a></li>
@@ -41,12 +41,11 @@
 			<!-- END Header with Search -->
 
 			<!-- START List -->
-			<ul class="list-group list-group-flush list-modal">
+			<ul class="list-group list-group-flush">
 
 				{% for user in site.data.modalSelectUsers %}
 				<!-- START LI: User -->
-				<li class="list-group-item list-group-item-action d-flex pe-auto" data-bs-toggle="button"
-					aria-current="true">
+				<li class="list-group-item d-flex pe-auto">
 					<!-- START Avatar Image Small Pill with Status -->
 					<div class="me-3 d-flex align-items-center">
 						<div class="position-relative">
@@ -65,9 +64,9 @@
 					</div>
 
 					<div class="dropdown align-self-center">
-						<button class="btn btn-link text-dark text-decoration-none" type="button"
+						<button class="btn btn-link text-body-emphasis text-decoration-none" type="button"
 							data-bs-toggle="dropdown" aria-expanded="false">
-							Can View <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+							Can View <i class="fa fa-angle-down ms-1 text-secondary"></i>
 						</button>
 						<ul class="dropdown-menu shadow-sm">
 							<li><a class="dropdown-item" href="#">Can View</a></li>
@@ -88,11 +87,11 @@
 
 
 			<!-- START Footer -->
-			<div class="modal-footer p-0 m-0 bg-light rounded-bottom py-3 ps-2 pe-3 d-flex">
+			<div class="modal-footer p-0 m-0 rounded-bottom py-3 ps-2 pe-3 d-flex">
 				<div class="dropdown">
-					<button class="btn btn-link text-body text-decoration-none" type="button" data-bs-toggle="dropdown"
+					<button class="btn btn-link text-body-emphasis text-decoration-none" type="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
-						Anyone with the link <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+						Anyone with the link <i class="fa fa-angle-down ms-1 text-secondary"></i>
 					</button>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="#">Anyone with the link</a></li>
@@ -101,15 +100,14 @@
 				</div>
 
 				<div class="dropdown">
-					<button class="btn btn-link text-body text-decoration-none" type="button" data-bs-toggle="dropdown"
+					<button class="btn btn-link text-body-emphasis text-decoration-none" type="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
-						Can Edit <i class="fa fa-angle-down ms-1 text-body text-opacity-50"></i>
+						Can Edit <i class="fa fa-angle-down ms-1 text-secondary"></i>
 					</button>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="#">Can Edit</a></li>
 						<li><a class="dropdown-item" href="#">Can View</a></li>
 				</div>
-
 
 				<button type="button" class="btn btn-primary px-3 ms-auto">
 					<i class="fa fa-link me-1"></i>
