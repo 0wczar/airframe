@@ -37,7 +37,7 @@
 					{% if page.navbarsDisabled %}
 
 					{% else %}
-					<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-2">
+					<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="#">
 								<img src="https://bs-5-jekyll-hewox0q3s-tomaszowczarczyk.vercel.app/images/logo-airframe-white.svg" alt=""
@@ -56,25 +56,23 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#">Applications</a>
+										<a class="nav-link" href="#">Projects</a>
 									</li>
 									<li class="nav-item dropdown">
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 											data-bs-toggle="dropdown" aria-expanded="false">
-											Users
+											Resources
 										</a>
 										<!-- Dropdown -->
 										<ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown">
-											<li><a class="dropdown-item" href="#">All Users</a></li>
-											<li><a class="dropdown-item" href="#">Pending Invitations</a></li>
+											<h6 class="dropdown-header fw-normal">Resources</h6></li>
+											<li><a class="dropdown-item" href="https://airframe-git-without-theme-tomaszowczarczyk.vercel.app"><i class="fa fa-fw fa-swatchbook fa-fw me-1"></i> Bootstrap Theme</a></li>
 											<li>
 												<hr class="dropdown-divider">
 											</li>
-											<li><a class="dropdown-item" href="#">Add User</a></li>
+											<li><a class="dropdown-item" href="https://github.com/0wczar/airframe" target="_blank"><i class="fa fa-code-branch fa-fw me-1"></i> Github Source</a></li>
+											<li><a class="dropdown-item" href="https://zeroheight.com/71219a745/p/499357-you-can-create-everything" target="_blank"><i class="fa fa-fw fa-book fa-fw me-1"></i> Documentation</a></li>
 										</ul>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link disabled">Projects</a>
 									</li>
 								</ul>
 								<ul class="navbar-nav mb-2 mb-lg-0">
@@ -98,15 +96,9 @@
 											<img class="avatar-xs rounded-pill " src="{{page.root}}/images/avatars/40.jpg"
 												alt="">
 										</a>
-										<!-- Dropdown -->
-										<ul class="dropdown-menu shadow-sm dropdown-menu-end" aria-labelledby="navbarDropdown">
-											<li><a class="dropdown-item" href="#" data-bs-theme-value="light" type="button">Light</a></li>
-											<li><a class="dropdown-item" href="#" data-bs-theme-value="dark" type="button">Dark</a></li>
-											<li>
-												<hr class="dropdown-divider">
-											</li>
-											<li><a class="dropdown-item" href="#">Add User</a></li>
-										</ul>
+										{% include layouts/dropdown-profile.html 
+											class="dropdown-menu-end"	
+										%}
 									</li>
 								</ul>
 							</div>

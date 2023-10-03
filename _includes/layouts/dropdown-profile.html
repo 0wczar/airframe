@@ -1,8 +1,8 @@
 <!-- START Dropdown Profile -->
 <ul class="dropdown-menu shadow-sm {{ include.class }}">
     <div class="pb-1 px-3">
-        <div class="pb-0 text-dark">Esta Deckow</div>
-        <small>
+        <div class="pb-0 text-body-emphasis">Esta Deckow</div>
+        <small class="text-secondary">
             esta.deckow@deckow.co.uk
         </small>
     </div>
@@ -15,9 +15,25 @@
     <li>
         <hr class="dropdown-divider">
     </li>
+    <h6 class="dropdown-header fw-normal">Select Theme</h6></li>
+    <li>
+        <button class="dropdown-item" type="button" data-bs-theme-value="light">
+            <i class="fa fa-fw fa-sun me-1"></i>
+            Light
+        </button>
+    </li>
+    <li>
+        <button class="dropdown-item" type="button" data-bs-theme-value="dark">
+            <i class="fa fa-fw fa-moon me-1"></i>
+            Dark
+        </button>
+    </li>
+    <li>
+        <hr class="dropdown-divider">
+    </li>
     <li>
         <a class="dropdown-item" href="{{page.root}}/login.html">
-            <i class="fa fa-power-off me-1"></i>
+            <i class="fa fa-fw fa-power-off me-1"></i>
             Sign Out
         </a>
     </li>

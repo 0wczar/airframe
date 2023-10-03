@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="auto">
 	<head>
 		<meta charset="utf-8">
 		<title>{{ site.title }} - {{ page.title }}</title>
@@ -9,6 +9,7 @@
 
 		<!-- Generated from SCSS (Bootstrap 5.02 and saved as styles.css)-->
 		<link href="{{page.root}}/css/styles.css" rel="stylesheet">
+		<script type="module" src="{{page.root}}/js/color-modes.js"></script>
 
 		<!-- Google Fonts Roboto -->
 		<link
@@ -27,7 +28,7 @@
 
 	</head>
 
-	<body class="bg-light min-vh-100 d-flex justify-content-center d-flex align-items-center">
+	<body class="min-vh-100 d-flex justify-content-center d-flex align-items-center">
 		<div class="container-fluid">
 			{{ content }}
 		</div>
