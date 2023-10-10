@@ -1666,3 +1666,10 @@ a.badge-outline-light:hover {
   --bs-bg-opacity: .8;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
+
+.nav-offcanvas {
+  --bs-nav-link-color:              rgba(var(--bs-white-rgb), .55);
+  --bs-nav-link-hover-color:        white;
+  --bs-nav-pills-link-active-color: white;
+  --bs-nav-pills-link-active-bg:    rgba(var(--bs-white-rgb), .20);
+}

@@ -3,9 +3,18 @@
 
     <!-- Left Side-->
     <div class="d-flex flex-grow-1">
+        
+        <!-- XS,SM Only: Sidebar Offcanvas -->
+        <button class="btn btn-link border-secondary-subtle me-2 btn-sm text-secondary d-block d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">
+            <i class="fa fa-bars"></i>
+        </button>
+        {% include V2/offcanvas-sidebar.html %}
+        
         {% if page.navbarBackDisabled %}
 
         {% elsif page.navbarBack %}
+        
             <a role="button" class="btn btn-link btn-sm rounded-circle text-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
             data-bs-original-title="Back to Projects"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/">
@@ -21,7 +30,7 @@
         {% elsif page.navbarBreadcrumb %}
             <a class="align-self-center h6 mb-0 fw-normal text-secondary" href="{{page.root}}/">{{ page.navbarLink }}</a>
             <span class="mx-2 text-body align-self-center fw-normal opacity-50">/</span>
-            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap">
+            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap text-truncate">
                 {{ page.navbarTitle }}
             </h6>
         {% else %}

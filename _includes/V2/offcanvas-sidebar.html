@@ -1,0 +1,86 @@
+<div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body p-4">
+
+        <!-- START TOP -->
+        <div>
+            <!-- Header -->
+            <div class="d-flex mb-4">
+                <!-- Logo -->
+                <a href="/" class="flex-grow-1">
+                    <img src="{{page.root}}/images/airframe-white-logo-only.svg" width="30" height="28">
+                </a>
+
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <hr class="text-white opacity-25" />
+
+            <!-- Menu -->
+            <div class="small pb-3 text-white text-opacity-75">Menu</div>
+            <nav class="nav flex-column nav-pills nav-offcanvas mb-4">
+                <a class="nav-link             {% if page.url == "/" %}active{% endif %}
+                {% if page.url == "/projects/grid/" %}active{% endif %}
+                {% if page.url == "/projects/list/" %}active{% endif %}
+                {% if page.url == "/projects/list/" %}active{% endif %}
+                {% if page.url == "/projects/list/list/" %}active{% endif %}
+                {% if page.url == "/projects/list/grid/" %}active{% endif %}
+                {% if page.url == "/projects/list/table/" %}active{% endif %}
+                {% if page.url == "/projects/list/list/details/" %}active{% endif %}
+                {% if page.url == "/projects/empty.html" %}active{% endif %}
+                {% if page.url == "/tasks/table/" %}active{% endif %}
+                {% if page.url == "/tasks/grid/" %}active{% endif %}
+                {% if page.url == "/tasks/list/" %}active{% endif %}
+                {% if page.url == "/tasks/list/task.html" %}active{% endif %}
+                {% if page.url == "/tasks/empty.html" %}active{% endif %}" aria-current="page" href="{{page.root}}/">
+                    <i class="fa-solid fa-fw fa-home align-self-center me-2"></i> Home
+                </a>
+                <a class="nav-link" href="https://github.com/0wczar/airframe" target="_blank">
+                    <i class="fa-brands fa-fw fa-github align-self-center me-2"></i>
+                    Github
+                </a>
+                <a class="nav-link" href="https://airframe-git-without-theme-tomaszowczarczyk.vercel.app" target="_blank">
+                    <i class="fa-solid fa-fw fa-book-blank align-self-center me-2"></i>
+                    Docs
+                </a>
+            </nav>
+
+            <!-- Theme -->
+            <div class="small text-white text-opacity-75 pb-3">Theme</div>
+            <nav class="nav flex-column nav-pills nav-offcanvas mb-3">
+                <button class="nav-link text-start" data-bs-theme-value="light" type="button">
+                    <i class="fa-solid fa-fw fa-sun me-2"></i>
+                    Light
+                </button>
+                <button class="nav-link text-start" data-bs-theme-value="dark" type="button">
+                    <i class="fa-solid fa-fw fa-moon me-2"></i>
+                    Dark
+                </button>
+            </nav>
+        </div>
+        <!-- END TOP -->
+
+
+        <!-- User -->
+        <nav class="nav flex-column nav-pills nav-offcanvas">
+            <hr class="text-white opacity-25" />
+            <div class="small pb-1 text-white text-opacity-75">User</div>
+            <li class="nav-item dropup">
+                <a class="nav-link text-start d-flex" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    <i class="fa fa-circle-user fa-2x fa-fw me-2 align-self-center"></i>
+                    <div class="flex-grow-1">
+                        <div>
+                            John Doe
+                        </div>
+                        <small>
+                            info@webkom.co
+                        </small>
+                    </div>
+                    <i class="fa fa-angle-up fa-fw me-2 align-self-center"></i>
+                </a>
+                {% include layouts/dropdown-profile.html %}
+            </li>
+        </nav>
+    </div>
+</div>
