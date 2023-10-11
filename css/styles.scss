@@ -1673,3 +1673,16 @@ a.badge-outline-light:hover {
   --bs-nav-pills-link-active-color: white;
   --bs-nav-pills-link-active-bg:    rgba(var(--bs-white-rgb), .20);
 }
+
+a.btn-ghost {
+  --bs-btn-bg: pink !important;
+  --bs-btn-border-color: red;
+  --bs-btn-hover-bg:  yellow !important;
+  --bs-btn-active-bg: #{light($danger, 90%)};
+}
+
+button.btn-filter {
+  --bs-btn-border-color: #{$secondary-border-subtle};
+  border-style: dashed;
+  --bs-btn-hover-border-color: #{$secondary};
+}
