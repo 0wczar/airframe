@@ -399,7 +399,7 @@
 
     .modal {
       --#{$prefix}modal-bg: #{$gray-900};
-      --#{$prefix}modal-border-color: transparent;
+      --#{$prefix}modal-border-color: #{$secondary-border-subtle-dark};
     }
 
     .modal-footer {
@@ -435,6 +435,12 @@
 
     .col-form-label {
       color: white;
+    }
+
+    .nav-pills {
+      --#{$prefix}nav-pills-link-active-color: #{$white};
+      --#{$prefix}nav-pills-link-active-bg: #{$gray-800};
+      --#{$prefix}nav-link-hover-color: #{$white};
     }
 
   }
