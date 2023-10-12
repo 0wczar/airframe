@@ -1686,3 +1686,27 @@ button.btn-filter {
   border-style: dashed;
   --bs-btn-hover-border-color: #{$secondary};
 }
+
+@include media-breakpoint-up(md) {
+  .offcanvas {
+      width: 75% !important; 
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .offcanvas {
+      width: 75% !important; 
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .offcanvas {
+      width: 75% !important; 
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .offcanvas {
+      width: 50% !important;
+  }
+}
