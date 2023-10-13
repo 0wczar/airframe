@@ -1,85 +1,99 @@
-    <!-- START Sidebar -->
-    <div class="d-none d-lg-block col col-lg-auto col-xl-auto col-xxl-auto bg-primary min-vh-100 align-items-end flex-column p-3 sidebar-primary">
+<!-- START Sidebar -->
+<div class="d-none d-lg-block col col-lg-auto col-xl-auto col-xxl-auto bg-primary vh-100 sidebar-primary">
 
-        <div class="d-flex justify-content-center">
-          <!-- Logo -->
-          <a href="/">
-            <img src="{{page.root}}/images/airframe-white-logo-only.svg" width="30" height="28">
-          </a>
-        </div>
+  <!-- START Wrapper -->
+  <div class="d-flex flex-column min-vh-100 px-1 py-3">
 
-       <!-- Avatar Image Small Pill with Status -->
-      <ul class="nav nav-pills sidebar-light-primary flex-column me-auto gap-1 pt-3 pb-4">
-        <li class="nav-item d-flex dropend">
-          <a class="nav-link d-flex flex-sm-fill justify-content-center p-2 
-          {% if page.url == "/settings/settings.html" %}active{% endif %}
-          {% if page.url == "/settings/password.html" %}active{% endif %}
-          {% if page.url == "/settings/general.html" %}active{% endif %}
-          {% if page.url == "/settings/billings.html" %}active{% endif %}
-          {% if page.url == "/settings/members.html" %}active{% endif %}
-          {% if page.url == "/settings/notifications.html" %}active{% endif %}
-          " 
-          aria-current="page" data-bs-toggle="dropdown" role="button">
-            <div class="position-relative d-inline-flex">
-              <img class="rounded-pill" src="{{page.root}}/images/avatars/36.jpg" alt="" height=30 weight=30>
-              <span class="position-absolute top-100 start-100 badge border border-primary rounded-circle bg-warning p-1" style="transform: translate(-90%,-80%);"><span class="visually-hidden">unread messages</span></span>
-            </div>
-          </a>
-          {% include layouts/dropdown-profile.html %}
-        </li>
-      </ul>
+    <!-- Logo -->
+    <div class="d-flex justify-content-center">
+
+      <a href="/">
+        <img src="{{page.root}}/images/airframe-white-logo-only.svg" width="30" height="28">
+      </a>
+    </div>
+
+    <!-- Avatar Image Small Pill with Status -->
+    <ul class="nav nav-pills sidebar-light-primary flex-column me-auto gap-1 pt-3 pb-4">
+      <li class="nav-item d-flex dropend">
+        <a class="nav-link d-flex flex-sm-fill justify-content-center p-2 
+        {% if page.url == " /settings/settings.html" %}active{% endif %} {% if page.url=="/settings/password.html"
+          %}active{% endif %} {% if page.url=="/settings/general.html" %}active{% endif %} {% if
+          page.url=="/settings/billings.html" %}active{% endif %} {% if page.url=="/settings/members.html" %}active{%
+          endif %} {% if page.url=="/settings/notifications.html" %}active{% endif %} " 
+        aria-current=" page" data-bs-toggle="dropdown" role="button">
+          <div class="position-relative d-inline-flex">
+            <img class="rounded-pill" src="{{page.root}}/images/avatars/36.jpg" alt="" height=30 weight=30>
+            <span class="position-absolute top-100 start-100 badge border border-primary rounded-circle bg-warning p-1"
+              style="transform: translate(-90%,-80%);"><span class="visually-hidden">unread messages</span></span>
+          </div>
+        </a>
+        {% include layouts/dropdown-profile.html %}
+      </li>
+    </ul>
 
 
-        <!-- Nav -->
-        <ul class="nav nav-pills sidebar-light-primary flex-column me-auto gap-1">
-          <li class="nav-item d-flex">
-            <a href="{{page.root}}/" class="nav-link d-flex flex-sm-fill p-3 justify-content-center
-            {% if page.url == "/" %}active{% endif %}
-            {% if page.url == "/projects/table/" %}active{% endif %}
-            {% if page.url == "/projects/grid/" %}active{% endif %}
-            {% if page.url == "/projects/list/" %}active{% endif %}
-            {% if page.url == "/projects/list/" %}active{% endif %}
-            {% if page.url == "/projects/list/list/" %}active{% endif %}
-            {% if page.url == "/projects/list/grid/" %}active{% endif %}
-            {% if page.url == "/projects/list/table/" %}active{% endif %}
-            {% if page.url == "/projects/list/list/details/" %}active{% endif %}
-            {% if page.url == "/projects/empty.html" %}active{% endif %}
-            {% if page.url == "/tasks/table/" %}active{% endif %}
-            {% if page.url == "/tasks/grid/" %}active{% endif %}
-            {% if page.url == "/tasks/list/" %}active{% endif %}
-            {% if page.url == "/tasks/list/task.html" %}active{% endif %}
-            {% if page.url == "/tasks/empty.html" %}active{% endif %}
-            
-            " aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
-              <i class="fa-solid fa-fw fa-home align-self-center"></i>
-            </a>
-          </li>
-          <li class="nav-item d-flex">
-            <a href="https://airframe-git-without-theme-tomaszowczarczyk.vercel.app" class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" title="Switch to Bootstrap Theme">
-              <i class="fa-solid fa-fw fa-toggle-on align-self-center"></i>
-            </a>
-          </li>
-          <li class="nav-item d-flex">
-            <a href="https://github.com/0wczar/airframe" target="_blank" class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" title="Go to Source">
-              <i class="fa-brands fa-fw fa-github align-self-center"></i>
-            </a>
-          </li>
-          <li class="nav-item d-flex">
-            <a href="https://zeroheight.com/71219a745/p/499357-you-can-create-everything" target="_blank" class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" title="Go to Documentation">
-              <i class="fa-solid fa-fw fa-book-blank align-self-center"></i>
-            </a>
-          </li>
-          <li class="nav-item d-flex">
-            <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="light" type="button" >
-              <i class="fa-solid fa-fw fa-sun align-self-center"></i>
-            </button>
-          </li>
-          <li class="nav-item d-flex">
-            <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="dark" type="button" >
-              <i class="fa-solid fa-fw fa-moon align-self-center"></i>
-            </button>
-          </li>  
-        </ul>
-    
-      </div>
-      <!-- END Sidebar -->
+    <!-- Menu -->
+    <ul class="nav nav-pills sidebar-light-primary flex-column me-auto gap-1">
+      <li class="nav-item d-flex">
+        <a href="{{page.root}}/" class="nav-link d-flex flex-sm-fill p-3 justify-content-center
+          {% if page.url == " /" %}active{% endif %} {% if page.url=="/projects/table/" %}active{% endif %} {% if
+          page.url=="/projects/grid/" %}active{% endif %} {% if page.url=="/projects/list/" %}active{% endif %} {% if
+          page.url=="/projects/list/" %}active{% endif %} {% if page.url=="/projects/list/list/" %}active{% endif %} {%
+          if page.url=="/projects/list/grid/" %}active{% endif %} {% if page.url=="/projects/list/table/" %}active{%
+          endif %} {% if page.url=="/projects/list/list/details/" %}active{% endif %} {% if
+          page.url=="/projects/empty.html" %}active{% endif %} {% if page.url=="/tasks/table/" %}active{% endif %} {% if
+          page.url=="/tasks/grid/" %}active{% endif %} {% if page.url=="/tasks/list/" %}active{% endif %} {% if
+          page.url=="/tasks/list/task.html" %}active{% endif %} {% if page.url=="/tasks/empty.html" %}active{% endif %}
+          {% if page.url=="/tasks/list/grid/" %}active{% endif %} {% if page.url=="/tasks/list/table/" %}active{% endif
+          %} " aria-current=" page" data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
+          <i class="fa-solid fa-fw fa-home align-self-center"></i>
+        </a>
+      </li>
+      <li class="nav-item d-flex">
+        <a href="https://airframe-git-without-theme-tomaszowczarczyk.vercel.app"
+          class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
+          data-bs-placement="right" title="Switch to Bootstrap Theme">
+          <i class="fa-solid fa-fw fa-toggle-on align-self-center"></i>
+        </a>
+      </li>
+      <li class="nav-item d-flex">
+        <a href="https://github.com/0wczar/airframe" target="_blank"
+          class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
+          data-bs-placement="right" title="Go to Source">
+          <i class="fa-brands fa-fw fa-github align-self-center"></i>
+        </a>
+      </li>
+      <li class="nav-item d-flex">
+        <a href="https://zeroheight.com/71219a745/p/499357-you-can-create-everything" target="_blank"
+          class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
+          data-bs-placement="right" title="Go to Documentation">
+          <i class="fa-solid fa-fw fa-book-blank align-self-center"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex-grow-1"></div>
+
+    <!-- Theme Switcher -->
+    <ul class="nav nav-pills sidebar-light-primary flex-column me-auto gap-1">
+      <li class="nav-item d-flex">
+        <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="light"
+          type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Light Theme">
+          <i class="fa-solid fa-fw fa-sun align-self-center"></i>
+        </button>
+      </li>
+      <li class="nav-item d-flex">
+        <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="dark"
+          type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Dark Theme">
+          <i class="fa-solid fa-fw fa-moon align-self-center"></i>
+        </button>
+      </li>
+    </ul>
+
+  </div>
+  <!-- END Wrapper -->
+
+
+
+</div>
+<!-- END Sidebar -->
