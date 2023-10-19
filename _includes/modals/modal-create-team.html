@@ -3,13 +3,7 @@
     
         <div class="modal-dialog position-relative">
 
-		<!-- Close Button -->
-		<button type="button" class="btn-link link-secondary btn position-absolute top-0 start-100 translate-middle z-3 pe-auto" data-bs-dismiss="modal">
-			<span class="fa-stack" style="font-size: 0.7em;">
-				<i class="fa-solid fa-circle fa-stack-2x"></i>
-				<i class="fa-solid fa-times fa-stack-1x text-white"></i>
-			</span>
-		</button>
+            {% include modals/button-close-modal.html %}
 
             <div class="modal-content rounded-5 shadow-sm overflow-auto z-2">
 
@@ -39,9 +33,13 @@
                 </div>
 
                 <!-- Footer -->
-                <div class="modal-footer hstack p-0 border-0 bg-light overflow-auto">
-                    <button type="button" class="btn flex-fill rounded-0 col-6 py-3 btn-link text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">Cancel</button>
-                    <a role="button" href="#" class="btn flex-fill rounded-0 col-6 btn-link py-3 text-dark text-decoration-none m-0">Create Team</a>
+                <div class="modal-footer hstack p-0 overflow-auto">
+                    <button type="button" class="btn btn-link btn-ghost  flex-fill rounded-0 col-6 py-3 text-secondary text-decoration-none m-0 border-end" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <a role="button" href="#" class="btn btn-link btn-ghost flex-fill rounded-0 col-6 py-3 text-dark text-decoration-none m-0">
+                        Create Team
+                    </a>
                 </div>
                 
             </div>

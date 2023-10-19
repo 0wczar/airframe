@@ -4,15 +4,9 @@
         <!-- Content -->
         <div class="modal-dialog modal-sm position-relative">
 
-        <!-- Right Close Button -->
-        <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
-            <span class="fa-stack" style="font-size: 0.7em;">
-                <i class="fa-solid fa-circle fa-stack-2x text-muted"></i>
-                <i class="fa-solid fa-times fa-stack-1x text-white"></i>
-            </span>
-        </span>
+          {% include modals/button-close-modal.html %}
           
-          <div class="modal-content rounded-5 shadow-sm overflow-auto">
+          <div class="modal-content rounded-5 shadow-sm overflow-auto z-2">
             
             <!-- Content -->
             <div class="modal-body px-4 pt-4">
@@ -57,9 +51,15 @@
             
             <!-- Footer -->
             <div class="modal-footer hstack p-0 m-0 rounded-bottom">
-              <button type="button" class="btn flex-fill rounded-0 py-3 btn-link text-secondary text-decoration-none m-0">Cancel</button>
-              <div class="vr m-0 border border-secondary-subtle  opacity-75"></div>
-              <button type="button" class="btn flex-fill rounded-0 btn-link py-3 text-body-emphasis text-decoration-none m-0">Save</button>
+              <button type="button" class="btn btn-link btn-ghost flex-fill rounded-0 py-3 text-secondary text-decoration-none m-0">
+                Cancel
+              </button>
+
+              <div class="vr m-0 border border-secondary-subtle"></div>
+              
+              <button type="button" class="btn btn-link btn-ghost flex-fill rounded-0 py-3 text-body-emphasis text-decoration-none m-0">
+                Save
+              </button>
             </div>
 
           </div>

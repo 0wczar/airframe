@@ -1,13 +1,7 @@
  <!-- START Dropdown Autocomplete -->
      <div class="dropdown-menu shadow pt-0 pb-0">
        
-        <!-- Right Close Button -->
-        <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
-            <span class="fa-stack" style="font-size: 0.7em;">
-                <i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
-                <i class="fa-solid fa-times fa-stack-1x text-white"></i>
-            </span>
-        </span>
+        {% include modals/button-close-modal.html %}
 
        <!-- Input Search -->
        <div>
@@ -69,14 +63,14 @@
         <!-- END List -->
        
        <!-- START Footer -->
-       <div class="hstack p-0 d-flex align-items-center bg-body-secondary small text-muted border-top rounded-bottom">
-        <button type="button" class="btn btn-sm px-4 small py-2 flex-fill text-nowrap rounded-0 btn-link text-secondary text-decoration-none m-0">
+       <div class="hstack p-0 d-flex align-items-center bg-body-secondary bg-opacity-75 border-top rounded-bottom">
+        <button type="button" class="btn btn-link btn-ghost btn-sm px-4 py-2 flex-fill text-nowrap rounded-0 btn-link link-secondary text-decoration-none m-0">
           Edit Tags
         </button>
               
-        <div class="vr m-0 bg-gray-600"></div>
+        <div class="vr m-0"></div>
               
-        <button type="button" class="btn btn-sm px-4 small py-2 flex-fill text-nowrap rounded-0 btn-link text-body-emphasis text-decoration-none m-0" data-bs-toggle="modal" data-bs-target="#modalCreateTag">
+        <button type="button" class="btn btn-link btn-ghost btn-sm px-4 py-2 flex-fill text-nowrap rounded-0 btn-link link-body-emphasis text-decoration-none m-0" data-bs-toggle="modal" data-bs-target="#modalCreateTag">
           Add Tag
         </button>
        </div>

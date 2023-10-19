@@ -3,17 +3,11 @@
 
 	<!-- START Modal Content -->
 	<div class="modal-dialog rounded-5 shadow-sm position-relative">
-		<!-- Close Button -->
-		<button type="button" class="btn-link btn position-absolute top-0 start-100 translate-middle"
-			style="z-index: 999;" data-bs-dismiss="modal">
-			<span class="fa-stack" style="font-size: 0.7em;">
-				<i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
-				<i class="fa-solid fa-times fa-stack-1x text-white"></i>
-			</span>
-		</button>
+
+		{% include modals/button-close-modal.html %}
 
 		<!-- START CONTENT -->
-		<div class="modal-content shadow-sm rounded-5 overflow-auto">
+		<div class="modal-content shadow-sm rounded-5 overflow-auto z-2">
 			<!-- START Header with Search -->
 			<div class="d-flex flex-column px-4 pt-4 pb-2 justify-content-center border-bottom border-secondary-subtle border-opacity-50">
 				<h5 class="text-center fw-normal pb-3">

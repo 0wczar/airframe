@@ -1,13 +1,9 @@
  <!-- START Dropdown Autocomplete -->
-     <div class="dropdown-menu shadow border-secondary-subtle pb-0 pt-0">
+     <div class="dropdown-menu shadow pb-0 pt-0">
 
-      <!-- Right Close Button -->
-      <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
-        <span class="fa-stack" style="font-size: 0.7em;">
-          <i class="fa-solid fa-circle fa-stack-2x text-secondary"></i>
-          <i class="fa-solid fa-times fa-stack-1x text-light"></i>
-        </span>
-      </span>
+      {% include modals/button-close-modal.html 
+        closeDropodown=""  
+      %}
        
        <!-- Input Search -->
        <div class="">
@@ -76,14 +72,14 @@
        <!-- END List -->
        
        <!-- START Footer -->
-       <div class="hstack p-0 d-flex align-items-center bg-body-secondary small text-body border-top rounded-bottom">
-        <button type="button" class="btn btn-sm small py-2 flex-fill rounded-0 btn-link text-secondary text-decoration-none m-0">
+       <div class="hstack p-0 d-flex align-items-center border-top bg-body-secondary bg-opacity-75 rounded-bottom">
+        <button type="button" class="btn btn-link btn-ghost btn-sm py-2 flex-fill rounded-0 link-secondary text-decoration-none m-0">
           Edit Users
         </button>
               
-        <div class="vr m-0 bg-gray-600"></div>
+        <div class="vr m-0 opacity-25"></div>
               
-        <button type="button" class="btn btn-sm small py-2 flex-fill rounded-0 btn-link text-body-emphasis text-decoration-none m-0" data-bs-toggle="modal" data-bs-target="#modalInviteUsers">
+        <button type="button" class="btn btn-link btn-sm btn-ghost py-2 flex-fill rounded-0 link-body-emphasis text-decoration-none m-0" data-bs-toggle="modal" data-bs-target="#modalInviteUsers">
           Add Users
         </button>
        </div>

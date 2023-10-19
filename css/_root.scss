@@ -191,16 +191,7 @@
 }
 
 @include color-mode(dark) {
-  .btn-link.active {
-    color: $white !important;
-    background-color: $gray-800;
-  }
 
-  // Hover
-  .btn-link:hover {
-    color: $white !important;
-    background-color: $gray-800;
-  }
 }
 
 @include color-mode(dark) {
@@ -435,6 +426,13 @@
 
     .col-form-label {
       color: white;
+    }
+
+    .btn-ghost {
+      --#{$prefix}btn-hover-bg: #{$gray-800};
+      --#{$prefix}btn-hover-color: white;
+      --#{$prefix}btn-active-bg: #{$gray-900};
+      --#{$prefix}btn-active-color: #{$white} !important;
     }
 
     .nav-pills {

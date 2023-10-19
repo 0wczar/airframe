@@ -3,16 +3,10 @@
     
         <div class="modal-dialog modal-xl position-relative show">
 
-            <!-- Right Close Button -->
-            <span class="position-absolute top-0 start-100 translate-middle" style="z-index: 999;">
-                <span class="fa-stack" style="font-size: 0.7em;">
-                    <i class="fas fa-circle fa-stack-2x text-muted"></i>
-                    <i class="far fa-times fa-stack-1x text-white"></i>
-                </span>
-            </span>
+            {% include modals/button-close-modal.html %}
             
             <!-- Content -->
-            <div class="modal-content rounded-5 shadow-sm overflow-auto">
+            <div class="modal-content rounded-5 shadow-sm overflow-auto z-2">
  
                 <div class="modal-body px-4 pt-4 pb-4">
                     <h4 class="mb-3 text-center fw-normal">

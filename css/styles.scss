@@ -1646,13 +1646,6 @@ a.badge-outline-light:hover {
   --bs-nav-pills-link-active-bg:    rgba(var(--bs-white-rgb), .20);
 }
 
-a.btn-ghost {
-  --bs-btn-bg: pink !important;
-  --bs-btn-border-color: red;
-  --bs-btn-hover-bg:  yellow !important;
-  --bs-btn-active-bg: #{light($danger, 90%)};
-}
-
 button.btn-filter {
   --bs-btn-border-color: #{$secondary-border-subtle};
   border-style: dashed;
@@ -1681,4 +1674,9 @@ button.btn-filter {
   .offcanvas {
       width: 50% !important;
   }
+}
+
+.btn-ghost {
+  --bs-btn-hover-bg: #{$gray-200};
+  --bs-btn-active-bg: #{$gray-200};
 }
