@@ -850,20 +850,6 @@ thead th {
 }
 
 
-// Button Close in Modal
-.btn-link > span > .fa-stack-2x  {
-  color: $gray-600;
-}
-.btn-link > span > .fa-stack-1x  {
-  color: $white;
-}
-.btn-link:hover > span > .fa-stack-2x {
-  color: $gray-700;
-}
-.btn-link:hover > span > .fa-stack-1x  {
-  color: $white;
-}
-
 // Radius Borders Custom Helpers
 .rounded-4 {
   border-radius: $border-radius-xl !important;
@@ -1170,20 +1156,6 @@ a.badge-outline-light:hover {
   background-color: $gray-100;
   border: 1px solid $gray-400;
 }
-
-// Button Link Custom
- // Active
- .btn-link.active {
-  color: $gray-800;
-  background-color: $gray-200;
-}
- // Hover
- .btn-link:hover {
-  color: $gray-600;
-  background-color: $gray-200;
-}
-
-
 
 // Modal Filter - disabled large focus in input
 .modal-dialog input:focus {
