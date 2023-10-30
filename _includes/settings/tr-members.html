@@ -9,18 +9,18 @@
                                 <span class="position-absolute top-100 start-100 badge border border-light rounded-circle bg-{{ site.data.statusColor | sample }} p-1" style="transform: translate(-90%,-60%);"><span class="visually-hidden">unread messages</span></span>
                             </div>
                         </td>
-                        <td class="align-middle text-dark">{{ site.data.firstName | sample }}</td>
-                        <td class="align-middle text-dark">{{ site.data.lastName | sample }}</td>
+                        <td class="align-middle text-body-emphasis">{{ site.data.firstName | sample }}</td>
+                        <td class="align-middle text-body-emphasis">{{ site.data.lastName | sample }}</td>
                         <td class="align-middle">{{ site.data.emails | sample }}</td>
                         <td class="align-middle">{{ include.status }}</td>
                         <td class="align-middle">
                             {% if include.admin %}
-                                <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+                                <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
                                     <i class="fa fa-circle me-1 text-danger"></i>
                                     Admin
                                 </span>                 
                             {% else %}
-                                <span class="badge badge-light-light rounded-pill text-dark ps-1 pe-2 fw-normal">
+                                <span class="badge bg-body-secondary text-body-emphasis rounded-pill border border-secondary border-opacity-10 ps-1 pe-2 fw-normal">
                                     <i class="fa fa-circle me-1 text-primary"></i>
                                     Member
                                 </span>     
