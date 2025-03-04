@@ -44,6 +44,60 @@ $spotify: #3BD46A;
   color: $spotify;
 }
 
+// Airframe 2025, Mar 4, Update - Bootstrap 5.3.3 
+
+.btn-outline {
+  --bs-btn-bg: none;
+  --bs-btn-border-width: 1px !important;
+  --bs-btn-color: var(--bs-emphasis-color) !important;
+  --bs-btn-border-color: var(--bs-secondary-border-subtle) !important;  
+  --bs-btn-hover-bg: var(--bs-secondary-bg);     
+  --bs-btn-hover-color: var(--bs-emphasis-color);
+  --bs-btn-hover-border-color: var(--bs-secondary-border-subtle) !important; 
+  --bs-btn-active-bg: var(--bs-secondary-bg);
+  --bs-btn-active-color: var(--bs-emphasis-color);
+  --bs-btn-active-border-color: var(--bs-secondary-border-subtle) !important;
+}
+
+.btn-ghost {
+  --bs-btn-bg: transparent;
+  --bs-btn-color: var(--bs-emphasis-color) !important;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: var(--bs-secondary-bg) !important;
+  --bs-btn-hover-color: var(--bs-emphasis-color);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: var(--bs-secondary-bg) !important;
+  --bs-btn-active-color: var(--bs-emphasis-color);
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: var(--bs-tertiary-color);      
+  --bs-btn-disabled-bg: none;      
+  --bs-btn-disabled-border-color: transparent;
+}
+
+.btn-secondary-ghost {
+  --bs-btn-bg: transparent;
+  --bs-btn-color: var(--bs-emphasis-color) !important;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: var(--bs-gray-300); 
+  --bs-btn-hover-color: var(--bs-emphasis-color);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: var(--bs-secondary-bg);
+  --bs-btn-active-color: var(--bs-emphasis-color);
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: var(--bs-tertiary-color);      
+  --bs-btn-disabled-bg: none;      
+  --bs-btn-disabled-border-color: transparent;
+}
+
+.btn-icon-ghost {
+  --bs-btn-bg: transparent;
+  --bs-btn-color: var(--bs-secondary-color) !important;     
+  --bs-btn-hover-bg: var(--bs-secondary-bg);         
+  --bs-btn-hover-color: var(--bs-emphasis-color);         
+  --bs-btn-active-bg: var(--bs-secondary-bg);
+  --bs-btn-active-color: var(--bs-emphasis-color);
+  --bs-btn-active-border-color: transparent;
+}
 
 // START CHEATSHEET.CSS as .SCSS
 body {

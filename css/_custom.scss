@@ -100,10 +100,11 @@ $dropdown-divider-bg:               $gray-200 !default; // changed
 $dropdown-box-shadow:               $box-shadow-sm !default; // changed
 $dropdown-link-color:               $body-color !default; // changed
 $dropdown-link-hover-color:         $dark !default; //changed
-$dropdown-link-hover-bg:            $gray-100 !default; //changed
+$dropdown-link-hover-bg:            $gray-200 !default; //changed
 $dropdown-link-active-color:        $dark !default; //changed
-$dropdown-link-active-bg:           $gray-200 !default; //changed
+$dropdown-link-active-bg:           $gray-300 !default; //changed
 $dropdown-header-color:             $dark !default; // change
+$dropdown-item-padding-y:           6px !default;
 
 $pagination-color:                  $body-color !default; // change
 $pagination-bg:                     transparent !default;
