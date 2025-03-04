@@ -439,10 +439,10 @@ $body-color:                $gray-900 !default;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
-$body-secondary-bg:         $gray-200 !default;
+$body-secondary-bg:         $gray-300 !default; // 2025 changed
 
 $body-tertiary-color:       rgba($body-color, .5) !default;
-$body-tertiary-bg:          $gray-100 !default;
+$body-tertiary-bg:          $gray-200 !default; // 2025 changed
 
 $body-emphasis-color:       $black !default;
 
