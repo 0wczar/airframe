@@ -7,16 +7,16 @@
         </th>
         <td class="align-middle">
           <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-          <label class="btn btn-link btn-sm text-body-emphasis opacity-25" for="btn-check-outlined">
+          <label class="btn btn-sm text-body-emphasis opacity-25" for="btn-check-outlined">
             <i class="fa-solid fa-fw fa-star"></i>
           </label>
         </td>
         <td class="align-middle text-middle">
             <!-- START Dropdown: Priority -->
             <div class="btn-group {% if include.tableView %} me-3 {% else %} {% endif %} ">
-              <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-icon-ghost {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   {% if include.important %} 
-                      <i class="fa-solid fa-circle fa-fw text-danger"></i> 
+                      <i class="fa-solid fa-circle fa-fw text-danger text-small"></i> 
                       Important
                   {% elsif include.importantIcon %} 
                       <i class="fa-solid fa-circle fa-fw text-danger"></i> 
@@ -46,7 +46,7 @@
         <td class="align-middle">
           <!-- START Dropdown: Status -->
           <div class="btn-group {% if include.tableView %} me-2 d-flex align-items-center {% else %}  {% endif %}">
-            <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded-3 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-icon-ghost {% if include.buttonDefault %} {% else %} btn-sm {% endif %} rounded" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               {% if include.buttonDefault %} 
               <i class="fa-solid fa-check fa-fw text-danger"></i>
                 Finished

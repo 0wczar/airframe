@@ -5,7 +5,7 @@
       <div class="card-body pb-0 d-flex justify-content-between">
             <!-- START Dropdown: Priority -->
             <div class="dropdown {% if include.tableView %} me-3 {% else %} {% endif %} ">
-              <button class="btn btn-link text-decoration-none {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-body-emphasis" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-ghost rounded text-decoration-none {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-body-emphasis" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   {% if include.important %} 
                       <i class="fa-solid fa-circle fa-fw text-danger me-1"></i> 
                       Important
@@ -39,7 +39,7 @@
           </div>
           <!-- END Dropdown: Priority -->
       
-          <button type="button" class="btn btn-link btn-sm text-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Subtasks">
+          <button type="button" class="btn btn-ghost rounded btn-sm text-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Subtasks">
             <i class="fa-solid fa-align-left text-secondary me-2"></i>2 <span class="text-secondary">/ 5</span>
           </button>
       </div>
@@ -50,7 +50,7 @@
         <div class="d-flex pb-2">
           <!-- START Dropdown: Status -->
           <div class="dropdown {% if include.tableView %} me-2 d-flex align-items-center {% else %} me-2 {% endif %}">
-            <button class="btn btn-link {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-icon-ghost rounded {% if include.buttonDefault %} {% else %} btn-sm {% endif %} text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               {% if include.finished %} 
                 <i class="fa-solid fa-check fa-fw text-success"></i>
               {% elsif include.backlog %} 
@@ -151,7 +151,7 @@
       <!-- START Cart Footer -->
       <div class="card-footer border-0 px-2 d-flex justify-content-between">
 
-        <button type="button" class="btn btn-link btn-sm text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Favorites">
+        <button type="button" class="btn btn-icon-ghost rounded btn-sm text-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Favorites">
           <i class="fa-solid fa-star"></i>
         </button>
 
