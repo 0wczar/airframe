@@ -1,14 +1,14 @@
 <!-- START Navbar -->
-<div class="px-4 pt-4">
+<div class="px-4 pb-3 pt-4 bg-white rounded-left">
     {% if page.showTitle %}
     <!-- Breadcrumbs -->
-    <div class="d-flex align-items-center mb-2">
+    <div class="d-flex align-items-center pb-2">
         <a href="{{page.root}}/" class="link-secondary text-decoration-none">Dashboard</a>
         <span class="mx-2">/</span>
         <span class="">Projects</span>
     </div>
     <!-- Title + Actions -->
-    <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="d-flex align-items-center justify-content-between bg-white">
         <div class="d-flex align-items-center">
             <h3 class="mb-0 me-2 fw-normal">{{ page.navbarTitle }}</h3>
             <!-- Inline: Bulk, Filters, Groups, Sort -->
