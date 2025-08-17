@@ -1,8 +1,71 @@
 <!-- START Navbar -->
-<div class="p-3 d-flex border-bottom shadow-sm">
+<div class="px-4 pt-4">
+    {% if page.showTitle and page.layoutProjectsTable %}
+    <!-- Breadcrumbs -->
+    <div class="d-flex align-items-center mb-2">
+        <a href="{{page.root}}/" class="link-secondary text-decoration-none">Dashboard</a>
+        <span class="mx-2">/</span>
+        <span class="">Projects</span>
+    </div>
+    <!-- Title + Actions -->
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center">
+            <h3 class="mb-0 me-2 fw-normal">{{ page.navbarTitle }}</h3>
+            <!-- Inline: Bulk, Filters, Groups, Sort -->
+            <div class="d-flex h-stack gap-1">
+                <!-- Bulk -->
+                <div class="dropdown" data-bs-theme="auto">
+                    <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" type="button"
+                        id="dropdownMenuButtonHeaderBulk" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
+                        style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+                        <i class="fa-solid fa-ellipsis" data-bs-toggle="tooltip" data-bs-placement="bottom",
+                            data-bs-original-title="Bulk Options"></i>
+                    </button>
+                    {% include tasks/dropdown-bulk.html %}
+                </div>
+                <!-- Filters -->
+                <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" type="button" data-bs-toggle="modal" href="#modalStart" role="button"
+                    style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+                    <i class="fas fa-filter" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Filters"></i>
+                </button>
+                <!-- Groups -->
+                <div class="dropdown" data-bs-theme="auto">
+                    <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" type="button"
+                        id="dropdownMenuButtonHeaderGroups" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
+                        style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+                        <i class="fa-solid fa-layer-group" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Groups"></i>
+                    </button>
+                    {% include V2/dropdown-groupby.html %}
+                </div>
+                <!-- Sort -->
+                <div class="dropdown" data-bs-theme="auto">
+                    <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" type="button"
+                        id="dropdownMenuButtonHeaderSort" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
+                        style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
+                        <i class="fas fa-sort" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Sort"></i>
+                    </button>
+                    {% include V2/dropdown-sort.html %}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex h-stack gap-1">
+            <!-- Switch layout (Table -> Grid) for Projects Table -->
+            <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/grid"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Grid View">
+                <i class="fas fa-table-cells"></i>
+            </a>
+            <!-- Add Project -->
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCreateProject" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
+                <i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Add Project" data-bs-original-title="Add Project"></i>
+            </button>
+        </div>
+    </div>
+    {% endif %}
 
-    <!-- Left Side-->
-    <div class="d-flex flex-grow-1">
+    {% unless page.showTitle and page.layoutProjectsTable %}
+    <!-- Toolbar row -->
+    <div class="d-flex">
+        <!-- Left Side-->
+        <div class="d-flex flex-grow-1">
         
         <!-- XS,SM,MD Only: Sidebar Offcanvas -->
         <button class="btn btn-link border-secondary-subtle me-2 btn-sm text-secondary d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
@@ -38,6 +101,7 @@
             
         {% endif %}
 
+        {% unless page.showTitle and page.layoutProjectsTable %}
         <!-- START Dropdown: Bulk -->
         <div class="dropdown" data-bs-theme="auto">
             <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary {% if page.dropdownBulkDisabled %}disabled{% else %}{% endif %}" type="button"
@@ -87,6 +151,7 @@
             {% include V2/dropdown-sort.html %}
         </div>
         <!-- END Dropdown: Sort -->
+        {% endunless %}
 
     </div>
 
@@ -299,5 +364,6 @@
         {% endif %}
 
     </div>
+    {% endunless %}
 </div>
 <!-- END Navbar -->
