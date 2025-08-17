@@ -1,6 +1,6 @@
 <!-- START Navbar -->
 <div class="px-4 pt-4">
-    {% if page.showTitle and page.layoutProjectsTable %}
+    {% if page.showTitle %}
     <!-- Breadcrumbs -->
     <div class="d-flex align-items-center mb-2">
         <a href="{{page.root}}/" class="link-secondary text-decoration-none">Dashboard</a>
@@ -49,19 +49,89 @@
             </div>
         </div>
         <div class="d-flex h-stack gap-1">
-            <!-- Switch layout (Table -> Grid) for Projects Table -->
-            <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/grid"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Grid View">
-                <i class="fas fa-table-cells"></i>
-            </a>
-            <!-- Add Project -->
+            {% if page.dropdownSelectLayout %}
+                <div class="dropdown">
+                    <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" aria-current="page" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" aria-label="Table View" data-bs-original-title="Change Layout">
+                        <i class="fa-solid fa-bars"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                    </button>
+                    {% include V2/dropdown-layout.html %}
+                </div>
+            {% elsif page.layoutListGridTasks %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutGridTasks %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/table/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTableTasks %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/grid/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTableTasksGroup %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/grid/group/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutListTableTasks %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/grid/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutGridTasksGroup %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/table/group/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutListGridTasksGroup %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/group/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutListTableTasksGroup %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font size: 0.8rem;" href="{{page.root}}/tasks/list/grid/group/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTasksListGridDetails %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/details/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTasksListTableDetails %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/grid/details/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTasksListTableGroupDetails %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/grid/group/details/">
+                        <i class="fas fa-table-cells" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutTasksListGridGroupDetails %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/group/details/">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% elsif page.layoutProjectsTable %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/grid"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Grid View">
+                        <i class="fas fa-table-cells"></i>
+                </a>
+            {% elsif page.layoutProjectsGrid %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/table"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Table View">
+                        <i class="fa-solid fa-bars"></i>
+                </a>
+            {% else %}
+                <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary disabled" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="#">
+                        <i class="fa-solid fa-bars" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Change Layout"></i>
+                </a>
+            {% endif %}
+
+            {% if page.navbarBtnAddTask %}
+            <button class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateTask" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
+                <i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Add Project" data-bs-original-title="Add Task"></i>
+            </button>
+            {% else %}
             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCreateProject" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%;">
                 <i class="fa-solid fa-plus" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Add Project" data-bs-original-title="Add Project"></i>
             </button>
+            {% endif %}
         </div>
     </div>
     {% endif %}
 
-    {% unless page.showTitle and page.layoutProjectsTable %}
+    {% unless page.showTitle %}
     <!-- Toolbar row -->
     <div class="d-flex">
         <!-- Left Side-->
@@ -87,9 +157,7 @@
                 {{ page.navbarTitle }}
             </h6>
         {% elsif page.showTitle %}
-            <h6 class="align-self-center mb-0 me-3 fw-semibold text-nowrap ms-1">
-                {{ page.navbarTitle }}
-            </h6>
+            
         {% elsif page.navbarBreadcrumb %}
             <a class="align-self-center h6 mb-0 fw-normal text-secondary" href="{{page.root}}/">{{ page.navbarLink }}</a>
             <span class="mx-2 text-body align-self-center fw-normal opacity-50">/</span>
@@ -101,7 +169,7 @@
             
         {% endif %}
 
-        {% unless page.showTitle and page.layoutProjectsTable %}
+        {% unless page.showTitle %}
         <!-- START Dropdown: Bulk -->
         <div class="dropdown" data-bs-theme="auto">
             <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary {% if page.dropdownBulkDisabled %}disabled{% else %}{% endif %}" type="button"
