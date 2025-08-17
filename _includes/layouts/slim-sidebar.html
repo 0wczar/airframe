@@ -46,28 +46,28 @@
           page.url=="/tasks/list/task.html" %}active{% endif %} {% if page.url=="/tasks/empty.html" %}active{% endif %}
           {% if page.url=="/tasks/list/grid/" %}active{% endif %} {% if page.url=="/tasks/list/table/" %}active{% endif
           %} " aria-current=" page" data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
-          <i class="fa-solid fa-fw fa-home align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/house.svg" alt="Home" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </a>
       </li>
       <li class="nav-item d-flex">
         <a href="https://airframe-git-without-theme-tomaszowczarczyk.vercel.app"
           class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
           data-bs-placement="right" title="Switch to Bootstrap Theme">
-          <i class="fa-solid fa-fw fa-toggle-on align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/display-slash.svg" alt="Theme" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </a>
       </li>
       <li class="nav-item d-flex">
         <a href="https://github.com/0wczar/airframe" target="_blank"
           class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
           data-bs-placement="right" title="Go to Source">
-          <i class="fa-brands fa-fw fa-github align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/bars-staggered.svg" alt="Menu" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </a>
       </li>
       <li class="nav-item d-flex">
         <a href="https://zeroheight.com/71219a745/p/499357-you-can-create-everything" target="_blank"
           class="nav-link d-flex justify-content-center flex-sm-fill p-3" aria-current="page" data-bs-toggle="tooltip"
           data-bs-placement="right" title="Go to Documentation">
-          <i class="fa-solid fa-fw fa-book align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/file.svg" alt="Docs" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </a>
       </li>
     </ul>
@@ -79,13 +79,13 @@
       <li class="nav-item d-flex">
         <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="light"
           type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Light Theme">
-          <i class="fa-solid fa-fw fa-sun align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/sun.svg" alt="Light" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </button>
       </li>
       <li class="nav-item d-flex">
         <button class="nav-link d-flex justify-content-center flex-sm-fill p-3" data-bs-theme-value="dark"
           type="button" data-bs-toggle="tooltip" data-bs-placement="right" title="Dark Theme">
-          <i class="fa-solid fa-fw fa-moon align-self-center"></i>
+          <img src="{{page.root}}/images/svgs/duotone/moon.svg" alt="Dark" width="20" height="20" class="align-self-center" style="filter: brightness(0) invert(1);">
         </button>
       </li>
     </ul>
