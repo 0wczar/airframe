@@ -3,9 +3,13 @@
     {% if page.showTitle %}
     <!-- Breadcrumbs -->
     <div class="d-flex align-items-center pb-2">
-        <a href="{{page.root}}/" class="link-secondary text-decoration-none">Dashboard</a>
-        <span class="mx-2">/</span>
+        {% if page.layoutProjectsTable or page.layoutProjectsGrid %}
         <span class="">Projects</span>
+        {% else %}
+        <a href="{{page.root}}/projects/table" class="link-secondary text-decoration-none">Projects</a>
+        <span class="mx-2">/</span>
+        <span class="">Tasks</span>
+        {% endif %}
     </div>
     <!-- Title + Actions -->
     <div class="d-flex align-items-center justify-content-between bg-white">
