@@ -28,15 +28,15 @@
 </head>
 
 <body class="vh-100 fixed-top">
-	<div class="container-fluid px-0">
-		<div class="row g-0">
+	<div class="container-fluid px-0 bg-primary">
+		<div class="row g-0 pt-3">
 			<!-- START SIDEBAR -->
 			{% include layouts/slim-sidebar.html %}
 			<!-- END SIDEBAR -->
 
 			<!-- START LIST -->
 			<div
-				class="col-xl-3 col-xxl-3 col-md-4 shadow-sm border-end vh-100">
+				class="col-xl-3 col-xxl-3 col-md-4 shadow-sm border-end vh-100 bg-primary">
 				{% if page.navbarListDisabled %}
 				{% else %}
 					{% include V2/navbar-list.html %}
@@ -47,7 +47,7 @@
 					{% include V2/navbar-filters.html %}
 				{% endif %}
 
-				<div class="table-responsive">
+				<div class="table-responsive bg-white">
 					{% if page.tableTasksGroup %} 
 						{% include V2/table-tasks-group.html %}
 					{% elsif page.settingsMenu %}
