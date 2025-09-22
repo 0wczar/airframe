@@ -14,6 +14,12 @@
         <!-- Title + Actions -->
         <div class="d-flex align-items-center justify-content-between bg-white">
             <div class="d-flex align-items-center">
+                <!-- XS,SM,MD Only: Sidebar Offcanvas Button for showTitle pages -->
+                <button class="btn btn-link border-secondary-subtle me-2 btn-sm text-secondary d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample">
+                    <i class="fas fa-bars"></i>
+                </button>
+                {% include V2/offcanvas-sidebar.html %}
                 <h3 class="mb-1 mt-1 me-2 fw-normal">{{ page.navbarTitle }}</h3>
                 <!-- Inline: Bulk, Filters, Groups, Sort -->
                 <div class="d-flex h-stack gap-1">
