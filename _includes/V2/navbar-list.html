@@ -54,7 +54,7 @@
             <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary {% if page.dropdownFilterDisabled %}disabled{% else %}{% endif %}" type="button"
             data-bs-toggle="modal" href="#modalStart" role="button"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-                <i class="fa-solid fa-filter-list" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                <i class="fa-solid fa-filter" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-original-title="Filters"></i>
             </button>
         <!-- END Dropdown: Filter -->
@@ -81,7 +81,7 @@
             <button class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary {% if page.dropdownSortDisabled %}disabled{% else %}{% endif %}" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
                 style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;">
-                <i class="fa-solid fa-bars-sort" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                <i class="fa-solid fa-sort" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 data-bs-original-title="Sort"></i>
             </button>
             {% include V2/dropdown-sort.html %}
@@ -107,12 +107,12 @@
             </div>
         {% elsif page.layoutListGridTasks %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutGridTasks %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/table/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutTableTasks %}
@@ -132,12 +132,12 @@
             </a>
         {% elsif page.layoutGridTasksGroup %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/table/group/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutListGridTasksGroup %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/group/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutListTableTasksGroup %}
@@ -147,7 +147,7 @@
             </a>
         {% elsif page.layoutTasksListGridDetails %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/table/details/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutTasksListTableDetails %}
@@ -157,7 +157,7 @@
             </a>
         {% elsif page.layoutTasksListTableGroupDetails %}
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/tasks/list/grid/group/details/">
-                    <i class="fa-solid fa-grid-2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    <i class="fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom"
                     data-bs-original-title="Change Layout"></i>
             </a>
         {% elsif page.layoutTasksListGridGroupDetails %}
@@ -169,7 +169,7 @@
             <!-- Layout Project Table > Grid  -->
             <a class="btn btn-link btn-sm btn-ghost rounded-circle text-secondary" role="button" style="width: 28px; height: 28px;line-height: 28px;text-align: center;padding: 0; border-radius: 50%; font-size: 0.8rem;" href="{{page.root}}/projects/grid"  data-bs-toggle="tooltip" data-bs-placement="bottom"
             data-bs-original-title="Grid View">
-                    <i class="fa-solid fa-grid-2"></i>
+                    <i class="fa-solid fa-grip"></i>
             </a>
         {% elsif page.layoutProjectsGrid %}
             <!-- Layout Project Grid > Table  -->
